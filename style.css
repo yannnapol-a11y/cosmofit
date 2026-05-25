@@ -1,0 +1,553 @@
+:root {
+    --neon-cyan: #00ffcc;
+    --neon-pink: #ff0055;
+    --neon-yellow: #ffff00;
+    --bg-dark: #05050d;
+    --terminal-bg: rgba(8, 12, 24, 0.85);
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Space Mono', monospace;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--neon-cyan);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Динамические мерцающие звезды на фоне */
+.stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(16,16,36,1) 0%, rgba(3,3,10,1) 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #fff;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+/* Основной терминал */
+.terminal {
+    width: 100%;
+    max-width: 800px;
+    background: var(--terminal-bg);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: neon-breath 8s infinite ease-in-out;
+    transition: all 0.3s ease;
+}
+
+@keyframes neon-breath {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);
+        border-color: rgba(0, 255, 204, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 255, 204, 0.35);
+        border-color: rgba(0, 255, 204, 1);
+    }
+}
+
+.terminal-header {
+    background: rgba(0, 255, 204, 0.02);
+    border-bottom: 1px solid rgba(0, 255, 204, 0.3);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-indicator {
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+    letter-spacing: 1px;
+}
+
+/* Кнопка сброса */
+.reset-btn {
+    background: transparent;
+    border: 1px solid var(--neon-pink);
+    color: var(--neon-pink);
+    padding: 4px 8px;
+    font-family: var(--font-title);
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 5px rgba(255, 0, 85, 0.3);
+    box-shadow: 0 0 5px rgba(255, 0, 85, 0.1);
+}
+
+.reset-btn:hover {
+    background: var(--neon-pink);
+    color: #05050d;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+}
+
+.day-nav { 
+    display: flex; 
+    gap: 8px; 
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    color: #008877;
+    padding: 6px 12px;
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-btn.active {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    background: rgba(0, 255, 204, 0.05);
+}
+
+.nav-btn.locked { 
+    opacity: 0.3; 
+    cursor: not-allowed; 
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #555;
+}
+
+.terminal-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output-wrapper { 
+    width: 100%; 
+}
+
+/* Анимация проявления текста */
+.fade-in-up {
+    animation: fadeInUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.story-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Заголовки */
+h2 { 
+    font-family: var(--font-title);
+    color: var(--neon-pink); 
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.4); 
+    margin-top: 0; 
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.orion-voice { 
+    font-style: italic; 
+    color: #a0a0ff; 
+    border-left: 3px solid var(--neon-pink); 
+    padding-left: 15px; 
+    margin-bottom: 25px; 
+    line-height: 1.6;
+}
+
+/* Шкалы жизнеобеспечения HUD */
+.ship-hud {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 25px;
+    background: rgba(0, 255, 204, 0.01);
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+    .ship-hud {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.hud-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(5, 5, 13, 0.6);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 204, 0.05);
+}
+
+.hud-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.hud-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+    overflow: hidden;
+}
+
+.hud-label {
+    font-family: var(--font-title);
+    font-size: 0.6rem;
+    color: rgba(0, 255, 204, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.hud-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.hud-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#hud-water { background: #00bfff; box-shadow: 0 0 6px #00bfff; }
+#hud-food { background: #00ff66; box-shadow: 0 0 6px #00ff66; }
+#hud-mind { background: #d896ff; box-shadow: 0 0 6px #d896ff; }
+#hud-energy { background: #ffaa00; box-shadow: 0 0 6px #ffaa00; }
+
+.hud-percent {
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    color: var(--neon-cyan);
+    min-width: 32px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Карточки задач */
+.tasks-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    width: 100%; 
+    margin-bottom: 25px; 
+}
+
+.task-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    padding: 14px 18px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.task-card:hover {
+    border-color: rgba(0, 255, 204, 0.35);
+    background: rgba(0, 255, 204, 0.02);
+}
+
+/* Кастомные чекбоксы */
+.checkbox-label { 
+    display: flex; 
+    gap: 15px; 
+    align-items: flex-start; 
+    cursor: pointer; 
+    position: relative;
+    user-select: none;
+}
+
+.checkbox-label input { 
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0; width: 0;
+}
+
+.checkbox-custom {
+    height: 18px;
+    width: 18px;
+    background-color: rgba(0, 255, 204, 0.02);
+    border: 1px solid rgba(0, 255, 204, 0.4);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 3px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label:hover input ~ .checkbox-custom {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 6px rgba(0, 255, 204, 0.3);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: rgba(0, 255, 204, 0.12);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.checkbox-custom::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--neon-cyan);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+    display: block;
+}
+
+.checkbox-text {
+    line-height: 1.4;
+}
+
+.task-juice {
+    margin-top: 8px;
+    padding-left: 33px;
+    color: var(--neon-yellow);
+    font-size: 0.9rem;
+    display: none;
+}
+
+.task-juice.visible { 
+    display: block; 
+    animation: blink 0.5s ease; 
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Секция тренировки */
+.workout-section {
+    background: rgba(255, 0, 85, 0.015);
+    border: 1px dashed rgba(255, 0, 85, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 15px; 
+    width: 100%; 
+    flex-wrap: wrap;
+}
+
+.input-group input {
+    background: #020206;
+    border: 1px solid rgba(255, 0, 85, 0.4);
+    color: var(--neon-pink);
+    padding: 10px;
+    width: 80px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+}
+
+/* Кнопки */
+.action-btn {
+    background: transparent;
+    border: 2px solid var(--neon-pink);
+    color: var(--neon-pink);
+    padding: 12px 24px;
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(255, 0, 85, 0.1);
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover { 
+    background: var(--neon-pink); 
+    color: #05050d; 
+    box-shadow: 0 0 18px rgba(255, 0, 85, 0.45); 
+}
+
+.action-btn.small { 
+    padding: 8px 15px; 
+    font-size: 0.8rem; 
+}
+
+.workout-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 255, 204, 0.03);
+    border: 1px solid rgba(0, 255, 204, 0.25);
+    border-radius: 4px;
+    display: none;
+    line-height: 1.5;
+}
+
+.workout-result.visible { 
+    display: block; 
+}
+
+/* Экран Победы */
+.victory-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.victory-title {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: glow-pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow-pulse {
+    0% { transform: scale(0.98); text-shadow: 0 0 12px rgba(0, 255, 204, 0.5); }
+    100% { transform: scale(1.02); text-shadow: 0 0 24px rgba(0, 255, 204, 0.85); }
+}
+
+.victory-message {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #fff;
+    background: rgba(0, 255, 204, 0.03);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    padding: 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.05);
+}
+
+.victory-stats {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 0, 85, 0.01);
+    border: 1px solid rgba(255, 0, 85, 0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-name {
+    font-family: var(--font-title);
+    font-size: 0.65rem;
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-val {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    font-weight: bold;
+}
+
+/* Скроллбары */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 204, 0.3);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-cyan);
+}
