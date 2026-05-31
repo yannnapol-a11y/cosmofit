@@ -6,6 +6,7 @@
     <title>Space Ark: Survival</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Добавим поддержку кириллицы для шрифтов, если потребуется -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,8 +16,16 @@
     <div class="terminal">
         <header class="terminal-header">
             <div class="status-container">
-                <span class="status-indicator">SYSTEM: ONLINE</span>
-                <button class="reset-btn" onclick="confirmResetProgress()" title="Reset progress">🔄 Reset</button>
+                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+                <button class="reset-btn" id="reset-btn" onclick="confirmResetProgress()" title="Reset progress">🔄 Reset</button>
+                
+                <!-- НАШ ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ -->
+                <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                    <option value="sr">SR</option>
+                    <option value="tr">TR</option>
+                </select>
             </div>
             <nav class="day-nav" id="dayNav">
                 <button class="nav-btn active" id="btn-intro" onclick="loadDay('intro')">Intro</button>
@@ -32,35 +41,22 @@
         </header>
 
         <main class="terminal-body">
+            <div class="ship-mission" id="ship-mission">
+                Mission Objective: Sync your body with the life support systems. Hydrate, eat clean, and build a mental shield to navigate the Ark to a New Home.
+            </div>
             <div class="ship-hud" id="shipHUD">
                 <div class="hud-item">
                     <span class="hud-icon">💧</span>
                     <div class="hud-bar-wrapper">
-                        <span class="hud-label">Water</span>
+                        <span class="hud-label" id="label-water">Water</span>
                         <div class="hud-bar"><div class="hud-fill" id="hud-water" style="width: 0%;"></div></div>
                     </div>
                     <span class="hud-percent" id="hud-water-txt">0%</span>
                 </div>
                 <div class="hud-item">
-                    <span class="hud-icon">🍏</span>
-                    <div class="hud-bar-wrapper">
-                        <span class="hud-label">Bio-fuel</span>
-                        <div class="hud-bar"><div class="hud-fill" id="hud-food" style="width: 0%;"></div></div>
-                    </div>
-                    <span class="hud-percent" id="hud-food-txt">0%</span>
-                </div>
-                <div class="hud-item">
-                    <span class="hud-icon">🤍</span>
-                    <div class="hud-bar-wrapper">
-                        <span class="hud-label">Mental Shield</span>
-                        <div class="hud-bar"><div class="hud-fill" id="hud-mind" style="width: 0%;"></div></div>
-                    </div>
-                    <span class="hud-percent" id="hud-mind-txt">0%</span>
-                </div>
-                <div class="hud-item">
                     <span class="hud-icon">🔋</span>
                     <div class="hud-bar-wrapper">
-                        <span class="hud-label">Thrusters</span>
+                        <span class="hud-label" id="label-energy">Thrusters</span>
                         <div class="hud-bar"><div class="hud-fill" id="hud-energy" style="width: 0%;"></div></div>
                     </div>
                     <span class="hud-percent" id="hud-energy-txt">0%</span>
@@ -74,7 +70,11 @@
             <button id="action-btn" class="action-btn" onclick="handleAction()">START SYSTEMS CALIBRATION</button>
         </main>
     </div>
-
-    <script src="script.js"></script>
+    <!-- НАШ ФУТЕР С БЛАГОДАРНОСТЬЮ -->
+    <footer class="terminal-footer">
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini. Without them, this journey wouldn't be possible. 🚀✨</p>
+    </footer>
 </body>
+ <script src="script.js"></script>
+
 </html>
