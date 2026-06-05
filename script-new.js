@@ -10,6 +10,7 @@ const uiTranslations = {
         resetConfirm: "Are you sure you want to reset all data and start a new mission?",
         days: { intro: "Intro", day1: "Day 01", day2: "Day 02", day3: "Day 03", day4: "Day 04", day5: "Day 05", day6: "Day 06", day7: "Day 07", final: "FINAL" },
         footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, Gemini, and Copilot. Without all of you, this journey would not have been possible. 🚀✨",
+        footerThanksHtml: "Made with love. Special thanks to my wonderful husband, two amazing daughters, <strong>Gemini</strong>, and <strong>Copilot</strong>. Without all of you, this journey would not have been possible. 🚀✨",
         confirmProtocol: "CONFIRM PROTOCOL",
         interactiveTitleTasks: "DAILY SYNCHRONIZATION TASKS",
         interactiveTitleWorkout: "PHYSICAL WORKOUT OVERDRIVE",
@@ -34,6 +35,7 @@ const uiTranslations = {
         resetConfirm: "Вы уверены, что хотите сбросить все данные и начать новую миссию?",
         days: { intro: "Интро", day1: "День 01", day2: "День 02", day3: "День 03", day4: "День 04", day5: "День 05", day6: "День 06", day7: "День 07", final: "ФИНАЛ" },
         footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям, Gemini и Copilot. Без вас всех это путешествие не было бы возможным. 🚀✨",
+        footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям, <strong>Gemini</strong> и <strong>Copilot</strong>. Без вас всех это путешествие не было бы возможным. 🚀✨",
         confirmProtocol: "ПОДТВЕРДИТЬ ПРОТОКОЛ",
         interactiveTitleTasks: "ЕЖЕДНЕВНЫЕ ЗАДАЧИ СИНХРОНИЗАЦИИ",
         interactiveTitleWorkout: "ФИЗИЧЕСКАЯ НАГРУЗКА ФОРСАЖ",
@@ -58,6 +60,7 @@ const uiTranslations = {
         resetConfirm: "Da li ste sigurni da želite da resetujete sve podatke i započnete novu misiju?",
         days: { intro: "Uvod", day1: "Dan 01", day2: "Dan 02", day3: "Dan 03", day4: "Dan 04", day5: "Dan 05", day6: "Dan 06", day7: "Dan 07", final: "KRAJ" },
         footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, Gemini-ju i Copilotu. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, <strong>Gemini-ju</strong> i <strong>Copilotu</strong>. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
         confirmProtocol: "POTVRDI PROTOKOL",
         interactiveTitleTasks: "DNEVNI ZADACI SINHRONIZACIJE",
         interactiveTitleWorkout: "FIZIČKI TRENING FORSAŽ",
@@ -709,7 +712,9 @@ function updateInterfaceTexts() {
     if (lblEnergy) lblEnergy.textContent = trans.hudEnergy;
     
     const footerTxt = document.getElementById("footer-thanks");
-    if (footerTxt) footerTxt.textContent = trans.footerThanks;
+    if (footerTxt) {
+        footerTxt.innerHTML = trans.footerThanksHtml || trans.footerThanks;
+    }
     
     setPageMetadata(gameState.currentLang);
     renderDayNav();
