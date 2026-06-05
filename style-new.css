@@ -586,14 +586,23 @@ textarea {
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     line-height: 1.6;
-    color: rgba(0, 255, 204, 0.4);
+    color: rgba(0, 255, 204, 0.75);
     font-family: var(--font-body);
+}
+
+.terminal-footer.footer-highlight {
+    background: rgba(0, 255, 204, 0.07);
+    border: 1px solid rgba(0, 255, 204, 0.18);
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.08);
 }
 
 .terminal-footer p {
     margin: 0;
+    font-weight: 500;
 }
 
 @media (prefers-reduced-motion: reduce) {
