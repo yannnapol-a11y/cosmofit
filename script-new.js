@@ -2,6 +2,8 @@ const uiTranslations = {
     en: {
         systemOnline: "SYSTEM: ONLINE",
         missionText: "Mission Objective: Sync your body with the life support systems. Hydrate and build physical endurance to navigate the Ark to a New Home.",
+        pageTitle: "Space Ark: Survival",
+        pageDescription: "Space Ark: Survival is an interactive browser-based space adventure game that encourages hydration, exercise, and daily mission progress through a futuristic sci-fi storyline.",
         resetBtn: "🔄 Reset",
         hudWater: "Water",
         hudEnergy: "Thrusters",
@@ -24,6 +26,8 @@ const uiTranslations = {
     ru: {
         systemOnline: "СИСТЕМА: ОНЛАЙН",
         missionText: "Цель миссии: Синхронизировать тело с системами жизнеобеспечения. Пейте воду и тренируйте выносливость, чтобы привести Ковчег к Новому Дому.",
+        pageTitle: "Space Ark: Survival — космическое приключение",
+        pageDescription: "Space Ark: Survival — браузерная интерактивная игра в жанре sci-fi, которая сочетает сюжет, гидратацию и физические задания для ежедневного прогресса.",
         resetBtn: "🔄 Сброс",
         hudWater: "Вода",
         hudEnergy: "Двигатели",
@@ -46,6 +50,8 @@ const uiTranslations = {
     sr: {
         systemOnline: "SISTEM: ONLAJN",
         missionText: "Cilj misije: Sinhronizujte telo sa sistemima za održavanje života. Pijte vodu i razvijajte izdržljivost da biste doveli Barku do Novog Doma.",
+        pageTitle: "Space Ark: Survival — svemirska misija",
+        pageDescription: "Space Ark: Survival je interaktivna veb igra koja kombinuje naučnu fantastiku, hidrataciju i vežbe za motivaciju kroz dnevne misije.",
         resetBtn: "🔄 Reset",
         hudWater: "Voda",
         hudEnergy: "Potisnici",
@@ -642,6 +648,8 @@ function loadProgress() {
     }
     const select = document.getElementById("lang-select");
     if (select) select.value = gameState.currentLang;
+    setDocumentLanguage(gameState.currentLang);
+    setPageMetadata(gameState.currentLang);
     if (storageEnabled) {
         const saveStateMessage = saved ? "Progress loaded from your last session." : "No saved progress found. Your progress will be saved automatically.";
         setSaveStateMessage(saveStateMessage);
@@ -692,6 +700,8 @@ function updateInterfaceTexts() {
     const resetBtn = document.getElementById("reset-btn");
     if (resetBtn) resetBtn.textContent = trans.resetBtn;
     
+    setDocumentLanguage(gameState.currentLang);
+    
     const lblWater = document.getElementById("label-water");
     if (lblWater) lblWater.textContent = trans.hudWater;
     
@@ -701,7 +711,32 @@ function updateInterfaceTexts() {
     const footerTxt = document.getElementById("footer-thanks");
     if (footerTxt) footerTxt.textContent = trans.footerThanks;
     
+    setPageMetadata(gameState.currentLang);
     renderDayNav();
+}
+
+function setDocumentLanguage(lang) {
+    if (!lang) return;
+    document.documentElement.lang = lang;
+}
+
+function setPageMetadata(lang) {
+    const trans = uiTranslations[lang] || uiTranslations.en;
+    const titleValue = trans.pageTitle || "Space Ark: Survival";
+    const descriptionValue = trans.pageDescription || "Interactive browser-based space adventure that encourages hydration, exercise, and daily mission progress through a futuristic sci-fi storyline.";
+
+    document.title = titleValue;
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) descriptionMeta.setAttribute('content', descriptionValue);
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', titleValue);
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', descriptionValue);
+    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', titleValue);
+    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+    if (twitterDescription) twitterDescription.setAttribute('content', descriptionValue);
 }
 
 function renderDayNav() {
@@ -1207,4 +1242,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateInterfaceTexts();
     showStorageWarning();
     loadDay(gameState.currentDayKey);
+    registerServiceWorker();
 });
+
+function registerServiceWorker() {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js")
+            .then(registration => {
+                console.log("Service Worker registered with scope:", registration.scope);
+            })
+            .catch(error => {
+                console.warn("Service Worker registration failed:", error);
+            });
+    }
+}

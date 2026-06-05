@@ -13,9 +13,9 @@ Interactive browser-based sci-fi wellness experience that blends hydration remin
 ## Важные файлы
 
 - `index.html` — главная страница для GitHub Pages
-- `index-new.html` — рабочий шаблон
 - `style-new.css` — стили
 - `script-new.js` — логика игры
+- `sw.js` — сервис-воркер для офлайн-режима
 - `og-image.svg` — соцкартинка
 - `icon.svg` — иконка PWA
 - `manifest.webmanifest` — web app manifest
@@ -60,5 +60,5 @@ git push -u origin main
 
 ## Советы
 
-- Не используйте `index-new.html` как основную страницу на GitHub Pages — нужен `index.html`.
+- `index.html` — единственная основная страница для GitHub Pages.
 - Если хотите, я могу помочь шаг за шагом сделать коммит и опубликовать сайт.

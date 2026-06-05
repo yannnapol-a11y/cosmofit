@@ -1,9 +1,9 @@
 {
   "name": "Space Ark: Survival",
   "short_name": "Space Ark",
-  "start_url": "/space-ark/",
+  "start_url": "./",
   "display": "standalone",
-  "scope": "/space-ark/",
+  "scope": "./",
   "theme_color": "#05050d",
   "background_color": "#05050d",
   "description": "Interactive sci-fi browser game with hydration and workout missions.",
