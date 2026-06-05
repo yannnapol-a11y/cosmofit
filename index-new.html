@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ark: Survival</title>
+    <meta name="description" content="Space Ark: Survival is an interactive browser-based space adventure game that encourages hydration, exercise, and daily mission progress through a futuristic sci-fi storyline.">
+    <meta name="keywords" content="space ark, survival game, browser game, interactive story, hydration challenge, fitness game, daily missions, sci-fi adventure">
+    <meta name="author" content="Space Ark">
+    <meta name="theme-color" content="#05050d">
+    <link rel="canonical" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="en" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="ru" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="sr" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="x-default" href="https://yannnapol-a11y.github.io/space-ark/">
+    <meta property="og:title" content="Space Ark: Survival">
+    <meta property="og:description" content="Play an immersive space mission game, complete daily hydration and workout tasks, and unlock new chapters as you guide the Ark to a new home.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://yannnapol-a11y.github.io/space-ark/">
+    <meta property="og:image" content="https://yannnapol-a11y.github.io/space-ark/og-image.svg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Space Ark: Survival">
+    <meta property="twitter:description" content="Interactive web experience combining hydration, exercise and sci-fi storytelling in a space survival game.">
+    <meta property="twitter:image" content="https://yannnapol-a11y.github.io/space-ark/og-image.svg">
+    <meta property="twitter:image:alt" content="Space Ark: Survival social preview image">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Space Ark: Survival",
+      "description": "Interactive browser-based space adventure that encourages hydration and fitness through daily mission challenges.",
+      "inLanguage": "en",
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Space Ark: Survival",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "about": "Interactive fitness and hydration game set on a space ark.",
+        "description": "An immersive sci-fi browser game that blends hydration reminders and workout motivation with an adventure storyline."
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="stars"></div>
+
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="terminal-title">
+                <h1>Space Ark: Survival</h1>
+                <p class="hero-summary">Stay hydrated, complete daily tasks, and guide the Ark toward a new home in this interactive sci-fi browser experience.</p>
+                <p class="hero-detail">Each chapter blends immersive storytelling with simple fitness challenges, making this space survival game easy to find, read, and enjoy for players looking for healthy adventure online.</p>
+            </div>
+            <div class="status-container">
+                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+                <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>
+                
+                <label for="lang-select" class="sr-only">Language</label>
+                <select id="lang-select" class="lang-select" aria-label="Language selector">
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                    <option value="sr">SR</option>
+                </select>
+            </div>
+            <nav class="day-nav" id="dayNav" aria-label="Chapter navigation"></nav>
+        </header>
+
+        <main id="main-content" class="terminal-body">
+            <section class="status-section" aria-labelledby="status-title">
+                <h2 id="status-title" class="sr-only">Mission status</h2>
+                <div class="hud">
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">💧</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-water">Water</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-water"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-water-txt">0%</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">🔋</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-energy">Thrusters</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-energy"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-energy-txt">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-section" aria-labelledby="story-title">
+                <h2 id="story-title" class="sr-only">Current mission log</h2>
+                <div class="output-wrapper">
+                    <p id="story-text" class="typing-text" role="status" aria-live="polite" aria-atomic="true"></p>
+                </div>
+            </section>
+
+            <div class="progress-indicator" id="progress-indicator" aria-live="polite"></div>
+            <div class="save-state" id="save-state" aria-live="polite"></div>
+            <div class="storage-warning hidden" id="storage-warning" role="alert">
+                Warning: local storage is unavailable. Progress will not be saved.
+            </div>
+
+            <button type="button" id="action-btn" class="action-btn">START SYSTEMS CALIBRATION</button>
+        </main>
+    </div>
+
+    <section class="seo-content" aria-labelledby="seo-heading">
+        <h2 id="seo-heading">Space Ark: Survival — Interactive Web Mission</h2>
+        <p>Space Ark: Survival is a browser-based interactive adventure that combines a science-fiction story with healthy daily habits. Players unlock each chapter by completing hydration and workout tasks, making the experience both entertaining and motivating.</p>
+        <h3>How to Play</h3>
+        <p>Start with the introductory mission, follow the AI prompts, and complete the water and workout tasks each day. As you progress, new chapters unlock and the story advances through atmospheric sci-fi scenes and mission reports.</p>
+        <h3>Why It Works</h3>
+        <p>This game encourages mindful hydration and movement in a playful format. It is designed to be easy to access in the browser, responsive on phones and tablets, and friendly for users looking for a short interactive wellness challenge.</p>
+    </section>
+
+    <footer class="terminal-footer">
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini. Without them, this journey wouldn't be possible. 🚀✨</p>
+    </footer>
+
+    <script src="script-new.js"></script>
+</body>
+</html>

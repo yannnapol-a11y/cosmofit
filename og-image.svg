@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02020a" />
+      <stop offset="100%" stop-color="#051324" />
+    </linearGradient>
+    <linearGradient id="textGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ffcc" />
+      <stop offset="100%" stop-color="#ff00aa" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g filter="url(#blur)">
+    <circle cx="980" cy="100" r="70" fill="#00ffcc" opacity="0.18" />
+    <circle cx="180" cy="520" r="60" fill="#ff00aa" opacity="0.18" />
+  </g>
+  <rect x="80" y="100" width="1040" height="430" rx="34" ry="34" fill="rgba(255,255,255,0.03)" stroke="rgba(0,255,204,0.2)" stroke-width="2" />
+  <text x="120" y="220" font-family="Orbitron, sans-serif" font-size="72" fill="url(#textGlow)">Space Ark</text>
+  <text x="120" y="310" font-family="Space Mono, monospace" font-size="40" fill="#ffffff">Interactive hydration & fitness adventure</text>
+  <text x="120" y="380" font-family="Space Mono, monospace" font-size="30" fill="#a9fff4">Complete daily missions to keep the Ark alive.</text>
+  <g transform="translate(120, 430)">
+    <rect x="0" y="0" width="260" height="50" rx="12" ry="12" fill="#00ffcc" opacity="0.16" />
+    <text x="20" y="34" font-family="Space Mono, monospace" font-size="22" fill="#ffffff">Play in browser</text>
+  </g>
+</svg>

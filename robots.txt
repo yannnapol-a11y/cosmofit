@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yannnapol-a11y.github.io/space-ark/sitemap.xml
