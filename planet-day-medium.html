@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ark: Planet Day - Medium</title>
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body class="planet-page">
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="terminal-title">
+                <h1 id="planet-title">Planet Day - Medium</h1>
+                <p class="hero-summary" id="planet-summary">Strange sounds and tremors make this day tense—move carefully.</p>
+            </div>
+            <div class="status-container">
+                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+                <div>
+                    <select id="planet-lang-select" class="lang-select">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="sr">SR</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <section class="hud">
+                <div class="hud-item">
+                    <span class="hud-icon">💧</span>
+                    <div class="hud-bar-wrapper">
+                        <span class="hud-label" id="label-water">Water</span>
+                        <div class="hud-bar"><div class="hud-fill" id="hud-water"></div></div>
+                    </div>
+                    <span class="hud-percent" id="hud-water-txt">0%</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-icon">🏋️</span>
+                    <div class="hud-bar-wrapper">
+                        <span class="hud-label" id="label-workout">Training</span>
+                        <div class="hud-bar"><div class="hud-fill" id="hud-workout"></div></div>
+                    </div>
+                    <span class="hud-percent" id="hud-workout-txt">0%</span>
+                </div>
+            </section>
+
+            <section class="story-section">
+    <button type="button" id="speak-btn" class="speak-btn" aria-label="Read story aloud">🔊</button>
+    <p id="planet-intro" class="typing-text">AI ORION: 'Captain, we're trapped...'</p>
+</section>
+
+            <div id="interactive-container"></div>
+
+            <button id="back-btn" class="action-btn">Return to Ark</button>
+        </main>
+    </div>
+
+    <script src="script-new.js"></script>
+    <script>
+        let planetGameState = {
+            currentLang: 'en',
+            waterDone: false,
+            fruitsDone: false,
+            squatPushReps: 0,
+            tremorSeqs: 0
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            planetGameState.currentLang = localStorage.getItem('selectedLang') || 'en';
+            document.documentElement.lang = planetGameState.currentLang;
+            document.getElementById('planet-lang-select').value = planetGameState.currentLang;
+            updatePlanetPageUI();
+
+            document.getElementById('planet-lang-select').addEventListener('change', (e) => {
+                planetGameState.currentLang = e.target.value;
+                localStorage.setItem('selectedLang', planetGameState.currentLang);
+                document.documentElement.lang = planetGameState.currentLang;
+                updatePlanetPageUI();
+            });
+
+            document.getElementById('back-btn').addEventListener('click', () => {
+                window.location.href = 'index-new.html';
+            });
+
+            renderPlanetMediumDay();  
+                const speakBtn = document.getElementById('speak-btn');
+if (speakBtn) {
+    speakBtn.addEventListener('click', () => {
+        if (speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+            speakBtn.textContent = '🔊';
+            return;
+        }
+        const text = document.getElementById('planet-intro')?.innerText?.trim() || '';
+        if (!text) return;
+        const lang = planetGameState.currentLang || 'en';
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang === 'ru' ? 'ru-RU' : lang === 'sr' ? 'sr-RS' : 'en-US';
+        utterance.rate = 1.05;
+        utterance.pitch = 0.9;
+        utterance.onstart = () => speakBtn.textContent = '⏹';
+        utterance.onend = () => speakBtn.textContent = '🔊';
+        utterance.onerror = () => speakBtn.textContent = '🔊';
+        speechSynthesis.speak(utterance);
+    });
+}  
+        });
+
+        function updatePlanetPageUI() {
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+            document.getElementById('status-indicator').textContent = trans.systemOnline;
+            document.getElementById('planet-title').textContent = trans.days?.planetDay1 || 'Planet Day - Medium';
+            document.getElementById('planet-summary').textContent = trans.planetSummary || '';
+            document.getElementById('label-water').textContent = trans.hudWater || 'Water';
+            document.getElementById('label-workout').textContent = trans.hudWorkout || 'Training';
+            document.getElementById('planet-intro').textContent = trans.planetIntroMedium || trans.planetIntroLow || '';
+        }
+
+        function renderPlanetMediumDay() {
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+            const container = document.getElementById('interactive-container');
+
+            const html = `
+                <div class="interactive-section">
+                    <h3>${trans.planetTasksTitle || 'PLANETARY ADAPTATION TASKS'}</h3>
+                    <div class="tasks-list">
+                        <div class="task-item">
+                            <input type="checkbox" id="water-planet" ${planetGameState.waterDone ? 'checked' : ''}>
+                            <label for="water-planet">${trans.planetWaterTask || '💧 Hydration: Drink 300 ml.'}</label>
+                        </div>
+                        <div class="juice-box ${planetGameState.waterDone ? '' : 'hidden'}" id="water-feedback">${trans.planetWaterDone || '✅ Hydration optimized.'}</div>
+
+                        <div class="task-item">
+                            <input type="checkbox" id="fruits-planet" ${planetGameState.fruitsDone ? 'checked' : ''}>
+                            <label for="fruits-planet">${trans.planetFruitsTask || '🌈 Promise to eat a yellow, red, green and orange fruit or vegetable.'}</label>
+                        </div>
+                        <div class="juice-box ${planetGameState.fruitsDone ? '' : 'hidden'}" id="fruits-feedback">${trans.planetFruitsDone || '✅ Promise given.'}</div>
+                    </div>
+                </div>
+
+                <div class="interactive-section">
+                    <h3>${trans.planetWorkoutMediumTitle || 'ATTUNEMENT SEQUENCE'}</h3>
+                    <p class="workout-desc">${trans.planetExercise2Instructions || ''}</p>
+                    <div class="input-group">
+                        <input type="number" id="squatpush-reps" min="0" value="${planetGameState.squatPushReps}" placeholder="0">
+                        <button type="button" id="submit-squatpush" class="submit-btn">${trans.planetSubmitWorkout || 'SUBMIT'}</button>
+                    </div>
+                </div>
+
+                <div class="interactive-section">
+                    <h3>${trans.planetTremorExercise || 'Ground Tremor Sequence'}</h3>
+                    <p class="workout-desc">${trans.planetTremorInstructions || ''}</p>
+                    <div class="input-group">
+                        <input type="number" id="tremor-seqs" min="0" value="${planetGameState.tremorSeqs}" placeholder="0">
+                        <button type="button" id="submit-tremor" class="submit-btn">${trans.planetSubmitWorkout || 'SUBMIT'}</button>
+                    </div>
+                    <div class="juice-box hidden" id="medium-feedback"></div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            const waterCheckbox = document.getElementById('water-planet');
+            if (waterCheckbox) {
+                waterCheckbox.addEventListener('change', () => {
+                    planetGameState.waterDone = waterCheckbox.checked;
+                    document.getElementById('water-feedback').classList.toggle('hidden', !waterCheckbox.checked);
+                    updatePlanetHUD();
+                });
+            }
+
+            const fruitsCheckbox = document.getElementById('fruits-planet');
+            if (fruitsCheckbox) {
+                fruitsCheckbox.addEventListener('change', () => {
+                    planetGameState.fruitsDone = fruitsCheckbox.checked;
+                    document.getElementById('fruits-feedback').classList.toggle('hidden', !fruitsCheckbox.checked);
+                    updatePlanetHUD();
+                });
+            }
+
+            document.getElementById('submit-squatpush').addEventListener('click', () => {
+                const val = parseInt(document.getElementById('squatpush-reps').value || '0', 10);
+                planetGameState.squatPushReps = isNaN(val) ? 0 : val;
+                showMediumFeedback();
+                updatePlanetHUD();
+            });
+
+            document.getElementById('submit-tremor').addEventListener('click', () => {
+                const val = parseInt(document.getElementById('tremor-seqs').value || '0', 10);
+                planetGameState.tremorSeqs = isNaN(val) ? 0 : val;
+                showMediumFeedback();
+                updatePlanetHUD();
+            });
+
+            updatePlanetHUD();
+        }
+
+        function showMediumFeedback() {
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+            const feedbackBox = document.getElementById('medium-feedback');
+            const total = (planetGameState.squatPushReps || 0) + (planetGameState.tremorSeqs || 0);
+            let msg = '';
+            if (total < 1) msg = trans.planetWorkoutLow || '🔴 No movements recorded.';
+            else if (total < 20) msg = trans.planetWorkoutMedium || '🟡 Gentle movements.';
+            else if (total < 40) msg = trans.planetWorkoutHigh || '🟢 Good work.';
+            else msg = trans.planetWorkoutVeryHigh || '🟢🟢 Outstanding!';
+            feedbackBox.textContent = msg;
+            feedbackBox.classList.remove('hidden');
+        }
+
+        function updatePlanetHUD() {
+            const waterPercent = (planetGameState.waterDone && planetGameState.fruitsDone) ? 100 : 0;
+            const totalReps = (planetGameState.squatPushReps || 0) + ((planetGameState.tremorSeqs || 0) * 2);
+            const workoutPercent = Math.min(100, Math.round((totalReps / 40) * 100));
+            document.getElementById('hud-water').style.width = waterPercent + '%';
+            document.getElementById('hud-workout').style.width = workoutPercent + '%';
+            document.getElementById('hud-water-txt').textContent = waterPercent + '%';
+            document.getElementById('hud-workout-txt').textContent = workoutPercent + '%';
+        }
+    </script>
+</body>
+</html>

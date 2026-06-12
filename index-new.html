@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Ark: Survival</title>
     <meta name="description" content="Space Ark: Survival is an interactive browser-based space adventure game that encourages hydration, exercise, and daily mission progress through a futuristic sci-fi storyline.">
-    <meta http-equiv="Content-Language" content="en">
     <meta name="keywords" content="space ark, survival game, browser game, interactive story, hydration challenge, fitness game, daily missions, sci-fi adventure">
     <meta name="author" content="Space Ark">
     <meta name="theme-color" content="#05050d">
@@ -39,7 +38,7 @@
       "@type": "WebPage",
       "name": "Space Ark: Survival",
       "description": "Interactive browser-based space adventure that encourages hydration and fitness through daily mission challenges.",
-      "inLanguage": "en",
+      "inLanguage": ["en", "ru", "sr"],
       "mainEntity": {
         "@type": "SoftwareApplication",
         "name": "Space Ark: Survival",
@@ -56,31 +55,26 @@
     <link rel="stylesheet" href="style-new.css">
 </head>
 <body>
-    <noscript>
-        <div class="noscript-warning">JavaScript is required to play Space Ark. Please enable JavaScript in your browser.</div>
-    </noscript>
+    <div class="eye-blink-overlay"></div>
     <div class="stars"></div>
-
-    <div class="terminal">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="terminal">       
         <header class="terminal-header">
             <div class="terminal-title">
                 <h1>Space Ark: Survival</h1>
-                <p class="hero-summary">Stay hydrated, complete daily tasks, and guide the Ark toward a new home in this interactive sci-fi browser experience.</p>
-                <p class="hero-detail">Each chapter blends immersive storytelling with simple fitness challenges, making this space survival game easy to find, read, and enjoy for players looking for healthy adventure online.</p>
-                <p class="powered-badge">Made with family, Gemini, Copilot, and you.</p>
-            </div>
+                <p class="hero-summary" id="mission-objective">Mission Objective: Movement without instructions or stress. Just trust in your body.</p>
+                </div>
             <div class="status-container">
                 <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
-                <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>
-                
+                <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>               
                 <label for="lang-select" class="sr-only">Language</label>
                 <select id="lang-select" class="lang-select" aria-label="Language selector">
                     <option value="en">EN</option>
                     <option value="ru">RU</option>
                     <option value="sr">SR</option>
                 </select>
-            </div>
-            <nav class="day-nav" id="dayNav" aria-label="Chapter navigation"></nav>
+            </div>            
         </header>
 
         <main id="main-content" class="terminal-body">
@@ -107,11 +101,12 @@
             </section>
 
             <section class="story-section" aria-labelledby="story-title">
-                <h2 id="story-title" class="sr-only">Current mission log</h2>
-                <div class="output-wrapper">
-                    <p id="story-text" class="typing-text" role="status" aria-live="polite" aria-atomic="true"></p>
-                </div>
-            </section>
+    <h2 id="story-title" class="sr-only">Current mission log</h2>
+    <button type="button" id="speak-btn" class="speak-btn" aria-label="Read story aloud">🔊</button>
+    <div class="output-wrapper">
+        <p id="story-text" class="typing-text" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+</section>
 
             <div class="progress-indicator" id="progress-indicator" aria-live="polite"></div>
             <div class="save-state" id="save-state" aria-live="polite"></div>
@@ -119,23 +114,63 @@
                 Warning: local storage is unavailable. Progress will not be saved.
             </div>
 
-            <button type="button" id="action-btn" class="action-btn">START SYSTEMS CALIBRATION</button>
+            <button type="button" id="action-btn" class="action-btn">START SYSTEMS CALIBRATION</button>            
+        <div class="reminder-settings" id="reminder-settings">
+    <h3 id="reminder-title">⏰ Daily Reminder</h3>
+    <div class="input-group">
+        <input type="time" id="reminder-time" value="09:00">
+        <button type="button" id="save-reminder" class="submit-btn">SAVE</button>
+    </div>
+    <p id="reminder-status"></p>
+</div>
         </main>
     </div>
+ 
 
-    <section class="seo-content" aria-labelledby="seo-heading">
-        <h2 id="seo-heading">Space Ark: Survival — Interactive Web Mission</h2>
-        <p>Space Ark: Survival is a browser-based interactive adventure that combines a science-fiction story with healthy daily habits. Players unlock each chapter by completing hydration and workout tasks, making the experience both entertaining and motivating.</p>
-        <h3>How to Play</h3>
-        <p>Start with the introductory mission, follow the AI prompts, and complete the water and workout tasks each day. As you progress, new chapters unlock and the story advances through atmospheric sci-fi scenes and mission reports.</p>
-        <h3>Why It Works</h3>
-        <p>This game encourages mindful hydration and movement in a playful format. It is designed to be easy to access in the browser, responsive on phones and tablets, and friendly for users looking for a short interactive wellness challenge.</p>
-    </section>
-
-    <footer class="terminal-footer footer-highlight">
-        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, Gemini, and Copilot. Without all of you, this journey would not have been possible. 🚀✨</p>
+    <footer class="terminal-footer">        
+    <div class="manifesto-container">
+        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already inside you.</h2>
+        <div class="manifesto-text" id="manifesto-text">
+            <p>Complex instructions often distract us from what matters most — connecting with our body. We invite you to return to the roots. This program is based entirely on natural movements, the ones we have known since birth.</p>
+            <p>You dont need to compare yourself to perfect pictures. If it feels comfortable, you are doing it right. Our goal is to bring you peace, confidence, and the joy of every movement.</p>
+        </div>
+    </div>    
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini. Without them, this journey wouldn't be possible. 🚀✨</p>
     </footer>
 
     <script src="script-new.js"></script>
+    <script>
+        // Mobile dayNav: set select to current page and scroll active link into view
+        (function(){
+            const sel = document.getElementById('day-nav-select');
+            const nav = document.getElementById('dayNav');
+            if (sel) {
+                // set select to current file if option exists
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                const opt = Array.from(sel.options).find(o => o.value === currentFile);
+                if (opt) sel.value = currentFile;
+                sel.addEventListener('change', (e) => {
+                    const v = e.target.value;
+                    if (v) window.location.href = v;
+                });
+            }
+
+            // mark active link and scroll it into view
+            if (nav) {
+                const links = nav.querySelectorAll('a.day-link');
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                for (const a of links) {
+                    const href = a.getAttribute('href');
+                    const full = a.href || href;
+                    if (href === currentFile || full.endsWith('/' + currentFile) || full.endsWith(currentFile)) {
+                        a.classList.add('active');
+                        a.setAttribute('aria-current', 'page');
+                        try { a.scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'}); } catch (e) { a.scrollIntoView(); }
+                        break;
+                    }
+                }
+            }
+        })();
+    </script>
 </body>
 </html>

@@ -8,15 +8,92 @@ const uiTranslations = {
         hudWater: "Water",
         hudEnergy: "Thrusters",
         resetConfirm: "Are you sure you want to reset all data and start a new mission?",
-        days: { intro: "Intro", day1: "Day 01", day2: "Day 02", day3: "Day 03", day4: "Day 04", day5: "Day 05", day6: "Day 06", day7: "Day 07", final: "FINAL" },
-        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, Gemini, and Copilot. Without all of you, this journey would not have been possible. 🚀✨",
-        footerThanksHtml: "Made with love. Special thanks to my wonderful husband, two amazing daughters, <strong>Gemini</strong>, and <strong>Copilot</strong>. Without all of you, this journey would not have been possible. 🚀✨",
+        days: { intro: "Intro", day1: "Day 01", day2: "Day 02", day3: "Day 03", day4: "Day 04", day5: "Day 05", day6: "Day 06", day7: "Day 07", final: "FINAL", planetDay1: "Planet Day 1", planetDayMedium: "Planet Day - Medium", planetDayHigh: "Planet Day - Advanced" },
+        planetDayMediumDesc: "Face strange sounds and ground tremors on an alien planet. Perform chair squats and push-ups to survive the day.",
+        planetDayHighDesc: "Battle extreme gravity and hostile flora. Beat your squat record and perform pull-ups to escape.",
+        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini chat. Without all of you, this journey would not have been possible. 🚀✨",
+        footerThanksHtml: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and <strong>Gemini chat</strong>. Without all of you, this journey would not have been possible. 🚀✨",
+        manifestoTitle: "Everything you need is already inside you.",
+        manifestoText: "<p>Complex instructions often distract us from what matters most — connecting with our body. We invite you to return to the roots. This program is based entirely on natural movements, the ones we have known since birth.</p><p>You don't need to compare yourself to perfect pictures. If it feels comfortable, you are doing it right. Our goal is to bring you peace, confidence, and the joy of every movement.</p>",
+
         confirmProtocol: "CONFIRM PROTOCOL",
+        continueBtn: "CONTINUE",
+        authIntroTitle: "PLANETARY CHECK-IN",
+        authIntroText: "AI ORION: 'Commander, the Ark has landed on an unknown planet. Sensors detect a domed structure nearby. Before we move out, we need to assess your condition, record medical risk factors, and measure your cardio response.'",
+        authChecklistTitle: "MEDICAL CHECKLIST",
+        authChecklistSubtitle: "Mark the statements that are true. ORION uses this data to determine your fitness level and contraindications.",
+        authChecklistQuestions: [
+            "Have you had surgery or childbirth in the last six months?",
+            "Do you have any chronic illnesses?",
+            "Do you experience chronic joint pain?",
+            "I regularly train with strength workouts.",
+            "I regularly do active cardio.",
+            "I take moderate walks and train sometimes.",
+            "I mostly sit and rest."
+        ],
+        authSubmitCheckup: "SUBMIT CHECKUP",
+        authCardioTitle: "CARDIO PULSE TEST",
+        authCardioInstructions: "Perform a short cardio test with squats, then enter your pulse before and after five minutes of rest. ORION will use this data to assess your readiness.",
+        authCardioRepsLabel: "Completed squats:",
+        authPulseBeforeLabel: "Pulse before test:",
+        authPulseAfterLabel: "Pulse after rest:",
+        authSubmitCardio: "SUBMIT CARDIO",
+        authResultHighTitle: "HIGH FITNESS LEVEL",
+        authResultHighText: "Planet sensors report aggressive energy readings. ORION warns that the world is hostile and your companion is anxious, but your body is ready to face the challenge.",
+        authResultMediumTitle: "MEDIUM FITNESS LEVEL",
+        authResultMediumText: "This planet is mysterious and moderately aggressive. ORION suggests caution, but the environment is rich with strange signals and potential discoveries.",
+        authResultLowTitle: "LOW FITNESS LEVEL",
+        authResultLowText: "The world appears friendlier and your partner is supportive. ORION recommends careful exploration and patience, because your body needs time to adapt.",
+        authContinueToPlanet: "START FIRST DAY ON PLANET",
+        authMissingFields: "Please fill in the test values before continuing.",
+        planetSummary: "The Ark has landed. Strange green flora surrounds the damaged vessel as ORION guides you toward the glowing dome.",
+        planetText1: "AI ORION: 'Commander, the atmosphere is unstable and plant growth is unusually rapid. The dome ahead is the only clear structure on the horizon. Move slowly, conserve energy, and stay close to the Ark until we can confirm the habitat inside.'",
+        planetText2: "Your partner checks the damaged hull and whispers, 'We are not alone here. This planet feels alive.'",
+        planetBackBtn: "Back to Ark",
+        planetIntroLow: "AI ORION: 'Commander, biometric scans show the flora here is non-aggressive. The plants emit soft bioluminescence and seem to part when we approach. This planet welcomes us gently. Your companion signals approval. We must explore and assess the dome structure, but with caution and care.'",
+        planetTasksTitle: "PLANETARY ADAPTATION TASKS",
+        planetWaterTask: "💧 Hydration: Drink 300 ml to stabilize bio-sensors in the new atmosphere.",
+        planetWaterDone: "✅ Hydration optimized. Bio-sensors adapting to local frequencies.",
+        planetFruitsTask: "🌈 Nutrition: Promise to eat a yellow, red, green, and orange fruit or vegetable.",
+        planetFruitsDone: "✅ Rainbow promise given. Flora resonates with your intention.",
+        planetWorkoutTitle: "GENTLE FLORA EXPLORATION SEQUENCE",
+        planetWorkoutDesc: "The friendly flora pulses with a gentle rhythm. Your companion suggests mimicking the plants' movement pattern—a flowing bridge gesture followed by a cross-body exploration motion. This will help your muscles adapt to the local gravity.",
+        planetExercise1: "🌿 Bridge (Glute Bridge) + Bird Dog Movements",
+        planetExerciseInstructions: "1. Lie on back, feet flat, raise hips in a bridge position (hold 2 sec, repeat).\n2. Move to table position (hands & knees), alternate lifting opposite arm & leg (count each pair).\nEnter total combined movements:",
+        planetSubmitWorkout: "SUBMIT",
+        planetWorkoutLow: "🔴 No movements recorded. Rest and try again when ready.",
+        planetWorkoutMedium: "🟡 Gentle movements. The flora seems to recognize your rhythm. Your companion nods approvingly.",
+        planetWorkoutHigh: "🟢 Excellent! Your body flows with the planet's harmony. The flora glows brighter around you. Your companion smiles.",
+        planetWorkoutVeryHigh: "🟢🟢 Outstanding! You've synchronized perfectly with the alien ecosystem. Bioluminescent flowers bloom around you in celebration. The dome structure ahead pulses with welcoming light.",
+        planetIntroHigh: "AI ORION: 'Captain, we've been pulled into a gravity well. The ground is heavy and the plants are covered in barbs — squat to avoid getting impaled. There are hissing sounds; grip something sturdy. If you can pull yourself up, do as many pull-ups as possible. Eat a protein source and remember water.'",
+        planetWorkoutHighTitle: "GRAVITY TRIAL — SQUAT ENDURANCE & PULL-UPS",
+        planetExerciseMaxSquatsInstructions: "Perform as many chairless squats as you can; try to beat your personal record by at least one rep. Enter squats performed:",
+        planetPullupInstructions: "Find a solid grip and attempt pull-ups. If you cannot, hold an isometric hang or perform assisted negatives. Enter pull-ups performed:",
+        planetProteinTask: "🍗 Nutrition: Eat a protein-rich food and drink water.",
+        planetProteinDone: "✅ Protein consumed. Strength stabilizing.",
+        planetBeatRecord: "🏆 New personal squat record! You beat your best.",
+        planetNoBeat: "🔁 Not yet — you're close. Try to beat the record next time!",
+        planetIntroMedium: "AI ORION: 'Commander, distant rumbling and odd cyclic sounds echo from the undergrowth. Sensors detect large moving masses. Move low and listen — then rise and respond. The terrain trembles occasionally; lie flat and listen, then push up to hands and knees and repeat when safe.'",
+        planetWorkoutMediumTitle: "ATTUNEMENT SEQUENCE — KNEE CHAIR SQUATS & PUSH-UPS",
+        planetExercise2: "🪑 Chair Squats + Push-ups (knees allowed)",
+        planetExercise2Instructions: "1. Stand in front of a chair, perform a controlled squat until you lightly touch the seat, then stand (counts as one).\\n2. Perform push-ups — full or on knees (counts individually).\\nEnter total combined repetitions:",
+        planetTremorExercise: "🌎 Ground Tremor Sequence (Lie down → Listen → Rise to hands & knees)",
+        hudWorkout: "Training",
         interactiveTitleTasks: "DAILY SYNCHRONIZATION TASKS",
         interactiveTitleWorkout: "PHYSICAL WORKOUT OVERDRIVE",
         interactiveRepsLabel: "Enter completed repetitions:",
+        planetTremorInstructions: "When the ground trembles, lie flat and listen for 5 seconds, then press up onto hands and knees supporting yourself, hold 2 seconds, then return to lie flat. Count each full lie-rise as one. Enter number of sequences:",
         interactiveSubmitBtn: "SUBMIT LOG DATA",
         interactiveNextDayBtn: "SYNCHRONIZATION OK. JUMP TO NEXT DAY",
+        journalTitle: "Mission Journal",
+        shareBtn: "Share mission",
+        shareCopied: "Mission progress copied to clipboard.",
+        shareUnsupported: "Sharing is not supported in this browser. Copy the page URL to share manually.",
+        journalCurrentDay: "Today: {day}",
+        journalHydration: "Hydration status:",
+        journalWorkout: "Workout repetitions:",
+        journalCompletedDays: "Completed chapters:",
+        journalNoProgress: "No mission activity recorded yet. Start your first chapter to see progress here.",
         victoryTitle: "MISSION EXODUS: SUCCESSFUL",
         victoryMessage: "You have successfully guided humanity into a new era.",
         victoryLog: "FINAL BIOMETRIC LOG",
@@ -33,15 +110,90 @@ const uiTranslations = {
         hudWater: "Вода",
         hudEnergy: "Двигатели",
         resetConfirm: "Вы уверены, что хотите сбросить все данные и начать новую миссию?",
-        days: { intro: "Интро", day1: "День 01", day2: "День 02", day3: "День 03", day4: "День 04", day5: "День 05", day6: "День 06", day7: "День 07", final: "ФИНАЛ" },
-        footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям, Gemini и Copilot. Без вас всех это путешествие не было бы возможным. 🚀✨",
-        footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям, <strong>Gemini</strong> и <strong>Copilot</strong>. Без вас всех это путешествие не было бы возможным. 🚀✨",
-        confirmProtocol: "ПОДТВЕРДИТЬ ПРОТОКОЛ",
+        days: { intro: "Интро", day1: "День 01", day2: "День 02", day3: "День 03", day4: "День 04", day5: "День 05", day6: "День 06", day7: "День 07", final: "ФИНАЛ", planetDay1: "День на планете", planetDayMedium: "День планеты - Средний", planetDayHigh: "День планеты - Продвинутый" },
+        planetDayMediumDesc: "Столкнись со странными звуками и землетрясениями на чужой планете. Выполняй приседания на стул и отжимания, чтобы выжить.",
+        planetDayHighDesc: "Сражайся с экстремальной гравитацией и враждебной флорой. Побей свой рекорд приседаний и выполни максимум подтягиваний, чтобы сбежать.",
+        footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и Gemini chat. Без вас всех это путешествие не было бы возможным. 🚀✨",
+        footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и <strong>Gemini chat</strong>. Без вас всех это путешествие не было бы возможным. 🚀✨",        
+        manifestoTitle: "Всё необходимое уже есть внутри тебя.",
+        manifestoText: "<p>Сложные инструкции часто отвлекают нас от главного — связи с телом. Мы предлагаем вернуться к истокам. Эта программа основана исключительно на естественных движениях, которые мы знаем с рождения.</p><p>Не нужно сравнивать себя с идеальными картинками. Если тебе комфортно — ты всё делаешь правильно. Наша цель — подарить тебе спокойствие, уверенность и радость от каждого движения.</p>", confirmProtocol: "ПОДТВЕРДИТЬ ПРОТОКОЛ",
+        continueBtn: "ПРОДОЛЖИТЬ",
+        authIntroTitle: "ПРИЕМНАЯ НА ПЛАНЕТЕ",
+        authIntroText: "ИИ ОРИОН: 'Командир, Ковчег приземлился на неизвестной планете. Датчики фиксируют купол поблизости. Прежде чем двигаться дальше, нам нужно оценить ваше состояние, записать медицинские риски и измерить кардио-ответ.'",
+        authChecklistTitle: "МЕДИЦИНСКИЙ ЧЕК-ЛИСТ",
+        authChecklistSubtitle: "Отметьте утверждения, которые верны. ORION использует эти данные, чтобы определить уровень подготовленности и противопоказания.",
+        authChecklistQuestions: [
+            "Были ли у вас операции или роды за последние полгода?",
+            "Есть ли у вас хронические заболевания?",
+            "Есть ли у вас хронические боли в суставах?",
+            "Я регулярно занимаюсь силовыми тренировками.",
+            "Я регулярно активно делаю кардио.",
+            "Умеренные прогулки и тренировки случаются иногда.",
+            "Я в основном сижу и отдыхаю."
+        ],
+        authSubmitCheckup: "ОТПРАВИТЬ ЧЕК-ЛИСТ",
+        authCardioTitle: "КАРДИО ТЕСТ",
+        authCardioInstructions: "Выполните короткий кардио-тест с приседаниями, затем введите пульс до и после пяти минут отдыха. ORION использует эти данные для оценки вашей готовности.",
+        authCardioRepsLabel: "Выполнено приседаний:",
+        authPulseBeforeLabel: "Пульс до теста:",
+        authPulseAfterLabel: "Пульс после отдыха:",
+        authSubmitCardio: "ОТПРАВИТЬ КАРДИО",
+        authResultHighTitle: "ВЫСОКИЙ УРОВЕНЬ",
+        authResultHighText: "Датчики планеты показывают агрессивную энергию. ORION предупреждает, что мир враждебен, и ваш напарник напряжён, но ваше тело готово к вызову.",
+        authResultMediumTitle: "СРЕДНИЙ УРОВЕНЬ",
+        authResultMediumText: "Планета выглядит таинственно и умеренно агрессивно. ORION предлагает осторожность, но среда богата странными сигналами и потенциалом открытий.",
+        authResultLowTitle: "НИЗКИЙ УРОВЕНЬ",
+        authResultLowText: "Мир кажется дружелюбнее, а напарник поддерживает. ORION рекомендует аккуратное исследование и терпение, потому что вашему телу нужно время адаптироваться.",
+        authContinueToPlanet: "НАЧАТЬ ПЕРВЫЙ ДЕНЬ НА ПЛАНЕТЕ",
+        authMissingFields: "Пожалуйста, заполните значения теста перед продолжением.",
+        planetSummary: "Ковчег приземлился. Странная зелёная флора окружает повреждённый корабль, пока ОРИОН ведёт вас к светящемуся куполу.",
+        planetText1: "ИИ ОРИОН: 'Командир, атмосфера нестабильна, а растительность растёт необычно быстро. Светящийся купол впереди — единственная четкая структура на горизонте. Двигайтесь медленно, экономьте энергию и оставайтесь рядом с Ковчегом, пока мы не подтвердим среду обитания внутри.'",
+        planetText2: "Ваш напарник проверяет повреждённый корпус и шепчет: 'Мы не одни здесь. Эта планета кажется живой.'",
+        planetBackBtn: "Вернуться на Ковчег",
+        planetIntroLow: "ИИ ОРИОН: 'Командир, биометрические сканы показывают, что флора здесь не агрессивна. Растения испускают мягкое биолюминесценце и кажется, что растения расступаются при нашем подходе. Эта планета приветствует нас нежно. Ваш напарник твёрдо кивает. Мы должны исследовать структуру купола, но с осторожностью и грацией.'",
+        planetTasksTitle: "ЗАДАЧИ АДАПТАЦИИ НА ПЛАНЕТЕ",
+        planetWaterTask: "💧 Гидратация: Выпей 300 мл, чтобы стабилизировать био-датчики в новой атмосфере.",
+        planetWaterDone: "✅ Гидратация оптимализирована. Био-датчики адаптируются к локальным частотам.",
+        planetFruitsTask: "🌈 Питание: Пообещай, что съешь жёлтый, красный, зелёный и оранжевый овощ или фрукт.",
+        planetFruitsDone: "✅ Радужное обещание дано. Флора резонирует с твоим намерением.",
+        planetWorkoutTitle: "НЕЖНАЯ ПОСЛЕДОВАТЕЛЬНОСТЬ ЭКСПЛОРАЦИИ",
+        planetWorkoutDesc: "Дружелюбная флора пульсирует мягким ритмом. Ваш напарник предлагает имитировать движения растений — течение моста и взмах через туловище. Это поможет вашему телу адаптироваться к местной гравитации.",
+        planetExercise1: "🌿 Мост (Ягодичный мост) + Движения Bird Dog",
+        planetExerciseInstructions: "1. Лежа на спине, ноги на полу, поднять бёдра в мост (держать 2-3 сек, повторить).\n2. Встать на четвереньки (руки, колена), попеременно поднимать противоположную руку и ногу (считать каждую пару).\nВведите общее количество движений:",
+        planetSubmitWorkout: "ОТПРАВИТЬ",
+        planetWorkoutLow: "🔴 Движений не зарегистрировано. Отдохни и попробуй снова, когда будешь готов.",
+        planetWorkoutMedium: "🟡 Плавные нежные движения. Флора кажется распознаёт твой ритм. Твой напарник одобрительно кивает.",
+        planetWorkoutHigh: "🟢 Отлично! Твоё тело течёт в гармонии с планетой. Флора светится ярче вокруг тебя. Твой напарник улыбается.",
+        planetWorkoutVeryHigh: "🟢🟢 Превосходно! Ты идеально синхронизировался с инопланетной экосистемой. Биолюминесцентные цветы расцветают вокруг тебя в праздновании. Купол впереди пульсирует приветственным светом.",
+        planetIntroHigh: "ИИ ОРИОН: 'Капитан, нас затянуло в гравитационную воронку. Тяжёлая гравитация и колючие растения вокруг — приседай, чтобы не пораниться. Слышны шипящие звуки; держись за крепкую опору. Если умеешь подтягиваться — делай максимум подтягиваний. Съешь что-нибудь с белком и не забудь про воду.'",
+        planetWorkoutHighTitle: "ИСПЫТАНИЕ ГРАВИТАЦИЕЙ — ВЫНОСЛИВОСТЬ ПРИСЕДАНИЙ И ПОДТЯГИВАНИЯ",
+        planetExerciseMaxSquatsInstructions: "Выполняй как можно больше приседаний без стула; постарайся побить свой личный рекорд хотя бы на один. Введи выполненные приседания:",
+        planetPullupInstructions: "Найди надежную опору и попытайся подтянуться. Если не умеешь — удерживайся или делай негативные подтягивания. Введи количество подтягиваний:",
+        planetProteinTask: "🍗 Питание: Съешь продукт, богатый белком, и выпей воду.",
+        planetProteinDone: "✅ Белок принят. Силы восстанавливаются.",
+        planetBeatRecord: "🏆 Новый личный рекорд по приседаниям! Ты превзошёл себя.",
+        planetNoBeat: "🔁 Ещё не побит — почти получилось. Попробуй побить рекорд в следующий раз!",
+        planetIntroMedium: "ИИ ОРИОН: 'Командир, издалека доносятся глухие раскаты и странные повторяющиеся звуки из зарослей. Датчики фиксируют крупные движущиеся массы. Двигайся низко и прислушайся — затем встань и ответь. Почва иногда дрожит; ляг и послушай, затем подними корпус на колени и ладони и повтори, когда безопасно.'",
+        planetWorkoutMediumTitle: "СИНХРОНИЗАЦИЯ — ПРИСЕДАНИЯ НА СТУЛ И ОТЖИМАНИЯ",
+        planetExercise2: "🪑 Приседания на стул + Отжимания (возможны на коленях)",
+        planetExercise2Instructions: "1. Встаньте перед стулом, выполните контролируемое приседание до лёгкого касания сиденья, затем встаньте (считается один).\\n2. Выполните отжимания — полноценные или на коленях (считаются поштучно).\\nВведите общее количество повторений:",
+        planetTremorExercise: "🌎 Последовательность при землетрясении (Ляг → Прислушайся → Встань на руки и колени)",
+        planetTremorInstructions: "Когда земля дрожит, лягте плоско и прислушайтесь 5 секунд, затем поднимитесь на руки и колени, удержите 2 секунды, затем вернитесь в положение лёжа. Считайте каждую полную «ляг-встань» как одно. Введите число последовательностей:",
+        hudWorkout: "Тренировка",
         interactiveTitleTasks: "ЕЖЕДНЕВНЫЕ ЗАДАЧИ СИНХРОНИЗАЦИИ",
         interactiveTitleWorkout: "ФИЗИЧЕСКАЯ НАГРУЗКА ФОРСАЖ",
         interactiveRepsLabel: "Введите выполненные повторения:",
         interactiveSubmitBtn: "ОТПРАВИТЬ ДАННЫЕ ЛОГА",
         interactiveNextDayBtn: "СИНХРОНИЗАЦИЯ УСПЕШНА. ПЕРЕЙТИ К СЛЕДУЮЩЕМУ ДНЮ",
+        journalTitle: "Журнал миссии",
+        shareBtn: "Поделиться миссией",
+        shareCopied: "Прогресс миссии скопирован в буфер обмена.",
+        shareUnsupported: "Обмен не поддерживается в этом браузере. Скопируйте URL страницы, чтобы поделиться вручную.",
+        journalCurrentDay: "Сегодня: {day}",
+        journalHydration: "Состояние гидратации:",
+        journalWorkout: "Количество повторений:",
+        journalCompletedDays: "Завершённые главы:",
+        journalNoProgress: "Пока нет активности миссии. Начните первую главу, чтобы увидеть прогресс здесь.",
         victoryTitle: "МИССИЯ ИСХОД: УСПЕШНО",
         victoryMessage: "Вы успешно провели человечество в новую эру.",
         victoryLog: "ФИНАЛЬНЫЙ БИОМЕТРИЧЕСКИЙ ЖУРНАЛ",
@@ -58,15 +210,91 @@ const uiTranslations = {
         hudWater: "Voda",
         hudEnergy: "Potisnici",
         resetConfirm: "Da li ste sigurni da želite da resetujete sve podatke i započnete novu misiju?",
-        days: { intro: "Uvod", day1: "Dan 01", day2: "Dan 02", day3: "Dan 03", day4: "Dan 04", day5: "Dan 05", day6: "Dan 06", day7: "Dan 07", final: "KRAJ" },
-        footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, Gemini-ju i Copilotu. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
-        footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, <strong>Gemini-ju</strong> i <strong>Copilotu</strong>. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        days: { intro: "Uvod", day1: "Dan 01", day2: "Dan 02", day3: "Dan 03", day4: "Dan 04", day5: "Dan 05", day6: "Dan 06", day7: "Dan 07", final: "KRAJ", planetDay1: "Dan na planeti", planetDayMedium: "Planet Dan - Srednji", planetDayHigh: "Planet Dan - Napredniji" },
+        planetDayMediumDesc: "Suoči se sa čudnim zvukovima i drhtavima tla na vanzemaljskoj planeti. Izvršavaj čučnjeve na stolici i sklekove da preživiš dan.",
+        planetDayHighDesc: "Bori se sa ekstremnom gravitacijom i neprijateljskom florom. Obori svoj rekord u čučnjevima i uradi što više zgibova da pobegiš.",
+        footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, Gemini chat. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama i <strong>Gemini chat</strong>. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        manifestoTitle: "Sve što ti treba već je unutar tebe.",
+        manifestoText: "<p>Složene instrukcije nas često odvlače od onoga što je najvažnije — veze sa telom. Pozivamo te da se vratiš korenima. Ovaj program se zasniva isključivo na prirodnim pokretima, onima koje znamo od rođenja.</p><p>Ne treba da se poređuješ sa savršenim slikama. Ako ti je ugodno — radiš to kako treba. Naš cilj je da ti donesemo mir, sigurnost i radost svakog pokreta.</p>",
         confirmProtocol: "POTVRDI PROTOKOL",
+        continueBtn: "NASTAVI",
+        authIntroTitle: "PROVERA NA PLANETI",
+        authIntroText: "AI ORION: 'Komandante, Barca je sletela na nepoznatu planetu. Senzori detektuju kupolu u blizini. Pre nego što krenemo dalje, moramo proceniti vaše stanje, zabeležiti medicinske rizike i izmeriti kardio odgovor.'",
+        authChecklistTitle: "MEDICINSKA LISTA",
+        authChecklistSubtitle: "Obeležite izjave koje su tačne. ORION koristi ove podatke da utvrdi nivo spremnosti i kontraindikacije.",
+        authChecklistQuestions: [
+            "Da li ste imali operaciju ili porođaj u poslednjih šest meseci?",
+            "Da li imate hronične bolesti?",
+            "Da li imate hronične bolove u zglobovima?",
+            "Redovno treniram sa tegovima.",
+            "Redovno radim aktivni kardio.",
+            "Umerene šetnje i treninzi su povremeno.",
+            "Većinom sedim i odmaram se."
+        ],
+        authSubmitCheckup: "POŠALJI LISTU",
+        authCardioTitle: "KARDIO TEST",
+        authCardioInstructions: "Uradi kratki kardio test sa čučnjevima, a zatim unesi puls pre i posle pet minuta odmora. ORION će koristiti ove podatke da proceni tvoju spremnost.",
+        authCardioRepsLabel: "Izvršenih čučnjeva:",
+        authPulseBeforeLabel: "Puls pre testa:",
+        authPulseAfterLabel: "Puls nakon odmora:",
+        authSubmitCardio: "POŠALJI KARDIO",
+        authResultHighTitle: "VISOKI NIVO",
+        authResultHighText: "Senzori planete pokazuju agresivnu energiju. ORION upozorava da je svet neprijateljski, a tvoj saputnik je napet, ali tvoje telo je spremno za izazov.",
+        authResultMediumTitle: "SREDNJI NIVO",
+        authResultMediumText: "Planeta izgleda misteriozno i umereno agresivno. ORION predlaže oprez, ali okolina je bogata čudnim signalima i potencijalnim otkrićima.",
+        authResultLowTitle: "NISKI NIVO",
+        authResultLowText: "Svet deluje prijateljskije, a saputnik te podržava. ORION preporučuje pažljivo istraživanje i strpljenje, jer tvoje telo treba vreme da se prilagodi.",
+        authContinueToPlanet: "POČNI PRVI DAN NA PLANETI",
+        authMissingFields: "Popuni vrednosti testa pre nego što nastavio.",
+        planetSummary: "Barca je sletela. Čudna zelena flora okružuje oštećeni brod dok ORION vodi prema sjajnoj kupoli.",
+        planetText1: "AI ORION: 'Komandante, atmosfera je nestabilna i rast biljaka je neuobičajeno brz. Sjajni kupola ispred je jedina jasna struktura na horizontu. Krećite se polako, štedite energiju i ostanite blizu Barke dok ne potvrdimo životnu sredinu unutra.'",
+        planetText2: "Tvoj saputnik proverava oštećeni trup i šapće: 'Nismo sami ovde. Ova planeta se čini živom.'",
+        planetBackBtn: "Nazad na Barku",
+        planetIntroLow: "AI ORION: 'Komandante, biometrijski skenovi pokazuju da flora ovde nije agresivna. Biljke emituju meku bioluminescenciju i izgledaju da se razmakuju kad se približavamo. Ova planeta nas želi pristojno. Tvoj saputnik se slaže. Moramo da istražimo strukturu kupole, ali oprezno i nežno.'",
+        planetTasksTitle: "ZADACI PLANETARNE ADAPTACIJE",
+        planetWaterTask: "💧 Hidratacija: Popij 300 ml da stabilizuješ bio-senzore u novoj atmosferi.",
+        planetWaterDone: "✅ Hidratacija optimizovana. Bio-senzori se prilagođavaju lokalnim frekvencijama.",
+        planetFruitsTask: "🌈 Ishrana: Obećaj da ćeš pojesti žuto, crveno, zeleno i narandžasto voće ili povrće.",
+        planetFruitsDone: "✅ Duga obećanja data. Flora rezonuje sa tvojom namerom.",
+        planetWorkoutTitle: "NEŽNA SEKVENCA ISTRAŽIVANJA FLORE",
+        planetWorkoutDesc: "Prijateljska flora pulzira sa nežnim ritmom. Tvoj saputnik sugeriše da imitiraš pokret biljaka - teče mostom prate prenosom tela. Ovo će pomoći tvojim mišićima da se prilagode lokalnoj gravitaciji.",
+        planetExercise1: "🌿 Most (Glute Bridge) + Pokret Bird Dog",
+        planetExerciseInstructions: "1. Leži na leđima, noge na podu, podizanje kuka u most (drži 2-3 sec, ponovi).\n2. Stani na četiri noge (ruke, kolena), naizmenično podiži suprotnu ruku i nogu (broji svaki par).\nUnesi ukupan broj kombinovanih pokreta:",
+        planetSubmitWorkout: "POŠALJI",
+        planetWorkoutLow: "🔴 Nijedan pokret nije registrovan. Odmori se i pokušaj ponovo kad bude spremno.",
+        planetWorkoutMedium: "🟡 Nežni pokreti. Flora izgleda da prepoznaje tvoj ritam. Tvoj saputnik odobravajuće klimnje.",
+        planetWorkoutHigh: "🟢 Odličan! Tvoje telo teče sa planetarnom harmonijom. Flora svetluči još jače oko tebe. Tvoj saputnik se osmehuje.",
+        planetWorkoutVeryHigh: "🟢🟢 Neverovatno! Savršeno si se sinhronizovao sa vanzemaljskim ekosustavom. Bioluminiscentni cvetovi procvetavaju oko tebe u slavlja. Kupola napred pulzira svečanom svetlošću.",
+        planetIntroHigh: "AI ORION: 'Kapetane, uhvaćeni smo u gravitacionom bunaru. Gravitacija je jaka, a biljke su prekrivene bodljama — čučni da se ne ubodeš. Čuju se šušti i kliktaji; nađi čvrst oslonac i drži se. Ako možeš da se zguraš, radi što više zgibova. Pojedi nešto bogato proteinima и ne zaboravi vodu.'",
+        planetWorkoutHighTitle: "TEST GRAVITACIJE — IZDRŽLJIVOST ČUČNJEVA I ZGIBOVI",
+        planetExerciseMaxSquatsInstructions: "Uradi što više čučnjeva bez stolice; pokušaj da oboriš lični rekord bar za jedan ponavljanje. Unesi broj čučnjeva:",
+        planetPullupInstructions: "Nađi čvrst hvat i pokušaj zgibove. Ako ne možeš, zadrži statički viseći položaj ili radi negativne ponavljanja. Unesi broj zgibova:",
+        planetProteinTask: "🍗 Ishrana: Pojedi nešto bogato proteinima i popij vodu.",
+        planetProteinDone: "✅ Protein unesen. Energija stabilizovana.",
+        planetBeatRecord: "🏆 Novi lični rekord u čučnjevima! Prevazišao si sebe.",
+        planetNoBeat: "🔁 Još nisi oborio rekord — skoro! Pokušaj ponovo.",
+        planetIntroMedium: "AI ORION: 'Komandante, izdaleka se čuju duboki zveckovi i čudni ciklični zvuci iz šume. Senzori detektuju velike pokretne mase. Kreći se nisko i osluškuj — zatim ustani i odgovori. Tlo povremeno drhti; legni i oslušni, zatim se podigni na kolena i dlanove i ponovi kada bude bezbedno.'",
+        planetWorkoutMediumTitle: "SINHRONIZACIJA — ČUČNJEVI NA STOLICI I SKLEKOVI",
+        planetExercise2: "🪑 Čučnjevi na stolici + Sklekovi (dozvoljeno na kolenima)",
+        planetExercise2Instructions: "1. Stani ispred stolice, izvedi kontrolisani čučanj dok blago ne dotakneš sedište, zatim se podigni (računa se kao jedan).\\n2. Uradi sklekove — puni ili na kolenima (računaju se pojedinačno).\\nUnesi ukupan broj ponavljanja:",
+        planetTremorExercise: "🌎 Sekvenca potresa tla (Legni → Oslušni → Ustani na ruke i kolena)",
+        planetTremorInstructions: "Kada tlo drhti, legni ravno i osluškuj 5 sekundi, zatim se podigni na ruke i kolena, zadrži 2 sekunde, pa se vrati u ležeći položaj. Svaki potpuni 'legni-usti' računa se kao jedno. Unesi broj sekvenci:",
+        hudWorkout: "Trening",
         interactiveTitleTasks: "DNEVNI ZADACI SINHRONIZACIJE",
         interactiveTitleWorkout: "FIZIČKI TRENING FORSAŽ",
         interactiveRepsLabel: "Unesite završena ponavljanja:",
         interactiveSubmitBtn: "POŠALJI PODATKE LOGA",
         interactiveNextDayBtn: "SINHRONIZACIJA USPEŠNA. PREĐI NA SLEDEĆI DAN",
+        journalTitle: "Dnevnik misije",
+        shareBtn: "Podeli misiju",
+        shareCopied: "Napredak misije je kopiran u međuspremnik.",
+        shareUnsupported: "Deljenje nije podržano u ovom pregledaču. Kopirajte URL stranice da biste podelili ručno.",
+        journalCurrentDay: "Danas: {day}",
+        journalHydration: "Stanje hidratacije:",
+        journalWorkout: "Broj ponavljanja:",
+        journalCompletedDays: "Završena poglavlja:",
+        journalNoProgress: "Nema aktivnosti misije. Pokrenite prvo poglavlje da biste ovde videli napredak.",
         victoryTitle: "MISIJA EGZODUS: USPEŠNA",
         victoryMessage: "Uspesno ste poveli čovečanstvo u novu eru.",
         victoryLog: "FINALNI BIOMETRIJSKI LOG",
@@ -131,7 +359,7 @@ const storyData = {
             ru: "🏋️ ТРЕНИРОВКА: ПРОКАЧКА ДАВЛЕНИЯ В ЦИЛИНДРАХ<br><br>ИИ ОРИОН: 'Цилиндры шасси корабля просели под экстремальным давлением. Если мы попробуем сесть в таком состоянии, то превратимся в космический металлолом! Используйте стул для опоры и делайте приседания, чтобы запустить ручные гидравлические насосы. Введите количество повторений, и я рассчитаю выработанную энергию.'",
             sr: "🏋️ TRENING: PUMPANJE PRITISKA U CILINDRIMA<br><br>AI ORION: 'Cilindri stajnog trapa broda su popustili pod ekstremnim pritiskom. Ako pokušamo da sletimo ovako, pretvorićemo se u kosmičko staro gvožđe! Koristite stolicu kao oslonac i radite čučnjeve kako biste pokrenuli ručne hidraulične pumpe. Unesite broj ponavljanja i ja ću izračunati generisanu energiju.'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Pressure pumps not activated. The vessel requires energy!",
@@ -190,7 +418,7 @@ const storyData = {
             ru: "🏋️ ТРЕНИРОВКА: РУЧНАЯ ГЕРМЕТИЗАЦИЯ ЛЮКА<br><br>ИИ ОРИОН: 'Электропривод сгорел. Единственный способ запереть переборку — взяться за аварийные рычаги и буквально отжать массивную стальную плиту от себя. Встаньте на колени, поставьте руки широко. Каждое отжимание — это еще один сантиметр закрытия тяжелой бронедвери!'",
             sr: "🏋️ TRENING: RUČNO ZAPTIVANJE OTVORA<br><br>AI ORION: 'Električni pogon je pregoreo. Jedini način da zaključamo pregradu je da uhvatimo poluge za hitne slučajeve i bukvalno odgurnemo masivnu čeličanu ploču od sebe. Spustite se na kolena, raširite ruke. Svaki sklek predstavlja jedan centimetar zatvaranja teških oklopnih vrata!'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Bulkhead open. Vacuum is draining our supplies!",
@@ -249,7 +477,7 @@ const storyData = {
             ru: "🏋️ ГЛАВНАЯ МИССИЯ: СКРУЧИВАНИЯ НА ПРЕСС 'РЕАКЦИЯ ЯДРА'<br><br>ИИ ОРИОН: 'Мы сползаем в гравитационный колодец сирены! Наш единственный шанс спастись — запустить нижние импульсные двигатели для резкого изменения курса. Лягте на спину, упритесь руками, поднимите ноги и подтяните таз к груди! Вытолкните корабль вверх!'",
             sr: "🏋️ GLAVNA MISIJA: TRBUŠNJACI ZA REAKCIJU JEZGRA<br><br>AI ORION: 'Klizimo u gravitacioni bunar sirene! Naš jedini spas je da aktiviramo donje impulsne potisnike za oštru korekciju kursa. Legnite na leđa, oslonite se rukama, podignite noge i privucite karlicu grudima! Lansirajte brod nagore!'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Flight axis skewed. The ship is being sucked into the siren's gravitational singularity!",
@@ -308,7 +536,7 @@ const storyData = {
             ru: "🏋️ ТРЕНИРОВКА: ЗАЩИТНЫЕ УДАРЫ В НЕВЕСОМОСТИ<br><br>ИИ ОРИОН: 'Палуба дрожит, гравитация отключена! Примите защитную стойку, удерживайте равновесие на одной ноге и наносите мощные, быстрые удары ногами вперед, чтобы выбросить тварей обратно в вакуум. Считайте удары: мы должны зачистить и левый, и правый сектора!'",
             sr: "🏋️ TRENING: ODBRAMBENI UDARCI U BEZTEŽINSKOM STANJU<br><br>AI ORION: 'Paluba se trese, gravitacija je isključena! Zauzmite odbrambeni stav, održavajte ravnotežu na jednoj nozi i zadajte snažne, brze udarce nogom unapred kako biste odbacili zveri nazad u vakuum. Brojte svoje udarce: moramo očistiti i levi i desni sektor!'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Defense breached! The hunters are swarming the central reactor core!",
@@ -367,7 +595,7 @@ const storyData = {
             ru: "🏋️ ТРЕНИРОВКА: КАЛИБРОВКА МАЧТЫ В УДЕРЖАНИИ 'СУПЕРМЕН'<br><br>ИИ ОРИОН: 'Автоматический привод антенной решетки заклинило. Лягте на палубу лицом вниз, вытяните руки вперед и оторвите конечности от пола, удерживая их в верхней точке. Ваше тело должно послужить несущей мачтой антенны. Каждый подъем приближает наш передающий луч к Альфе Центавра!'",
             sr: "🏋️ TRENING: KALIBRACIJA STUBA U 'SUPERMEN' IZDRŽAJU<br><br>AI ORION: 'Automatski motor antene je zaglavljen. Legnite licem prema dole na palubu, ispružite ruke napred i podignite ekstremitete od poda, držeći ih u najvišoj tački. Vaše telo mora delovati kao noseći stub antene. Svako podizanje usmerava naš prenosni snop bliže Alfi Kentauri!'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Alignment lost. The vessel drifts in complete radio silence.",
@@ -426,7 +654,7 @@ const storyData = {
             ru: "🏋️ ГЛАВНАЯ МИССИЯ: УДАРНЫЕ БЕРПИ (БЕЗ ПРЫЖКА)<br><br>ИИ ОРИОН: 'Гравитация размазывает нас по палубе! Падайте в положение планки под весом перегрузки, затем, преодолевая колоссальный вес, выталкивайте себя обратно вверх. Каждое повторение подает аварийное питание на посадочные двигатели. Смягчите удар, Командир!'",
             sr: "🏋️ GLAVNA MISIJA: UDARNI BERPI (BEZ SKOKA)<br><br>AI ORION: 'Gravitacija nas baca o palubu! Spustite se u položaj planka pod uticajem G-sile, a zatim se, boreći se protiv ogromne težine, gurnite nazad nagore. Svako ponavljanje ubrizgava struju za hitne slučajeve u potisnike za spuštanje. Ublažite udar, Komandante!'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Propulsion systems offline. The Ark slammed into the planetary core at terminal velocity...",
@@ -485,7 +713,7 @@ const storyData = {
             ru: "🏋️ ФИНАЛЬНОЕ ИСПЫТАНИЕ: ПЕРЕКАТЫ НА СПИНЕ ДЛЯ ВЫРАВНИВАНИЯ ПОЗВОНОЧНИКА<br><br>ИИ ОРИОН: 'Силы приземления сжали ваш позвоночник, а местная гравитация очень сильна. Сядьте на палубу, подтяните колени к груди, крепко обнимите их и плавно перекатывайтесь назад и вперед по спине. Это выровняет позвонки и восстановит нейронные сигналы. Введите количество повторений, и я откалибрую вашу подвижность.'",
             sr: "🏋️ FINALNI IZAZOV: KOTRLJANJE NA LEĐIMA ZA PORAVNANJE KIČME<br><br>AI ORION: 'Sile sletanja su kompresovale vašu kičmu, a lokalna gravitacija je intenzivna. Sedite na palubu, privucite kolena grudima, čvrsto ih zagrlite i nežno se kotrljajte unazad i unapred duž kičme. Ovo će poravnati vaše pršljenove i vratiti neuronske signale. Unesite ponavljanja i ja ću kalibrisati vašu mobilnost.'"
         },
-        calcResult: function(count, lang = 'en') {
+        calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
                     error: "Error: Spinal rolls not executed. Your neural pathways are unresponsive!",
@@ -548,6 +776,29 @@ const storyData = {
             en: ["SUMMARIZE RESULTS", "GLANCE AT YOUR PARTNER", "PREPARE WEAPONS", "END OF CHAPTER ONE 🚀"],
             ru: ["ПОДВЕСТИ ИТОГИ", "ВЗГЛЯНУТЬ НА НАПАРНИКА", "ПОДГОТОВИТЬ ОРУЖИЕ", "КОНЕЦ ПЕРВОЙ ГЛАВЫ 🚀"],
             sr: ["SUMIRAJ REZULTATE", "POGLEDAJ PARTNERA", "PRIPREMI ORUŽJE", "KRAJ PRVOG POGLAVLJA 🚀"]
+        },
+        nextKey: null
+    },
+    planetDay1: {
+        type: "text-only",
+        steps: {
+            en: [
+                "AI ORION: 'The landing is complete. You see a glowing dome in the distance and the local atmosphere is thin but breathable through the ship's filter. This is your first day on the planet. Stay close to your companion, investigate the dome, and move slowly while the Ark remains damaged.'",
+                "Commander, if we attempt to leave this system, we will need to penetrate the dome and discover the energy source inside. The planet is still unknown, and your physiology is our most important asset."
+            ],
+            ru: [
+                "ИИ ОРИОН: 'Посадка завершена. Вдалеке виден светящийся купол, а местная атмосфера разрежена, но её можно фильтровать. Это ваш первый день на планете. Держитесь рядом с напарником, исследуйте купол и двигайтесь медленно, пока Ковчег повреждён.'",
+                "Командир, если мы попытаемся покинуть эту систему, нам придётся проникнуть под купол и найти источник энергии внутри. Планета по-прежнему неизвестна, и ваша физиология — наш самый важный ресурс."
+            ],
+            sr: [
+                "AI ORION: 'Sletanje je završeno. U daljini se vidi sjajni kupola, a lokalna atmosfera je retka, ali se može filtrirati. Ovo je tvoj prvi dan na planeti. Drži se blizu saputnika, istraži kupolu i kreći se polako dok je Barca oštećena.'",
+                "Komandante, ako pokušamo da napustimo ovaj sistem, moraćemo da prodremo ispod kupole i pronađemo izvor energije unutra. Planeta je i dalje nepoznata, a tvoja fiziologija je naš najvažniji resurs."
+            ]
+        },
+        btnTexts: {
+            en: ["BEGIN PLANET EXPLORATION"],
+            ru: ["НАЧАТЬ ИССЛЕДОВАНИЕ ПЛАНЕТЫ"],
+            sr: ["POČNI ISTRAŽIVANJE PLANETE"]
         },
         nextKey: null
     }
@@ -682,7 +933,7 @@ function changeLanguage(lang) {
     gameState.currentLang = safeLang;
     saveProgress();
     updateInterfaceTexts();
-    
+
     const finalSteps = getTranslatedDaySteps(storyData.final, safeLang);
     if (gameState.currentDayKey === "final" && gameState.currentStepIndex >= finalSteps.length - 1) {
         renderVictoryScreen();
@@ -696,28 +947,40 @@ function changeLanguage(lang) {
 function updateInterfaceTexts() {
     const lang = gameState.currentLang;
     const trans = uiTranslations[lang];
-    
+
     const indicator = document.getElementById("status-indicator");
     if (indicator) indicator.textContent = trans.systemOnline;
-    
+
     const resetBtn = document.getElementById("reset-btn");
     if (resetBtn) resetBtn.textContent = trans.resetBtn;
-    
+
     setDocumentLanguage(gameState.currentLang);
-    
+
     const lblWater = document.getElementById("label-water");
     if (lblWater) lblWater.textContent = trans.hudWater;
-    
+
     const lblEnergy = document.getElementById("label-energy");
     if (lblEnergy) lblEnergy.textContent = trans.hudEnergy;
-    
+
     const footerTxt = document.getElementById("footer-thanks");
+    
     if (footerTxt) {
         footerTxt.innerHTML = trans.footerThanksHtml || trans.footerThanks;
     }
-    
+const manifestoTitle = document.getElementById("manifesto-title");
+if (manifestoTitle) manifestoTitle.textContent = trans.manifestoTitle;
+
+const manifestoText = document.getElementById("manifesto-text");
+if (manifestoText) manifestoText.innerHTML = trans.manifestoText;
+    const journalHeading = document.getElementById("journal-title");
+    if (journalHeading) journalHeading.textContent = trans.journalTitle;
+
+    const shareActionBtn = document.getElementById("share-btn");
+    if (shareActionBtn) shareActionBtn.textContent = trans.shareBtn;
+
     setPageMetadata(gameState.currentLang);
     renderDayNav();
+    renderMissionJournal();
 }
 
 function setDocumentLanguage(lang) {
@@ -808,7 +1071,7 @@ function loadDay(dayKey) {
     gameState.currentDayKey = dayKey;
     gameState.currentStepIndex = 0;
     saveProgress();
-    
+
     document.querySelectorAll(".nav-btn").forEach(btn => {
         btn.classList.remove("active");
         btn.removeAttribute("aria-current");
@@ -820,7 +1083,7 @@ function loadDay(dayKey) {
         activeBtn.setAttribute("aria-current", "page");
         activeBtn.setAttribute("aria-pressed", "true");
     }
-    
+
     if (dayKey === "final") {
         renderVictoryScreen();
     } else {
@@ -828,12 +1091,13 @@ function loadDay(dayKey) {
         updateHUD();
     }
     updateProgressIndicator();
+    renderMissionJournal();
 }
 
 // Обновление HUD баров (Water и Thrusters)
 function updateHUD() {
     const currentDay = storyData[gameState.currentDayKey];
-    
+
     // Вычисляем процент воды
     let waterPercent = 0;
     if (currentDay && currentDay.type === "interactive-day" && currentDay.tasks[gameState.currentLang]) {
@@ -841,7 +1105,7 @@ function updateHUD() {
         const isWaterChecked = getStoredItem(`track_${gameState.currentDayKey}_${taskId}`) === "true";
         waterPercent = isWaterChecked ? 100 : 0;
     }
-    
+
     // Процент двигателей (тренировки)
     const workoutReps = parseInt(getStoredItem(`track_${gameState.currentDayKey}_workout_reps`) || "0");
     let energyPercent = 0;
@@ -852,14 +1116,14 @@ function updateHUD() {
     } else if (gameState.currentDayKey === "day6" || gameState.currentDayKey === "day7") {
         energyPercent = Math.min(100, Math.round((workoutReps / 20) * 100));
     }
-    
+
     const barWater = document.getElementById("hud-water");
     const txtWater = document.getElementById("hud-water-txt");
     if (barWater && txtWater) {
         barWater.style.width = `${waterPercent}%`;
         txtWater.textContent = `${waterPercent}%`;
     }
-    
+
     const barEnergy = document.getElementById("hud-energy");
     const txtEnergy = document.getElementById("hud-energy-txt");
     if (barEnergy && txtEnergy) {
@@ -920,18 +1184,19 @@ function renderCurrentState() {
     const lang = gameState.currentLang;
     const output = document.getElementById("story-text");
     const actionBtn = document.getElementById("action-btn");
-    
+
     if (!dayData || !output || !actionBtn) return;
-    
+
     const existingInteractive = document.getElementById("interactive-container");
     if (existingInteractive) existingInteractive.remove();
-    
+
     if (dayData.type === "text-only") {
         renderTextOnlyScreen(dayData, lang, output, actionBtn);
     } else if (dayData.type === "interactive-day") {
         renderInteractiveDayScreen(dayData, lang, output, actionBtn);
     }
     updateProgressIndicator();
+    renderMissionJournal();
 }
 
 function renderTextOnlyScreen(dayData, lang, output, actionBtn) {
@@ -977,6 +1242,12 @@ function renderInteractiveDayScreen(dayData, lang, output, actionBtn) {
                 <div class="input-group">
                     <input type="number" id="reps-input" min="0" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${savedReps}" placeholder="0">
                     <button type="button" id="submit-workout" class="submit-btn">${trans.interactiveSubmitBtn}</button>
+                    <button type="button" id="timer-start-btn" class="submit-btn">▶ СТАРТ</button>
+                    <div class="timer-display">
+                        <span id="timer-phase"></span>
+                        <span id="timer-seconds">30</span>
+                        <span id="timer-rounds"></span>
+                    </div>
                 </div>
             </div>
             <div class="juice-box bonus-box hidden" id="workout-feedback"></div>
@@ -1025,7 +1296,7 @@ function handleAction() {
         skipTypewriter();
         return;
     }
-    
+
     const steps = dayData.steps[lang] || dayData.steps["en"];
     if (gameState.currentStepIndex < steps.length - 1) {
         gameState.currentStepIndex++;
@@ -1056,6 +1327,7 @@ function toggleTask(taskId, isChecked) {
     }
     updateHUD();
     checkDayCompletion();
+    renderMissionJournal();
 }
 
 // ТВОЯ ИСПРАВЛЕННАЯ ЛОГИКА ПООЩРЕНИЯ ТРЕНИРОВКИ:
@@ -1063,21 +1335,22 @@ function submitWorkout() {
     const dayData = storyData[gameState.currentDayKey];
     const input = document.getElementById("reps-input");
     const feedbackBox = document.getElementById("workout-feedback");
-    
+
     if (!dayData || !input || !feedbackBox) return;
-    
+
     const val = parseInt(input.value || "0");
     setStoredItem(`track_${gameState.currentDayKey}_workout_reps`, val.toString());
-    
+
     // Вызываем calcResult, передавая количество и язык
     const feedbackText = dayData.calcResult(val, gameState.currentLang);
-    
+
     // Красиво выводим поощрение на экран
     feedbackBox.innerHTML = feedbackText;
     feedbackBox.classList.remove("hidden");
-    
+
     updateHUD();
     checkDayCompletion();
+    renderMissionJournal();
 }
 
 // Проверка выполнения нормы дня для разблокировки следующего дня
@@ -1098,11 +1371,119 @@ function checkDayCompletion() {
     }
 }
 
+function getCompletedDays() {
+    return Object.keys(storyData).filter(dayKey => {
+        const day = storyData[dayKey];
+        if (!day || day.type !== "interactive-day") return false;
+        const taskId = getTranslatedDayTasks(day, gameState.currentLang)[0]?.id;
+        const waterOk = taskId ? getStoredItem(`track_${dayKey}_${taskId}`) === "true" : false;
+        const reps = parseInt(getStoredItem(`track_${dayKey}_workout_reps`) || "0");
+        return waterOk && reps >= 1;
+    });
+}
+
+function renderMissionJournal() {
+    const journalContent = document.getElementById("mission-log-content");
+    const shareMessage = document.getElementById("share-message");
+    const trans = uiTranslations[gameState.currentLang];
+    if (!journalContent) return;
+
+    const currentDayLabel = uiTranslations[gameState.currentLang]?.days?.[gameState.currentDayKey] || gameState.currentDayKey;
+    const currentDayData = storyData[gameState.currentDayKey];
+    const taskId = currentDayData && currentDayData.type === "interactive-day" ? getTranslatedDayTasks(currentDayData, gameState.currentLang)[0]?.id : undefined;
+    const waterDone = taskId ? getStoredItem(`track_${gameState.currentDayKey}_${taskId}`) === "true" : false;
+    const reps = parseInt(getStoredItem(`track_${gameState.currentDayKey}_workout_reps`) || "0");
+    const completedDays = getCompletedDays();
+
+    let contentHtml = "";
+    if (!waterDone && reps === 0 && completedDays.length === 0 && gameState.currentDayKey === "intro") {
+        contentHtml = `<p>${trans.journalNoProgress}</p>`;
+    } else {
+        contentHtml = `
+            <p><strong>${trans.journalCurrentDay.replace("{day}", currentDayLabel)}</strong></p>
+            <p>${trans.journalHydration} <strong>${waterDone ? "✅" : "❌"}</strong></p>
+            <p>${trans.journalWorkout} <strong>${reps}</strong></p>
+            <p>${trans.journalCompletedDays} <strong>${completedDays.length}</strong></p>
+        `;
+        if (completedDays.length) {
+            const listItems = completedDays.map(dayKey => `<li>${uiTranslations[gameState.currentLang]?.days?.[dayKey] || dayKey}</li>`).join("");
+            contentHtml += `<ul>${listItems}</ul>`;
+        }
+    }
+
+    journalContent.innerHTML = contentHtml;
+    if (shareMessage) {
+        shareMessage.textContent = "";
+        shareMessage.classList.add("hidden");
+    }
+}
+
+function shareMissionProgress() {
+    const trans = uiTranslations[gameState.currentLang];
+    const currentDayLabel = uiTranslations[gameState.currentLang]?.days?.[gameState.currentDayKey] || gameState.currentDayKey;
+    const currentDayData = storyData[gameState.currentDayKey];
+    const taskId = currentDayData && currentDayData.type === "interactive-day" ? getTranslatedDayTasks(currentDayData, gameState.currentLang)[0]?.id : undefined;
+    const waterDone = taskId ? getStoredItem(`track_${gameState.currentDayKey}_${taskId}`) === "true" : false;
+    const reps = parseInt(getStoredItem(`track_${gameState.currentDayKey}_workout_reps`) || "0");
+    const completedDays = getCompletedDays();
+    const shareText = `${trans.pageTitle}\n${trans.journalCurrentDay.replace("{day}", currentDayLabel)}\n${trans.journalHydration} ${waterDone ? "✅" : "❌"}\n${trans.journalWorkout} ${reps}\n${trans.journalCompletedDays} ${completedDays.length}\n${window.location.href}`;
+    const shareData = { title: trans.pageTitle, text: shareText, url: window.location.href };
+    const shareMessage = document.getElementById("share-message");
+
+    const showMessage = message => {
+        if (!shareMessage) return;
+        shareMessage.textContent = message;
+        shareMessage.classList.remove("hidden");
+        setTimeout(() => shareMessage.classList.add("hidden"), 4000);
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData).catch(() => showMessage(trans.shareUnsupported));
+    } else if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(shareText)
+            .then(() => showMessage(trans.shareCopied))
+            .catch(() => showMessage(trans.shareUnsupported));
+    } else {
+        showMessage(trans.shareUnsupported);
+    }
+}
+
 // Переход к следующему дню по кнопке
 function jumpToNextDay() {
     const dayData = storyData[gameState.currentDayKey];
     if (!dayData || !dayData.nextKey) return;
-    
+
+    const now = new Date();
+    const todayStr = now.toDateString();
+    const lastDayKey = `last_completed_${gameState.currentDayKey}`;
+    const lastCompleted = getStoredItem(lastDayKey);
+
+    if (lastCompleted && lastCompleted === todayStr) {
+        // Уже завершили сегодня — показываем сообщение
+        const lang = gameState.currentLang;
+        const message = lang === 'ru'
+            ? '🌟 Отличная работа! Ты сегодня можешь ещё прогуляться 30 минут — остальное завтра!'
+            : lang === 'sr'
+            ? '🌟 Odličan posao! Možeš još prošetati 30 minuta danas — ostalo sutra!'
+            : '🌟 Great work! You can still take a 30-minute walk today — the rest tomorrow!';
+
+        const nextBtn = document.getElementById('next-day-btn');
+        if (nextBtn) {
+            let hint = document.getElementById('next-day-hint');
+            if (!hint) {
+                hint = document.createElement('p');
+                hint.id = 'next-day-hint';
+                hint.style.cssText = 'color: #00ffcc; font-size: 0.85rem; margin-top: 10px; font-family: Space Mono, monospace;';
+                nextBtn.insertAdjacentElement('afterend', hint);
+            }
+            hint.textContent = message;
+        }
+        return;
+    }
+
+    // Сохраняем дату завершения
+    setStoredItem(lastDayKey, todayStr);
+
     const nextDay = dayData.nextKey;
     if (!gameState.unlockedDays.includes(nextDay)) {
         gameState.unlockedDays.push(nextDay);
@@ -1110,7 +1491,7 @@ function jumpToNextDay() {
     gameState.currentDayKey = nextDay;
     gameState.currentStepIndex = 0;
     saveProgress();
-    
+
     updateInterfaceTexts();
     loadDay(nextDay);
 }
@@ -1119,7 +1500,7 @@ function jumpToNextDay() {
 function getAggregateStats() {
     let totalWater = 0;
     let totalWorkouts = 0;
-    
+
     Object.keys(storyData).forEach(dayKey => {
         const day = storyData[dayKey];
         if (day.type === "interactive-day") {
@@ -1132,7 +1513,7 @@ function getAggregateStats() {
             totalWorkouts += reps;
         }
     });
-    
+
     return { totalWater, totalWorkouts };
 }
 
@@ -1141,20 +1522,20 @@ function renderVictoryScreen() {
     const trans = uiTranslations[gameState.currentLang];
     const container = document.getElementById("interactive-container");
     if (container) container.remove();
-    
+
     const output = document.getElementById("story-text");
     const actionBtn = document.getElementById("action-btn");
     if (actionBtn) actionBtn.style.display = "none";
-    
+
     const stats = getAggregateStats();
-    
+
     // Рендерим шаги финала в виде красивого текста
     let stepsHtml = "";
     const finalSteps = getTranslatedDaySteps(storyData.final, gameState.currentLang);
     finalSteps.forEach(step => {
         stepsHtml += `<p class="victory-step">${step}</p>`;
     });
-    
+
     output.innerHTML = `
         <div class="victory-container">
             <h2>🏆 ${trans.victoryTitle}</h2>
@@ -1172,13 +1553,192 @@ function renderVictoryScreen() {
                 </div>
             </div>
             
-            <button type="button" id="victory-new-mission" class="action-btn">${trans.victoryNewMission}</button>
+            <button type="button" id="victory-new-mission" class="action-btn">${trans.continueBtn}</button>
         </div>
     `;
     const victoryButton = document.getElementById("victory-new-mission");
     if (victoryButton) {
-        victoryButton.addEventListener("click", confirmResetProgress);
+        victoryButton.addEventListener("click", startPostFinalAssessment);
     }
+}
+
+function startPostFinalAssessment() {
+    gameState.postFinalStage = "authIntro";
+    gameState.assessment = {
+        medicalAnswers: {},
+        cardioReps: 0,
+        pulseBefore: 0,
+        pulseAfter: 0,
+        fitnessLevel: null,
+        branch: null
+    };
+    renderPostFinalAssessment();
+}
+
+function renderPostFinalAssessment() {
+    const output = document.getElementById("story-text");
+    const actionBtn = document.getElementById("action-btn");
+    const trans = uiTranslations[gameState.currentLang];
+
+    if (actionBtn) {
+        actionBtn.style.display = "none";
+    }
+
+    const existing = document.getElementById("interactive-container");
+    if (existing) existing.remove();
+    if (!output) return;
+
+    output.innerHTML = "";
+    const container = document.createElement("div");
+    container.id = "interactive-container";
+    container.className = "interactive-container";
+
+    if (gameState.postFinalStage === "authIntro") {
+        container.innerHTML = `
+            <div class="interactive-section">
+                <h3>${trans.authIntroTitle}</h3>
+                <p>${trans.authIntroText}</p>
+            </div>
+            <button type="button" id="assessment-start" class="action-btn">${trans.continueBtn}</button>
+        `;
+    } else if (gameState.postFinalStage === "authChecklist") {
+        let questionsHtml = "";
+        const questions = uiTranslations[gameState.currentLang].authChecklistQuestions || uiTranslations.en.authChecklistQuestions;
+        questions.forEach((question, index) => {
+            questionsHtml += `
+                <label class="task-item">
+                    <input type="checkbox" data-question-id="q${index + 1}" id="check-q${index + 1}">
+                    <span>${question}</span>
+                </label>
+            `;
+        });
+        container.innerHTML = `
+            <div class="interactive-section">
+                <h3>${trans.authChecklistTitle}</h3>
+                <p>${trans.authChecklistSubtitle}</p>
+                <div class="tasks-list">${questionsHtml}</div>
+            </div>
+            <button type="button" id="submit-checkup" class="submit-btn">${trans.authSubmitCheckup}</button>
+        `;
+    } else if (gameState.postFinalStage === "cardioTest") {
+        container.innerHTML = `
+            <div class="interactive-section">
+                <h3>${trans.authCardioTitle}</h3>
+                <p>${trans.authCardioInstructions}</p>
+                <div class="workout-form">
+                    <label for="cardio-reps">${trans.authCardioRepsLabel}</label>
+                    <input type="number" id="cardio-reps" min="0" value="${gameState.assessment.cardioReps || ""}" placeholder="0">
+                    <label for="pulse-before">${trans.authPulseBeforeLabel}</label>
+                    <input type="number" id="pulse-before" min="0" value="${gameState.assessment.pulseBefore || ""}" placeholder="0">
+                    <label for="pulse-after">${trans.authPulseAfterLabel}</label>
+                    <input type="number" id="pulse-after" min="0" value="${gameState.assessment.pulseAfter || ""}" placeholder="0">
+                </div>
+                <div class="juice-box" id="assessment-feedback"></div>
+            </div>
+            <button type="button" id="submit-cardio" class="submit-btn">${trans.authSubmitCardio}</button>
+        `;
+    } else if (gameState.postFinalStage === "assessmentResult") {
+        const resultTitle = trans[`authResult${capitalizeString(gameState.assessment.fitnessLevel)}Title`] || trans.authResultMediumTitle;
+        const resultText = trans[`authResult${capitalizeString(gameState.assessment.fitnessLevel)}Text`] || trans.authResultMediumText;
+        container.innerHTML = `
+            <div class="interactive-section">
+                <h3>${resultTitle}</h3>
+                <p>${resultText}</p>
+                <p>AI ORION: 'I detected a dome structure on the horizon. If you decide to search for a better planet, we will need to enter the dome and discover what magic it hides. The Ark is damaged and cannot safely leave this system yet.'</p>
+            </div>
+            <button type="button" id="start-planet" class="action-btn">${trans.authContinueToPlanet}</button>
+        `;
+    }
+
+    output.parentNode.insertBefore(container, output.nextSibling);
+
+    if (gameState.postFinalStage === "authIntro") {
+        const startBtn = document.getElementById("assessment-start");
+        if (startBtn) startBtn.addEventListener("click", () => {
+            gameState.postFinalStage = "authChecklist";
+            renderPostFinalAssessment();
+        });
+    }
+
+    if (gameState.postFinalStage === "authChecklist") {
+        const submitCheckupBtn = document.getElementById("submit-checkup");
+        if (submitCheckupBtn) submitCheckupBtn.addEventListener("click", submitMedicalChecklist);
+    }
+
+    if (gameState.postFinalStage === "cardioTest") {
+        const submitCardioBtn = document.getElementById("submit-cardio");
+        if (submitCardioBtn) submitCardioBtn.addEventListener("click", submitCardioAssessment);
+    }
+
+    if (gameState.postFinalStage === "assessmentResult") {
+        const startPlanetBtn = document.getElementById("start-planet");
+        if (startPlanetBtn) startPlanetBtn.addEventListener("click", startPlanetDay);
+    }
+}
+
+function submitMedicalChecklist() {
+    const questions = uiTranslations[gameState.currentLang].authChecklistQuestions || uiTranslations.en.authChecklistQuestions;
+    const answers = {};
+    questions.forEach((_, index) => {
+        const checkbox = document.getElementById(`check-q${index + 1}`);
+        if (checkbox) {
+            answers[`q${index + 1}`] = checkbox.checked;
+        }
+    });
+    gameState.assessment.medicalAnswers = answers;
+    gameState.postFinalStage = "cardioTest";
+    renderPostFinalAssessment();
+}
+
+function submitCardioAssessment() {
+    const feedbackBox = document.getElementById("assessment-feedback");
+    const repsInput = document.getElementById("cardio-reps");
+    const pulseBeforeInput = document.getElementById("pulse-before");
+    const pulseAfterInput = document.getElementById("pulse-after");
+    const trans = uiTranslations[gameState.currentLang];
+    if (!repsInput || !pulseBeforeInput || !pulseAfterInput || !feedbackBox) return;
+
+    const reps = parseInt(repsInput.value || "0", 10);
+    const pulseBefore = parseInt(pulseBeforeInput.value || "0", 10);
+    const pulseAfter = parseInt(pulseAfterInput.value || "0", 10);
+    if (isNaN(reps) || isNaN(pulseBefore) || isNaN(pulseAfter) || reps < 0 || pulseBefore < 0 || pulseAfter < 0) {
+        feedbackBox.textContent = trans.authMissingFields;
+        return;
+    }
+
+    gameState.assessment.cardioReps = reps;
+    gameState.assessment.pulseBefore = pulseBefore;
+    gameState.assessment.pulseAfter = pulseAfter;
+    gameState.assessment.fitnessLevel = calculateFitnessLevel();
+    gameState.postFinalStage = "assessmentResult";
+    renderPostFinalAssessment();
+}
+
+function calculateFitnessLevel() {
+    const answers = gameState.assessment.medicalAnswers || {};
+    const contraindications = [answers.q1, answers.q2, answers.q3].filter(Boolean).length;
+    const activityScore = [answers.q4, answers.q5, answers.q6, answers.q7].filter(Boolean).length;
+    const reps = gameState.assessment.cardioReps || 0;
+    const pulseBefore = gameState.assessment.pulseBefore || 0;
+    const pulseAfter = gameState.assessment.pulseAfter || 0;
+    const pulseChange = pulseAfter - pulseBefore;
+
+    if (contraindications > 0 || reps < 12 || pulseAfter > 120 || pulseChange > 35) {
+        return "Low";
+    }
+    if (activityScore >= 3 && reps >= 35 && pulseChange <= 20) {
+        return "High";
+    }
+    return "Medium";
+}
+
+function capitalizeString(value) {
+    if (!value || typeof value !== "string") return "";
+    return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+}
+
+function startPlanetDay() {
+    window.location.href = "planet-day1.html";
 }
 
 // Звездный фон
@@ -1234,6 +1794,11 @@ function initPageEvents() {
         langSelect.addEventListener("change", event => changeLanguage(event.target.value));
     }
 
+    const shareBtn = document.getElementById("share-btn");
+    if (shareBtn) {
+        shareBtn.addEventListener("click", shareMissionProgress);
+    }
+
     const actionBtn = document.getElementById("action-btn");
     if (actionBtn) {
         actionBtn.addEventListener("click", handleAction);
@@ -1259,5 +1824,264 @@ function registerServiceWorker() {
             .catch(error => {
                 console.warn("Service Worker registration failed:", error);
             });
+    }    
+}
+const speakBtn = document.getElementById('speak-btn');
+
+if (speakBtn) {
+    speakBtn.addEventListener('click', () => {
+        if (speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+            speakBtn.textContent = '🔊';
+            return;
+        }
+
+        // Берём текст: сначала из интерактивного дня, потом из обычного story-text
+        const orionEl = document.querySelector('#interactive-container .orion-talk');
+        const storyEl = document.getElementById('story-text');
+        const text = (orionEl?.innerText?.trim()) || (storyEl?.innerText?.trim()) || '';
+
+        if (!text) return;
+
+        const lang = document.getElementById('lang-select')?.value ||
+                     document.getElementById('planet-lang-select')?.value || 'en';
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang === 'ru' ? 'ru-RU' : lang === 'sr' ? 'sr-RS' : 'en-US';
+        utterance.rate = 1.4;
+        utterance.pitch = 0.6;
+
+        utterance.onstart = () => speakBtn.textContent = '⏹';
+        utterance.onend = () => speakBtn.textContent = '🔊';
+        utterance.onerror = () => speakBtn.textContent = '🔊';
+
+        speechSynthesis.speak(utterance);
+    });
+}
+// ============ ТАБАТА ТАЙМЕР ============
+function speakOrionVoice(text) {
+    if (!window.speechSynthesis) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    const lang = document.getElementById('lang-select')?.value || 'en';
+    u.lang = lang === 'ru' ? 'ru-RU' : lang === 'sr' ? 'sr-RS' : 'en-US';
+    u.rate = 1.1;
+    u.pitch = 0.9;
+    speechSynthesis.speak(u);
+}
+
+function playBeepSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(880, audioCtx.currentTime);
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.3);
+}
+
+function getVoiceText(type) {
+    const lang = document.getElementById('lang-select')?.value || 'en';
+    if (type === 'work') return lang === 'ru' ? 'Работа!' : lang === 'sr' ? 'Rad!' : 'Work!';
+    if (type === 'rest') return lang === 'ru' ? 'Отдых!' : lang === 'sr' ? 'Odmor!' : 'Rest!';
+    if (type === 'done') return lang === 'ru' ? 'Готово! Молодец!' : lang === 'sr' ? 'Gotovo!' : 'Done! Great job!';
+}
+
+let timerRound = 1;
+let timerIsWork = true;
+let timerTick = null;
+
+function startSpaceTabata() {
+    timerRound = 1;
+    timerIsWork = true;
+    playTimerRound();
+}
+
+function stopSpaceTabata() {
+    if (timerTick) { clearInterval(timerTick); timerTick = null; }
+    const btn = document.getElementById('timer-start-btn');
+    if (btn) btn.textContent = '▶ СТАРТ';
+    const phase = document.getElementById('timer-phase');
+    const seconds = document.getElementById('timer-seconds');
+    const rounds = document.getElementById('timer-rounds');
+    if (phase) phase.textContent = '';
+    if (seconds) seconds.textContent = '30';
+    if (rounds) rounds.textContent = '';
+}
+
+function playTimerRound() {
+    if (timerRound > 5) {
+        playBeepSound();
+        speakOrionVoice(getVoiceText('done'));
+        stopSpaceTabata();
+        return;
+    }
+
+    playBeepSound();
+    speakOrionVoice(getVoiceText(timerIsWork ? 'work' : 'rest'));
+
+    const phase = document.getElementById('timer-phase');
+    const roundsEl = document.getElementById('timer-rounds');
+    if (phase) {
+        phase.textContent = getVoiceText(timerIsWork ? 'work' : 'rest');
+        phase.style.color = timerIsWork ? '#00ffcc' : '#ff9900';
+    }
+    if (roundsEl) roundsEl.textContent = `Round ${timerRound} / 5`;
+
+    let secs = 30;
+    const secsEl = document.getElementById('timer-seconds');
+    if (secsEl) secsEl.textContent = secs;
+
+    if (timerTick) clearInterval(timerTick);
+    timerTick = setInterval(() => {
+        secs--;
+        if (secsEl) secsEl.textContent = secs;
+        if (secs <= 0) {
+            clearInterval(timerTick);
+            timerTick = null;
+            timerIsWork = !timerIsWork;
+            if (timerIsWork) timerRound++;
+            playTimerRound();
+        }
+    }, 1000);
+}
+
+// Подключаем кнопку СТАРТ через делегирование событий
+document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'timer-start-btn') {
+        if (timerTick) {
+            stopSpaceTabata();
+        } else {
+            e.target.textContent = '⏹ СТОП';
+            startSpaceTabata();
+        }
+    }
+});
+// ============ УВЕДОМЛЕНИЯ ============
+function requestNotificationPermission() {
+    if (!('Notification' in window)) return;
+    if (Notification.permission === 'default') {
+        Notification.requestPermission();
     }
 }
+
+function scheduleWorkoutReminder() {
+    if (Notification.permission !== 'granted') return;
+
+    const lang = gameState.currentLang;
+    const title = lang === 'ru' ? '🚀 Space Ark ждёт тебя!' 
+                : lang === 'sr' ? '🚀 Space Ark te čeka!'
+                : '🚀 Space Ark is waiting!';
+    const body = lang === 'ru' ? 'Пора на тренировку, Командир!'
+               : lang === 'sr' ? 'Vreme je za trening, Komandante!'
+               : 'Time to train, Commander!';
+
+    new Notification(title, { body, icon: 'icon.svg' });
+}
+
+// Спрашиваем разрешение при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(requestNotificationPermission, 3000);
+});
+
+// Проверяем каждый час — если 9 утра и ещё не тренировался сегодня
+setInterval(() => {
+    const hour = new Date().getHours();
+    const todayStr = new Date().toDateString();
+    const lastNotified = getStoredItem('last_notified');
+    if (hour === 9 && lastNotified !== todayStr) {
+        setStoredItem('last_notified', todayStr);
+        scheduleWorkoutReminder();
+    }
+}, 60 * 60 * 1000);
+// ============ ЗАПУСК УВЕДОМЛЕНИЙ ============
+// ============ УВЕДОМЛЕНИЯ С ВЫБОРОМ ВРЕМЕНИ ============
+function setupDailyReminder() {
+    if (!('Notification' in window)) {
+        const settings = document.getElementById('reminder-settings');
+        if (settings) settings.style.display = 'none';
+        return;
+    }
+
+    // Загружаем сохранённое время
+    const savedTime = getStoredItem('reminder_time') || '09:00';
+    const timeInput = document.getElementById('reminder-time');
+    if (timeInput) timeInput.value = savedTime;
+
+    updateReminderStatus();
+
+    const saveBtn = document.getElementById('save-reminder');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            if (Notification.permission === 'default') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') saveReminderTime();
+                    else showReminderStatus('blocked');
+                });
+            } else if (Notification.permission === 'granted') {
+                saveReminderTime();
+            } else {
+                showReminderStatus('blocked');
+            }
+        });
+    }
+}
+
+function saveReminderTime() {
+    const timeInput = document.getElementById('reminder-time');
+    if (!timeInput) return;
+
+    const time = timeInput.value || '09:00';
+    setStoredItem('reminder_time', time);
+
+    const [hour, minute] = time.split(':').map(Number);
+    sendReminderToSW(hour, minute);
+    showReminderStatus('saved', time);
+}
+
+function sendReminderToSW(hour, minute) {
+    if (!navigator.serviceWorker.controller) return;
+    navigator.serviceWorker.controller.postMessage({
+        type: 'SCHEDULE_NOTIFICATION',
+        lang: gameState.currentLang,
+        hour,
+        minute
+    });
+}
+
+function showReminderStatus(status, time) {
+    const el = document.getElementById('reminder-status');
+    if (!el) return;
+    const lang = gameState.currentLang;
+
+    if (status === 'saved') {
+        el.textContent = lang === 'ru' ? `✅ Напоминание установлено на ${time}`
+                       : lang === 'sr' ? `✅ Podsetnik postavljen za ${time}`
+                       : `✅ Reminder set for ${time}`;
+    } else if (status === 'blocked') {
+        el.textContent = lang === 'ru' ? '❌ Уведомления заблокированы в браузере'
+                       : lang === 'sr' ? '❌ Obaveštenja su blokirana u pregledaču'
+                       : '❌ Notifications blocked in browser settings';
+    }
+}
+
+function updateReminderStatus() {
+    const el = document.getElementById('reminder-status');
+    if (!el) return;
+    const lang = gameState.currentLang;
+    const savedTime = getStoredItem('reminder_time');
+
+    if (Notification.permission === 'granted' && savedTime) {
+        el.textContent = lang === 'ru' ? `✅ Напоминание установлено на ${savedTime}`
+                       : lang === 'sr' ? `✅ Podsetnik postavljen za ${savedTime}`
+                       : `✅ Reminder set for ${savedTime}`;
+    } else if (Notification.permission === 'blocked') {
+        el.textContent = lang === 'ru' ? '❌ Уведомления заблокированы'
+                       : lang === 'sr' ? '❌ Obaveštenja su blokirana'
+                       : '❌ Notifications blocked';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(setupDailyReminder, 2000);
+});

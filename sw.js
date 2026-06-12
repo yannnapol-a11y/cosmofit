@@ -55,3 +55,56 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+// ============ УВЕДОМЛЕНИЯ ============
+self.addEventListener('push', event => {
+    const lang = event.data ? event.data.text() : 'en';
+    const title = lang === 'ru' ? '🚀 Space Ark ждёт тебя!'
+                : lang === 'sr' ? '🚀 Space Ark te čeka!'
+                : '🚀 Space Ark is waiting!';
+    const body = lang === 'ru' ? 'Пора на тренировку, Командир!'
+               : lang === 'sr' ? 'Vreme je za trening, Komandante!'
+               : 'Time to train, Commander!';
+
+    event.waitUntil(
+        self.registration.showNotification(title, {
+            body,
+            icon: './icon.svg',
+            badge: './icon.svg'
+        })
+    );
+});
+
+self.addEventListener('notificationclick', event => {
+    event.notification.close();
+    event.waitUntil(
+        clients.openWindow('./')
+    );
+});
+
+// Проверка времени для уведомления
+self.addEventListener('message', event => {
+    if (event.data && event.data.type === 'SCHEDULE_NOTIFICATION') {
+        const { lang, hour } = event.data;
+        const now = new Date();
+        const target = new Date();
+        target.setHours(hour, 0, 0, 0);
+        if (target <= now) target.setDate(target.getDate() + 1);
+        const delay = target - now;
+
+        setTimeout(() => {
+            self.registration.showNotification(
+                lang === 'ru' ? '🚀 Space Ark ждёт тебя!' 
+                : lang === 'sr' ? '🚀 Space Ark te čeka!' 
+                : '🚀 Space Ark is waiting!',
+                {
+                    body: lang === 'ru' ? 'Пора на тренировку, Командир!'
+                        : lang === 'sr' ? 'Vreme je za trening, Komandante!'
+                        : 'Time to train, Commander!',
+                    icon: './icon.svg',
+                    badge: './icon.svg'
+                }
+            );
+        }, delay);
+    }
+});
+`

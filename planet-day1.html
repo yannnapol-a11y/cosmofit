@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ark: Planet Day 1</title>
+    <meta name="description" content="Space Ark: Day 1 on the unknown planet, with a fresh green landscape and a new mission beginning under the dome.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body class="planet-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="stars"></div>
+    <div class="planet-scene"></div>
+
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="terminal-title">
+                <h1 id="planet-title">Planet Day 1</h1>
+                <p class="hero-summary" id="planet-summary">Exploring a friendly alien world with verdant, welcoming flora.</p>
+            </div>
+            <div class="status-container">
+                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+                <div>
+                    <label for="planet-lang-select" class="sr-only">Language</label>
+                    <select id="planet-lang-select" class="lang-select" aria-label="Language selector">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="sr">SR</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="terminal-body">
+            <section class="status-section" aria-labelledby="status-title">
+                <h2 id="status-title" class="sr-only">Mission status</h2>
+                <div class="hud">
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">💧</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-water">Water</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-water"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-water-txt">0%</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">🏋️</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-workout">Training</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-workout"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-workout-txt">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-section" aria-labelledby="planet-story-title">
+                <h2 id="planet-story-title" class="sr-only">Planet Day 1 mission</h2>
+                <div class="output-wrapper">
+                    <p class="typing-text" id="planet-intro">AI ORION: 'Commander, biometric scans show the flora here is non-aggressive. The plants emit soft bioluminescence and seem to part when we approach. This planet welcomes us gently. Your companion signals approval. We must explore and assess the dome structure, but with caution and care.'</p>
+                </div>
+            </section>
+
+            <div id="interactive-container"></div>
+
+            <button type="button" id="back-btn" class="action-btn">Return to Ark</button>
+        </main>
+    </div>
+
+    <footer class="terminal-footer">
+        <p id="planet-footer">Made with love. Special thanks to my wonderful husband, two amazing daughters, Gemini, and Copilot. 🚀✨</p>
+    </footer>
+
+    <script src="script-new.js"></script>
+    <script>
+        let planetGameState = {
+            currentLang: "en",
+            waterDone: false,
+            fruitsDone: false,
+            workoutReps: 0
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            planetGameState.currentLang = localStorage.getItem("selectedLang") || "en";
+            document.documentElement.lang = planetGameState.currentLang;
+            document.getElementById("planet-lang-select").value = planetGameState.currentLang;
+            updatePlanetPageUI();
+
+            document.getElementById("planet-lang-select").addEventListener("change", (e) => {
+                planetGameState.currentLang = e.target.value;
+                localStorage.setItem("selectedLang", planetGameState.currentLang);
+                document.documentElement.lang = planetGameState.currentLang;
+                updatePlanetPageUI();
+            });
+
+            document.getElementById("back-btn").addEventListener("click", () => {
+                window.location.href = "index-new.html";
+            });
+
+            renderPlanetDay();
+        });
+
+        function updatePlanetPageUI() {
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+            
+            document.getElementById("status-indicator").textContent = trans.systemOnline;
+            document.getElementById("planet-title").textContent = trans.days?.planetDay1 || "Planet Day 1";
+            document.getElementById("planet-summary").textContent = trans.planetSummary || "Exploring a friendly alien world.";
+            document.getElementById("label-water").textContent = trans.hudWater || "Water";
+            document.getElementById("label-workout").textContent = trans.hudWorkout || "Training";
+            document.getElementById("planet-intro").textContent = trans.planetIntroLow || trans.planetIntro || "AI ORION message...";
+            document.getElementById("back-btn").textContent = trans.planetBackBtn || "Return to Ark";
+            document.getElementById("planet-footer").innerHTML = trans.footerThanksHtml || trans.footerThanks;
+        }
+
+        function renderPlanetDay() {
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+            const container = document.getElementById("interactive-container");
+            
+            let html = `
+                <div class="interactive-section">
+                    <h3>${trans.planetTasksTitle || "PLANETARY ADAPTATION TASKS"}</h3>
+                    <div class="tasks-list">
+                        <div class="task-item">
+                            <input type="checkbox" id="water-planet" ${planetGameState.waterDone ? "checked" : ""}>
+                            <label for="water-planet">${trans.planetWaterTask || "💧 Hydration: Drink 300 ml to stabilize bio-sensors in the new atmosphere."}</label>
+                        </div>
+                        <div class="juice-box ${planetGameState.waterDone ? "" : "hidden"}" id="water-feedback">${trans.planetWaterDone || "✅ Hydration optimized. Bio-sensors adapting to local frequencies."}</div>
+
+                        <div class="task-item">
+                            <input type="checkbox" id="fruits-planet" ${planetGameState.fruitsDone ? "checked" : ""}>
+                            <label for="fruits-planet">${trans.planetFruitsTask || "🌈 Nutrition: Promise to eat a yellow, red, green, and orange fruit or vegetable."}</label>
+                        </div>
+                        <div class="juice-box ${planetGameState.fruitsDone ? "" : "hidden"}" id="fruits-feedback">${trans.planetFruitsDone || "✅ Rainbow promise given. Flora resonates with your intention."}</div>
+                    </div>
+                </div>
+
+                <div class="interactive-section">
+                    <h3>${trans.planetWorkoutTitle || "GENTLE FLORA EXPLORATION SEQUENCE"}</h3>
+                    <p class="workout-desc">${trans.planetWorkoutDesc || "The friendly flora pulses with a gentle rhythm. Your companion suggests mimicking the plants' movement pattern—a flowing bridge gesture followed by a cross-body exploration motion. This will help your muscles adapt to the local gravity."}</p>
+                    <div class="workout-form">
+                        <label>${trans.planetExercise1 || "🌿 Bridge Pulse (Glute Bridge) + Bird Dog Movements"}</label>
+                        <p style="font-size: 0.8rem; margin: 5px 0; color: rgba(0, 255, 204, 0.8);">${trans.planetExerciseInstructions || "1. Lie on back, feet flat, raise hips in a bridge position (hold 2 sec, repeat).<br>2. Move to table position (hands & knees), alternate lifting opposite arm & leg (count each pair).<br>Enter total combined movements:"}</p>
+                        <div class="input-group">
+                            <input type="number" id="planet-reps" min="0" value="${planetGameState.workoutReps}" placeholder="0" style="flex: 1;">
+                            <button type="button" id="submit-planet-workout" class="submit-btn">${trans.planetSubmitWorkout || "SUBMIT"}</button>
+                        </div>
+                    </div>
+                    <div class="juice-box bonus-box hidden" id="planet-feedback"></div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            const waterCheckbox = document.getElementById("water-planet");
+            if (waterCheckbox) {
+                waterCheckbox.addEventListener("change", () => {
+                    planetGameState.waterDone = waterCheckbox.checked;
+                    const feedback = document.getElementById("water-feedback");
+                    if (feedback) feedback.classList.toggle("hidden", !waterCheckbox.checked);
+                    updatePlanetHUD();
+                });
+            }
+
+            const fruitsCheckbox = document.getElementById("fruits-planet");
+            if (fruitsCheckbox) {
+                fruitsCheckbox.addEventListener("change", () => {
+                    planetGameState.fruitsDone = fruitsCheckbox.checked;
+                    const feedback = document.getElementById("fruits-feedback");
+                    if (feedback) feedback.classList.toggle("hidden", !fruitsCheckbox.checked);
+                    updatePlanetHUD();
+                });
+            }
+
+            const submitBtn = document.getElementById("submit-planet-workout");
+            if (submitBtn) {
+                submitBtn.addEventListener("click", submitPlanetWorkout);
+            }
+
+            updatePlanetHUD();
+        }
+
+        function submitPlanetWorkout() {
+            const input = document.getElementById("planet-reps");
+            const feedback = document.getElementById("planet-feedback");
+            const trans = uiTranslations[planetGameState.currentLang] || uiTranslations.en;
+
+            if (!input || !feedback) return;
+
+            const reps = parseInt(input.value || "0", 10);
+            if (isNaN(reps) || reps < 0) {
+                feedback.textContent = trans.authMissingFields || "Please enter a valid number.";
+                feedback.classList.remove("hidden");
+                return;
+            }
+
+            planetGameState.workoutReps = reps;
+
+            let message = "";
+            if (reps < 1) {
+                message = trans.planetWorkoutLow || "🔴 No movements recorded. Rest and try again when ready.";
+            } else if (reps < 20) {
+                message = trans.planetWorkoutMedium || "🟡 Gentle movements. The flora seems to recognize your rhythm. Your companion nods approvingly.";
+            } else if (reps < 40) {
+                message = trans.planetWorkoutHigh || "🟢 Excellent! Your body flows with the planet's harmony. The flora glows brighter around you. Your companion smiles.";
+            } else {
+                message = trans.planetWorkoutVeryHigh || "🟢🟢 Outstanding! You've synchronized perfectly with the alien ecosystem. Bioluminescent flowers bloom around you in celebration. The dome structure ahead pulses with welcoming light.";
+            }
+
+            feedback.innerHTML = message;
+            feedback.classList.remove("hidden");
+            updatePlanetHUD();
+        }
+
+        function updatePlanetHUD() {
+            const waterPercent = (planetGameState.waterDone && planetGameState.fruitsDone) ? 100 : 0;
+            const workoutPercent = Math.min(100, Math.round((planetGameState.workoutReps / 40) * 100));
+
+            const waterBar = document.getElementById("hud-water");
+            const workoutBar = document.getElementById("hud-workout");
+            if (waterBar) waterBar.style.width = waterPercent + "%";
+            if (workoutBar) workoutBar.style.width = workoutPercent + "%";
+
+            document.getElementById("hud-water-txt").textContent = waterPercent + "%";
+            document.getElementById("hud-workout-txt").textContent = workoutPercent + "%";
+        }
+    </script>
+</body>
+</html>
