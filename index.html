@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ark: Survival</title>
+    <meta name="description" content="Space Ark: Survival is an interactive browser-based space adventure game that encourages hydration, exercise, and daily mission progress through a futuristic sci-fi storyline.">
+    <meta name="keywords" content="space ark, survival game, browser game, interactive story, hydration challenge, fitness game, daily missions, sci-fi adventure">
+    <meta name="author" content="Space Ark">
+    <meta name="theme-color" content="#05050d">
+    <link rel="canonical" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="en" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="ru" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="sr" href="https://yannnapol-a11y.github.io/space-ark/">
+    <link rel="alternate" hreflang="x-default" href="https://yannnapol-a11y.github.io/space-ark/">
+    <meta property="og:title" content="Space Ark: Survival">
+    <meta property="og:description" content="Play an immersive space mission game, complete daily hydration and workout tasks, and unlock new chapters as you guide the Ark to a new home.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Space Ark: Survival">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="sr_RS">
+    <meta property="og:url" content="https://yannnapol-a11y.github.io/space-ark/">
+    <meta property="og:image" content="https://yannnapol-a11y.github.io/space-ark/og-image.svg">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Space Ark: Survival">
+    <meta property="twitter:description" content="Interactive web experience combining hydration, exercise and sci-fi storytelling in a space survival game.">
+    <meta property="twitter:image" content="https://yannnapol-a11y.github.io/space-ark/og-image.svg">
+    <meta property="twitter:image:alt" content="Space Ark: Survival social preview image">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Space Ark: Survival",
+      "description": "Interactive browser-based space adventure that encourages hydration and fitness through daily mission challenges.",
+      "inLanguage": ["en", "ru", "sr"],
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Space Ark: Survival",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "about": "Interactive fitness and hydration game set on a space ark.",
+        "description": "An immersive sci-fi browser game that blends hydration reminders and workout motivation with an adventure storyline."
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+    <div class="eye-blink-overlay"></div>
+    <div class="stars"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="terminal">       
+        <header class="terminal-header">
+            <div class="terminal-title">
+                <h1>Space Ark: Survival</h1>
+                <p class="hero-summary" id="mission-objective">Mission Objective: Movement without instructions or stress. Just trust in your body.</p>
+                </div>
+            <div class="status-container">
+                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+                <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>               
+                <label for="lang-select" class="sr-only">Language</label>
+                <select id="lang-select" class="lang-select" aria-label="Language selector">
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                    <option value="sr">SR</option>
+                </select>
+            </div>            
+        </header>
+
+        <main id="main-content" class="terminal-body">
+            <section class="status-section" aria-labelledby="status-title">
+                <h2 id="status-title" class="sr-only">Mission status</h2>
+                <div class="hud">
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">💧</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-water">Water</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-water"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-water-txt">0%</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-icon" aria-hidden="true">🔋</span>
+                        <div class="hud-bar-wrapper">
+                            <span class="hud-label" id="label-energy">Thrusters</span>
+                            <div class="hud-bar"><div class="hud-fill" id="hud-energy"></div></div>
+                        </div>
+                        <span class="hud-percent" id="hud-energy-txt">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-section" aria-labelledby="story-title">
+    <h2 id="story-title" class="sr-only">Current mission log</h2>
+    <button type="button" id="speak-btn" class="speak-btn" aria-label="Read story aloud">🔊</button>
+    <div class="output-wrapper">
+        <p id="story-text" class="typing-text" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+</section>
+
+            <div class="progress-indicator" id="progress-indicator" aria-live="polite"></div>
+            <div class="save-state" id="save-state" aria-live="polite"></div>
+            <div class="storage-warning hidden" id="storage-warning" role="alert">
+                Warning: local storage is unavailable. Progress will not be saved.
+            </div>
+
+            <button type="button" id="action-btn" class="action-btn">START SYSTEMS CALIBRATION</button>            
+        <div class="reminder-settings" id="reminder-settings">
+    <h3 id="reminder-title">⏰ Daily Reminder</h3>
+    <div class="input-group">
+        <input type="time" id="reminder-time" value="09:00">
+        <button type="button" id="save-reminder" class="submit-btn">SAVE</button>
+    </div>
+    <p id="reminder-status"></p>
+</div>
+        </main>
+    </div>
+ 
+
+    <footer class="terminal-footer">        
+    <div class="manifesto-container">
+        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already inside you.</h2>
+        <div class="manifesto-text" id="manifesto-text">
+            <p>Complex instructions often distract us from what matters most — connecting with our body. We invite you to return to the roots. This program is based entirely on natural movements, the ones we have known since birth.</p>
+            <p>You dont need to compare yourself to perfect pictures. If it feels comfortable, you are doing it right. Our goal is to bring you peace, confidence, and the joy of every movement.</p>
+        </div>
+    </div>    
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini. Without them, this journey wouldn't be possible. 🚀✨</p>
+    </footer>
+
+    <script src="script-new.js"></script>
+    <script>
+        // Mobile dayNav: set select to current page and scroll active link into view
+        (function(){
+            const sel = document.getElementById('day-nav-select');
+            const nav = document.getElementById('dayNav');
+            if (sel) {
+                // set select to current file if option exists
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                const opt = Array.from(sel.options).find(o => o.value === currentFile);
+                if (opt) sel.value = currentFile;
+                sel.addEventListener('change', (e) => {
+                    const v = e.target.value;
+                    if (v) window.location.href = v;
+                });
+            }
+
+            // mark active link and scroll it into view
+            if (nav) {
+                const links = nav.querySelectorAll('a.day-link');
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                for (const a of links) {
+                    const href = a.getAttribute('href');
+                    const full = a.href || href;
+                    if (href === currentFile || full.endsWith('/' + currentFile) || full.endsWith(currentFile)) {
+                        a.classList.add('active');
+                        a.setAttribute('aria-current', 'page');
+                        try { a.scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'}); } catch (e) { a.scrollIntoView(); }
+                        break;
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
