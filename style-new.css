@@ -681,6 +681,9 @@ textarea {
     font-size: 2rem;
     color: #00ffcc;
     line-height: 1;
+    min-width: 2.5rem;
+    text-align: center;
+    display: inline-block;
 }
 
 #timer-phase {
@@ -694,6 +697,8 @@ textarea {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
     color: rgba(180, 220, 210, 0.7);
+    min-width: 80px;
+    display: inline-block;
 }
 
 .input-group input[type="number"] {
@@ -1129,7 +1134,7 @@ body.planet-page .action-btn:hover {
 
 .manifesto-title {
     font-family: 'Orbitron', system-ui, -apple-system, sans-serif; /* Orbitron для футуризма */
-    font-size: 1.5rem; /* Сделали заголовок крупнее и заметнее */
+    font-size: 2rem; /* Сделали заголовок крупнее и заметнее */
     color: #00ffcc; /* Твой фирменный бирюзовый, он отлично горит на темном фоне */
     margin-bottom: 20px;
     letter-spacing: 0.7px;
@@ -1139,7 +1144,7 @@ body.planet-page .action-btn:hover {
 .manifesto-text p {
     /* Главный секрет читаемости: используем системные шрифты без засечек, они идеальны для чтения больших текстов */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1rem; /* Увеличили размер букв (было 0.95, стало 1.1) — теперь не нужно вглядываться! */
+    font-size: 1.4rem; /* Увеличили размер букв (было 0.95, стало 1.1) — теперь не нужно вглядываться! */
     line-height: 1.65; /* Идеальное расстояние между строками, чтобы они не слипались */
     
     /* Цвет текста: не ядовито-белый, а мягкий, благородный светло-серый/молочный. 
@@ -1182,4 +1187,42 @@ input[type="time"] {
     font-family: 'Space Mono', monospace;
     font-size: 0.85rem;
     border-radius: 4px;
+}
+.days-progress {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 255, 204, 0.15);
+}
+
+.days-track {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.day-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 204, 0.3);
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.day-dot.completed {
+    background: #00ffcc;
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+}
+
+.day-dot.current {
+    border-color: #00ffcc;
+    box-shadow: 0 0 12px rgba(0, 255, 204, 0.4);
+    animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 6px rgba(0, 255, 204, 0.4); }
+    50% { box-shadow: 0 0 16px rgba(0, 255, 204, 0.8); }
 }

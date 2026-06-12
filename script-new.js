@@ -11,11 +11,10 @@ const uiTranslations = {
         days: { intro: "Intro", day1: "Day 01", day2: "Day 02", day3: "Day 03", day4: "Day 04", day5: "Day 05", day6: "Day 06", day7: "Day 07", final: "FINAL", planetDay1: "Planet Day 1", planetDayMedium: "Planet Day - Medium", planetDayHigh: "Planet Day - Advanced" },
         planetDayMediumDesc: "Face strange sounds and ground tremors on an alien planet. Perform chair squats and push-ups to survive the day.",
         planetDayHighDesc: "Battle extreme gravity and hostile flora. Beat your squat record and perform pull-ups to escape.",
-        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini chat. Without all of you, this journey would not have been possible. 🚀✨",
-        footerThanksHtml: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and <strong>Gemini chat</strong>. Without all of you, this journey would not have been possible. 🚀✨",
-        manifestoTitle: "Everything you need is already inside you.",
-        manifestoText: "<p>Complex instructions often distract us from what matters most — connecting with our body. We invite you to return to the roots. This program is based entirely on natural movements, the ones we have known since birth.</p><p>You don't need to compare yourself to perfect pictures. If it feels comfortable, you are doing it right. Our goal is to bring you peace, confidence, and the joy of every movement.</p>",
-
+        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and my fiends. Without all of you, this journey would not have been possible. 🚀✨",
+        footerThanksHtml: "Made with love. Special thanks to my wonderful <strong>husband</strong>, two amazing daughters, and my friends. Without all of you, this journey would not have been possible. 🚀✨",
+        manifestoTitle: "Everything you need is already within you. The most important thing is the connection with your own body.",
+        manifestoText: "Pain is not a part of the workout. If you experience pain in your joints, spine, or internal organs, stop exercising and consult a doctor. This project is designed for motivation and general fitness maintenance; it does not replace medical advice. If you have any medical contraindications, please consult a specialist. Move without comparing yourself to others. If you feel comfortable — you are on the right track.",
         confirmProtocol: "CONFIRM PROTOCOL",
         continueBtn: "CONTINUE",
         authIntroTitle: "PLANETARY CHECK-IN",
@@ -23,9 +22,9 @@ const uiTranslations = {
         authChecklistTitle: "MEDICAL CHECKLIST",
         authChecklistSubtitle: "Mark the statements that are true. ORION uses this data to determine your fitness level and contraindications.",
         authChecklistQuestions: [
-            "Have you had surgery or childbirth in the last six months?",
-            "Do you have any chronic illnesses?",
-            "Do you experience chronic joint pain?",
+            "I have had surgery or given birth in the last six months.",
+            "I have any chronic illnesses?",
+            "I experience chronic joint pain?",
             "I regularly train with strength workouts.",
             "I regularly do active cardio.",
             "I take moderate walks and train sometimes.",
@@ -113,19 +112,19 @@ const uiTranslations = {
         days: { intro: "Интро", day1: "День 01", day2: "День 02", day3: "День 03", day4: "День 04", day5: "День 05", day6: "День 06", day7: "День 07", final: "ФИНАЛ", planetDay1: "День на планете", planetDayMedium: "День планеты - Средний", planetDayHigh: "День планеты - Продвинутый" },
         planetDayMediumDesc: "Столкнись со странными звуками и землетрясениями на чужой планете. Выполняй приседания на стул и отжимания, чтобы выжить.",
         planetDayHighDesc: "Сражайся с экстремальной гравитацией и враждебной флорой. Побей свой рекорд приседаний и выполни максимум подтягиваний, чтобы сбежать.",
-        footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и Gemini chat. Без вас всех это путешествие не было бы возможным. 🚀✨",
-        footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и <strong>Gemini chat</strong>. Без вас всех это путешествие не было бы возможным. 🚀✨",        
-        manifestoTitle: "Всё необходимое уже есть внутри тебя.",
-        manifestoText: "<p>Сложные инструкции часто отвлекают нас от главного — связи с телом. Мы предлагаем вернуться к истокам. Эта программа основана исключительно на естественных движениях, которые мы знаем с рождения.</p><p>Не нужно сравнивать себя с идеальными картинками. Если тебе комфортно — ты всё делаешь правильно. Наша цель — подарить тебе спокойствие, уверенность и радость от каждого движения.</p>", confirmProtocol: "ПОДТВЕРДИТЬ ПРОТОКОЛ",
+        footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и моим друзьям. Без вас всех это путешествие не было бы возможным. 🚀✨",
+        footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному <strong>мужу</strong>, двум прекрасным дочерям и моим друзьям. Без вас всех это путешествие не было бы возможным. 🚀✨",        
+        manifestoTitle: "Всё необходимое уже есть внутри тебя. Главное — связь с собственным телом.",
+        manifestoText: "Боль — не часть тренировки. При боли в суставах, позвоночнике или внутренних органах прекратите занятия и обратитесь к врачу. Этот проект создан для мотивации и поддержания общей физической формы и не заменяет медицинские рекомендации. Если у вас есть противопоказания, проконсультируйтесь со специалистом. Двигайся без сравнения с другими. Если тебе комфортно — ты на правильном пути.",
         continueBtn: "ПРОДОЛЖИТЬ",
         authIntroTitle: "ПРИЕМНАЯ НА ПЛАНЕТЕ",
         authIntroText: "ИИ ОРИОН: 'Командир, Ковчег приземлился на неизвестной планете. Датчики фиксируют купол поблизости. Прежде чем двигаться дальше, нам нужно оценить ваше состояние, записать медицинские риски и измерить кардио-ответ.'",
         authChecklistTitle: "МЕДИЦИНСКИЙ ЧЕК-ЛИСТ",
         authChecklistSubtitle: "Отметьте утверждения, которые верны. ORION использует эти данные, чтобы определить уровень подготовленности и противопоказания.",
         authChecklistQuestions: [
-            "Были ли у вас операции или роды за последние полгода?",
-            "Есть ли у вас хронические заболевания?",
-            "Есть ли у вас хронические боли в суставах?",
+            "У меня была операция или я рожала в последние шесть месяцев.",
+            "У меня есть хронические заболевания.",
+            "У меня хроническая боль в суставах.",
             "Я регулярно занимаюсь силовыми тренировками.",
             "Я регулярно активно делаю кардио.",
             "Умеренные прогулки и тренировки случаются иногда.",
@@ -213,10 +212,10 @@ const uiTranslations = {
         days: { intro: "Uvod", day1: "Dan 01", day2: "Dan 02", day3: "Dan 03", day4: "Dan 04", day5: "Dan 05", day6: "Dan 06", day7: "Dan 07", final: "KRAJ", planetDay1: "Dan na planeti", planetDayMedium: "Planet Dan - Srednji", planetDayHigh: "Planet Dan - Napredniji" },
         planetDayMediumDesc: "Suoči se sa čudnim zvukovima i drhtavima tla na vanzemaljskoj planeti. Izvršavaj čučnjeve na stolici i sklekove da preživiš dan.",
         planetDayHighDesc: "Bori se sa ekstremnom gravitacijom i neprijateljskom florom. Obori svoj rekord u čučnjevima i uradi što više zgibova da pobegiš.",
-        footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, Gemini chat. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
-        footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama i <strong>Gemini chat</strong>. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
-        manifestoTitle: "Sve što ti treba već je unutar tebe.",
-        manifestoText: "<p>Složene instrukcije nas često odvlače od onoga što je najvažnije — veze sa telom. Pozivamo te da se vratiš korenima. Ovaj program se zasniva isključivo na prirodnim pokretima, onima koje znamo od rođenja.</p><p>Ne treba da se poređuješ sa savršenim slikama. Ako ti je ugodno — radiš to kako treba. Naš cilj je da ti donesemo mir, sigurnost i radost svakog pokreta.</p>",
+        footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, i mojim prijateljima. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom <strong>mužu</strong>, dvema neverovatnim ćerkama i mojim prijateljima. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
+        manifestoTitle: "Sve što ti je potrebno već je unutar tebe. Najvažnija je veza sa sopstvenim telom.",
+        manifestoText: "Bol nije deo treninga. Ukoliko osetiš bol u zglobovima, kičmi ili unutrašnjim organima, prekini sa vežbanjem i obrati se lekaru. Ovaj projekat je kreiran za motivaciju i održavanje opšte fizičke forme i ne zamenjuje medicinske savete. Ako imaš bilo kakve kontraindikacije, konsultuj se sa stručnjakom. Kreći se bez poređenja sa drugima. Ako se osećaš prijatno — na pravom si putu.",
         confirmProtocol: "POTVRDI PROTOKOL",
         continueBtn: "NASTAVI",
         authIntroTitle: "PROVERA NA PLANETI",
@@ -224,9 +223,9 @@ const uiTranslations = {
         authChecklistTitle: "MEDICINSKA LISTA",
         authChecklistSubtitle: "Obeležite izjave koje su tačne. ORION koristi ove podatke da utvrdi nivo spremnosti i kontraindikacije.",
         authChecklistQuestions: [
-            "Da li ste imali operaciju ili porođaj u poslednjih šest meseci?",
-            "Da li imate hronične bolesti?",
-            "Da li imate hronične bolove u zglobovima?",
+            "Imao/la sam operaciju ili porođaj u poslednjih šest meseci.",
+            "Imam hronične bolesti.",
+            "Imam hronične bolove u zglobovima.",
             "Redovno treniram sa tegovima.",
             "Redovno radim aktivni kardio.",
             "Umerene šetnje i treninzi su povremeno.",
@@ -310,22 +309,13 @@ const storyData = {
         type: "text-only",
         steps: {
             en: [
-                "Earth was extinguished in a matter of hours. Humanity burned everything: reactors, power grids, cities. A nuclear winter enveloped our home world.",
-                "You are the last survivors. A man and a woman. You managed to leap into the ark's airlock just a second before the atmosphere turned to ash.",
-                "The vessel is hurtling through the freezing void of space in search of a New Home. But the cosmos is ruthless. Drop your hands, submit to stress, weaken in zero gravity—and humanity vanishes forever.",
-                "Commander, your body and mind are the final biological sanctuary for our species. Self-care is your absolute duty. Welcome on board."
+                "Earth became uninhabitable after a global catastrophe. Humanity put its last hopes into the Space Ark. You are the Commander. Your body, your mind, and your discipline are the core fuel for our life support systems. Sync your systems, activate the thrusters, and lead us to a New Home."
             ],
             ru: [
-                "Земля угасла за считанные часы. Человечество сожгло всё: реакторы, энергосети, города. Ядерная зима окутала наш родной мир.",
-                "Вы — последние выжившие. Мужчина и женщина. Вы успели запрыгнуть в шлюз Ковчега всего за секунду до того, как атмосфера превратилась в пепел.",
-                "Корабль мчится сквозь ледяную пустоту космоса в поисках Нового Дома. Но космос безжалостен. Стоит опустить руки, поддаться стрессу, ослабнуть в невесомости — и человечество исчезнет навсегда.",
-                "Командир, ваше тело и разум — последнее биологическое убежище для нашего вида. Забота о себе — ваш абсолютный долг. Добро пожаловать на борт."
+                "Земля стала непригодной для жизни после глобальной катастрофы. Человечество вверило свои последние надежды Космическому Ковчегу. Вы — Командир. Ваше тело, ваш разум и ваша дисциплина — главное топливо для систем жизнеобеспечения. Синхронизируйте свои показатели, запустите двигатели и ведите нас к Новому Дому."
             ],
             sr: [
-                "Zemlja je ugašena za nekoliko sati. Čovečanstvo je spalilo sve: reaktore, energetske mreže, gradove. Nuklearna zima je obavila naš rodni svet.",
-                "Vi ste poslednji preživeli. Muškarac i žena. Uspeli ste da uskočite u vazdušnu komoru Barke samo sekundu pre nego što se atmosfera pretvorila u pepeo.",
-                "Brod juri kroz ledenu prazninu svemira u potrazi za Novim Domom. Ali kosmos je nemilosrdan. Ako spustite ruke, prepustite se stresu, oslabite u beztežinskom stanju — čovečanstvo će nestati zauvek.",
-                "Komandante, vaše telo i um su poslednje biološko utočište za našu vrstu. Briga o sebi je vaša apsolutna dužnost. Dobrodošli na brod."
+                "Zemlja je postala nenaseljiva nakon globalne katastrofe. Čovečanstvo je svoje poslednje nade poverilo Svemirskoj Barki. Vi ste Komandant. Vaše telo, vaš um i vaša disciplina su glavno gorivo za sisteme za održavanje života. Sinhronizujte svoje sisteme, pokrenite potisnike i vodite nas ka Novom Domu."
             ]
         },
         btnTexts: {
@@ -355,10 +345,30 @@ const storyData = {
             sr: [{ id: "water_d1", text: "💧 Hidratacija (Hlađenje reaktora): Popijte 300 ml čiste vode da biste ručno pokrenuli ventil za hitnu stabilizaciju.", juice: "✅ Logika hidratacije je sinhronizovana. Pritisak u glavnom krugu hlađenja raste!" }]
         },
         workoutText: {
-            en: "🏋️ WORKOUT: CYLINDER PRESSURE PUMPING<br><br>AI ORION: 'The vessel's landing gear cylinders have sagged under extreme pressure. If we try to land like this, we'll turn into cosmic scrap metal! Use a chair for support and do squats to actuate the manual hydraulic pumps. Enter your reps, and I will compute the generated power.'",
-            ru: "🏋️ ТРЕНИРОВКА: ПРОКАЧКА ДАВЛЕНИЯ В ЦИЛИНДРАХ<br><br>ИИ ОРИОН: 'Цилиндры шасси корабля просели под экстремальным давлением. Если мы попробуем сесть в таком состоянии, то превратимся в космический металлолом! Используйте стул для опоры и делайте приседания, чтобы запустить ручные гидравлические насосы. Введите количество повторений, и я рассчитаю выработанную энергию.'",
-            sr: "🏋️ TRENING: PUMPANJE PRITISKA U CILINDRIMA<br><br>AI ORION: 'Cilindri stajnog trapa broda su popustili pod ekstremnim pritiskom. Ako pokušamo da sletimo ovako, pretvorićemo se u kosmičko staro gvožđe! Koristite stolicu kao oslonac i radite čučnjeve kako biste pokrenuli ručne hidraulične pumpe. Unesite broj ponavljanja i ja ću izračunati generisanu energiju.'"
-        },
+    en: `🏋️ WORKOUT: CYLINDER PRESSURE PUMPING<br><br>
+<strong>⚠️ Warning! Danger!</strong> The vessel's landing gear cylinders have sagged under extreme pressure. If we try to land like this, we'll turn into cosmic scrap metal! We need to activate the manual hydraulic pumps.<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and do chair squats for 30 seconds.<br>
+2. During rest — stay seated and stretch gently.<br>
+3. Repeat until the cycle is complete.<br><br>
+Add up all your reps and enter the total so I can calculate the generated power.`,
+
+    ru: `🏋️ ТРЕНИРОВКА: ПРОКАЧКА ДАВЛЕНИЯ В ЦИЛИНДРАХ<br><br>
+<strong>⚠️ Внимание! Опасность!</strong> Цилиндры шасси корабля просели под экстремальным давлением. Если мы попробуем сесть в таком состоянии, то превратимся в космический металлолом! Нам нужно запустить ручные гидравлические насосы.<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и приседай на стул в течение 30 секунд.<br>
+2. Во время отдыха останься на стуле и сделай лёгкую растяжку.<br>
+3. Повторяй раунды до завершения цикла.<br><br>
+Сложи результаты всех раундов и введи итоговое число, чтобы я рассчитал выработанную энергию.`,
+
+    sr: `🏋️ TRENING: PUMPANJE PRITISKA U CILINDRIMA<br><br>
+<strong>⚠️ Pažnja! Opasnost!</strong> Cilindri stajnog trapa su popustili pod ekstremnim pritiskom. Ako pokušamo da sletimo ovako, pretvorićemo se u kosmičko staro gvožđe! Moramo pokrenuti ručne hidraulične pumpe.<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi čučnjeve na stolici 30 sekundi.<br>
+2. Tokom odmora ostani na stolici i lagano se istegni.<br>
+3. Ponavljaj runde do kraja ciklusa.<br><br>
+Saberi sve ponavljanja i unesi ukupan broj da izračunam generisanu energiju.`
+},
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -413,11 +423,31 @@ const storyData = {
             ru: [{ id: "water_d2", text: "💧 Гидратация (Гидравлические контуры): Выпейте 300 мл чистой воды, чтобы поднять давление в линиях гермозатвора.", juice: "✅ Давление восстановлено! Тяжелые переборки безопасности закрылись на треть. Свист уходящего воздуха затихает." }],
             sr: [{ id: "water_d2", text: "💧 Hidratacija (Hidraulični krugovi): Popijte 300 ml čiste vode da biste podigli pritisak u linijama sigurnosnih vrata.", juice: "✅ Pritisak je obnovljen! Teške sigurnosne pregrade su se zatvorile za jednu trećinu. Šištanje vazduha koji izlazi se stišava." }]
         },
-        workoutText: {
-            en: "🏋️ WORKOUT: MANUAL HATCH SEALING<br><br>AI ORION: 'The electrical actuator is fried. The only way to lock the bulkhead is to hold the emergency levers and literally push the massive steel plate away from you. Take a knee, place your hands wide. Each pushup represents one centimeter of sealing the heavy blast door!'",
-            ru: "🏋️ ТРЕНИРОВКА: РУЧНАЯ ГЕРМЕТИЗАЦИЯ ЛЮКА<br><br>ИИ ОРИОН: 'Электропривод сгорел. Единственный способ запереть переборку — взяться за аварийные рычаги и буквально отжать массивную стальную плиту от себя. Встаньте на колени, поставьте руки широко. Каждое отжимание — это еще один сантиметр закрытия тяжелой бронедвери!'",
-            sr: "🏋️ TRENING: RUČNO ZAPTIVANJE OTVORA<br><br>AI ORION: 'Električni pogon je pregoreo. Jedini način da zaključamo pregradu je da uhvatimo poluge za hitne slučajeve i bukvalno odgurnemo masivnu čeličanu ploču od sebe. Spustite se na kolena, raširite ruke. Svaki sklek predstavlja jedan centimetar zatvaranja teških oklopnih vrata!'"
-        },
+       workoutText: {
+    en: `🏋️ WORKOUT: MANUAL HATCH SEALING<br><br>
+<strong>⚠️ Critical failure!</strong> The electrical actuator is fried. The bulkhead is the only thing standing between us and the void — and it won't seal itself!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and do push-ups for 30 seconds — full or on knees, both work.<br>
+2. During rest — stay low, breathe, keep your hands ready.<br>
+3. Each rep seals the blast door one centimeter more.<br><br>
+Add up all your reps and enter the total — I'll calculate how much of the door we've sealed!`,
+
+    ru: `🏋️ ТРЕНИРОВКА: РУЧНАЯ ГЕРМЕТИЗАЦИЯ ЛЮКА<br><br>
+<strong>⚠️ Критическая неисправность!</strong> Электропривод сгорел. Переборка — единственное что отделяет нас от вакуума — и она не закроется сама!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и отжимайся 30 секунд — полные или с колен, оба варианта подходят.<br>
+2. Во время отдыха — оставайся низко, дыши, держи руки наготове.<br>
+3. Каждое отжимание закрывает бронедверь ещё на один сантиметр.<br><br>
+Сложи все повторения и введи итоговое число — я рассчитаю насколько мы закрыли дверь!`,
+
+    sr: `🏋️ TRENING: RUČNO ZAPTIVANJE OTVORA<br><br>
+<strong>⚠️ Kritičan kvar!</strong> Električni pogon je pregoreo. Pregrada je jedina stvar između nas i vakuuma — i neće se zatvoriti sama!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi sklekove 30 sekundi — puni ili na kolenima, oba rade.<br>
+2. Tokom odmora — ostani nisko, diši, drži ruke spremne.<br>
+3. Svaki sklek zatvara oklopna vrata još jedan centimetar.<br><br>
+Saberi sva ponavljanja i unesi ukupan broj — izračunaću koliko smo zatvorili vrata!`
+},
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -472,11 +502,38 @@ const storyData = {
             ru: [{ id: "water_d3", text: "💧 Гидратация (Синхронизация антидота): Выпейте 300 мл чистой воды, чтобы сохранить бдительность и защитить рецепторы мозга от звуковых частот.", juice: "✅ Водный баланс оптимален! Клеточная структура мозга защищена от гипноза." }],
             sr: [{ id: "water_d3", text: "💧 Hidratacija (Sinhronizacija antidota): Popijte 300 ml čiste vode da ostanete budni i zaštitite receptore mozga od zvučnih frekvencija.", juice: "✅ Bilans tečnosti je optimalan! Ćelijska struktura mozga je zaštićena od hipnoze." }]
         },
-        workoutText: {
-            en: "🏋️ MAIN MISSION: CORE REACTION CRUNCHES<br><br>AI ORION: 'We are slipping into the siren's gravitational well! Our only escape is to fire the lower impulse thrusters for a violent course correction. Lie on your back, brace your hands, lift your legs, and drive your pelvis to your chest! Blast the ship upward!'",
-            ru: "🏋️ ГЛАВНАЯ МИССИЯ: СКРУЧИВАНИЯ НА ПРЕСС 'РЕАКЦИЯ ЯДРА'<br><br>ИИ ОРИОН: 'Мы сползаем в гравитационный колодец сирены! Наш единственный шанс спастись — запустить нижние импульсные двигатели для резкого изменения курса. Лягте на спину, упритесь руками, поднимите ноги и подтяните таз к груди! Вытолкните корабль вверх!'",
-            sr: "🏋️ GLAVNA MISIJA: TRBUŠNJACI ZA REAKCIJU JEZGRA<br><br>AI ORION: 'Klizimo u gravitacioni bunar sirene! Naš jedini spas je da aktiviramo donje impulsne potisnike za oštru korekciju kursa. Legnite na leđa, oslonite se rukama, podignite noge i privucite karlicu grudima! Lansirajte brod nagore!'"
-        },
+
+       workoutText: {
+    en: `🏋️ MAIN MISSION: CORE REACTION CRUNCHES<br><br>
+<strong>🚨 Emergency!</strong> We are slipping into the siren's gravitational well! Our only escape is to fire the lower impulse thrusters — and that means activating your core!<br><br>
+<strong>How to do it:</strong><br>
+Lie on your back. Press your hands flat on the floor beside you — or grip something sturdy above your head for extra support. Lift both legs up, then drive your knees toward your chest, lifting your hips slightly off the floor. Lower slowly and repeat. This is a reverse crunch — the movement comes from your lower belly, not your neck!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and do reverse crunches for 30 seconds.<br>
+2. During rest — keep lying down, breathe deeply, let your core recover.<br>
+3. Repeat until the cycle is complete.<br><br>
+Add up all your reps and enter the total — every crunch fires the thrusters and pushes us closer to safety!`,
+
+    ru: `🏋️ ГЛАВНАЯ МИССИЯ: СКРУЧИВАНИЯ НА ПРЕСС 'РЕАКЦИЯ ЯДРА'<br><br>
+<strong>🚨 Экстренная ситуация!</strong> Мы сползаем в гравитационный колодец сирены! Единственный шанс спастись — запустить нижние импульсные двигатели — а это значит активировать пресс!<br><br>
+<strong>Как выполнять:</strong><br>
+Лягте на спину. Прижмите ладони к полу по бокам от себя — или возьмитесь за что-то устойчивое над головой для дополнительной опоры. Поднимите обе ноги вверх, затем подтяните колени к груди, слегка отрывая таз от пола. Медленно опустите и повторите. Это обратные скручивания — движение идёт от нижнего пресса, а не от шеи!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и делай обратные скручивания 30 секунд.<br>
+2. Во время отдыха — оставайся лёжа, дыши глубоко, дай прессу восстановиться.<br>
+3. Повторяй раунды до завершения цикла.<br><br>
+Сложи все повторения и введи итоговое число — каждое скручивание запускает двигатели и приближает нас к спасению!`,
+
+    sr: `🏋️ GLAVNA MISIJA: TRBUŠNJACI ZA REAKCIJU JEZGRA<br><br>
+<strong>🚨 Hitna situacija!</strong> Klizimo u gravitacioni bunar sirene! Jedini spas je da aktiviramo donje impulsne potisnike — a to znači aktivirati trbušne mišiće!<br><br>
+<strong>Kako izvesti:</strong><br>
+Legni na leđa. Pritisni dlanove na pod pored sebe — ili se uhvati za nešto čvrsto iznad glave za dodatnu potporu. Podigi obe noge gore, zatim privuci kolena grudima, lagano podižući karlicu od poda. Polako spusti i ponovi. Ovo su obrnuti trbušnjaci — pokret dolazi iz donjeg stomaka, ne iz vrata!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi obrnute trbušnjake 30 sekundi.<br>
+2. Tokom odmora — ostani da ležiš, diši duboko, pusti trbušne mišiće da se oporave.<br>
+3. Ponavljaj runde do kraja ciklusa.<br><br>
+Saberi sva ponavljanja i unesi ukupan broj — svaki trbušnjak pokreće potisnike i približava nas spasenju!`
+},
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -531,11 +588,39 @@ const storyData = {
             ru: [{ id: "water_d4", text: "💧 Пополнение влаги (Вывод гормонов паники): Выпейте большой стакан чистой воды, чтобы смыть адреналиновый шок и запустить глубокую клеточную фильтрацию.", juice: "✅ Внутреннее равновесие восстановлено. Мышечные ткани получили жизненно важную влагу, необходимую для быстрой регенерации." }],
             sr: [{ id: "water_d4", text: "💧 Hidratacija (Ispiranje hormona panike): Popijte veliku čašu čiste vode da biste isprali adrenalinski šok i pokrenuli duboko ćelijsko filtriranje.", juice: "✅ Unutrašnja ravnoteža je uspostavljena. Mišićna tkiva dobijaju vitalnu hidrataciju potrebnu za brzu regeneraciju." }]
         },
-        workoutText: {
-            en: "🏋️ WORKOUT: ZERO-G DEFENSIVE KICKS<br><br>AI ORION: 'The deck is shaking, gravity is offline! Take a defensive stance, balance on one leg, and deliver powerful, rapid kicks forward to knock the beasts back into the vacuum. Count your strikes: we must clear both the left and right sectors!'",
-            ru: "🏋️ ТРЕНИРОВКА: ЗАЩИТНЫЕ УДАРЫ В НЕВЕСОМОСТИ<br><br>ИИ ОРИОН: 'Палуба дрожит, гравитация отключена! Примите защитную стойку, удерживайте равновесие на одной ноге и наносите мощные, быстрые удары ногами вперед, чтобы выбросить тварей обратно в вакуум. Считайте удары: мы должны зачистить и левый, и правый сектора!'",
-            sr: "🏋️ TRENING: ODBRAMBENI UDARCI U BEZTEŽINSKOM STANJU<br><br>AI ORION: 'Paluba se trese, gravitacija je isključena! Zauzmite odbrambeni stav, održavajte ravnotežu na jednoj nozi i zadajte snažne, brze udarce nogom unapred kako biste odbacili zveri nazad u vakuum. Brojte svoje udarce: moramo očistiti i levi i desni sektor!'"
-        },
+
+       workoutText: {
+    en: `🏋️ MAIN MISSION: ZERO-G DEFENSIVE KICKS<br><br>
+<strong>🚨 Emergency!</strong> The deck is shaking, gravity is offline! Alien beasts are trying to breach the sector. Take a defensive stance, balance on one leg, and deliver powerful kicks to knock them back into the vacuum!<br><br>
+<strong>How to do it:</strong><br>
+Stand tall and find your balance on one leg, keeping your core tight. Lift the other knee up and execute a controlled, powerful kick forward. Step back down and repeat. Alternate legs each round (e.g., Round 1 — right leg, Round 2 — left leg), or alternate kicks if you prefer. Keep your hands up to protect your face and maintain your balance!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and do rapid kicks for 30 seconds.<br>
+2. During rest — stand steady, shake out your legs, and catch your breath.<br>
+3. Repeat until the cycle is complete, making sure to clear both sectors (left and right leg).<br><br>
+Add up all your strikes and enter the total — every single kick pushes the beasts away and secures the perimeter!`,
+
+    ru: `🏋️ ГЛАВНАЯ МИССИЯ: ЗАЩИТНЫЕ УДАРЫ В НЕВЕСОМОСТИ<br><br>
+<strong>🚨 Экстренная ситуация!</strong> Палуба дрожит, гравитация отключена! Инопланетные твари пытаются прорваться в отсек. Примите защитную стойку, удерживайте равновесие на одной ноге и наносите мощные удары, чтобы выбросить их обратно в вакуум!<br><br>
+<strong>Как выполнять:</strong><br>
+Встаньте ровно, поймайте баланс на одной ноге, удерживая пресс напряженным. Поднимите другое колено вверх и выполните четкий, мощный удар (кик) ногой вперед. Вернитесь в исходное положение и повторите. Меняйте рабочую ногу каждый раунд (например: Раунд 1 — правая, Раунд 2 — левая). Держите руки у лица, чтобы защищаться и сохранять равновесие!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и наноси быстрые удары в течение 30 секунд.<br>
+2. Во время отдыха — подыши, встряхни ноги и восстанови баланс.<br>
+3. Повторяй раунды до завершения цикла, чтобы зачистить и левый, и правый сектора.<br><br>
+Сложи все удары вместе и введи итоговое число — каждый удар отбрасывает тварей назад и спасает корабль!`,
+
+    sr: `🏋️ GLAVNA MISIJA: ODBRAMBENI UDARCI U BEZTEŽINSKOM STANJU<br><br>
+<strong>🚨 Hitna situacija!</strong> Paluba se trese, gravitacija je isključena! Vanzemaljske zveri pokušavaju da probiju sektor. Zauzmi odbrambeni stav, drži ravnotežu na jednoj nozi i zadaj snažne udarce kako bi ih odbacio nazad u vakuum!<br><br>
+<strong>Kako izvesti:</strong><br>
+Stani pravo, pronađi ravnotežu na jednoj nozi i drži trbušnjake napetim. Podigni drugo koleno uvis i izvedi kontrolisan, snažan udarac nogom unapred. Vrati se u početni položaj i ponovi. Menjaj radnu nogu svake runde (npr. Runda 1 — desna noga, Runda 2 — leva noga). Drži ruke podignute ispred lica radi odbrane i bolje ravnoteže!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i zadaj brze udarce nogom 30 sekundi.<br>
+2. Tokom odmora — protresi noge, diši duboko i vrati balans.<br>
+3. Ponavljaj runde do kraja ciklusa, kako bismo očistili i levi i desni sektor.<br><br>
+Saberi sve udarce i unesi ukupan broj — svaki udarac odbacuje zveri i osigurava bezbednost broda!`
+},
+
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -591,10 +676,37 @@ const storyData = {
             sr: [{ id: "water_d5", text: "💧 Hidratacija (Hlađenje procesora): Popijte 300 ml vode. Potrebna mi je kondenzacija vlage vašeg tela kako bih ohladio pregrejane primopredajnike.", juice: "✅ Radio modul je ohlađen! Temperature ploča su se vratile u bezbedne granice, statičke smetnje na ekranima su smanjene za 20%." }]
         },
         workoutText: {
-            en: "🏋️ WORKOUT: SUPERMAN HOLD MAST CALIBRATION<br><br>AI ORION: 'The array's automatic motor is jammed. Lie face down on the deck, stretch your arms forward, and lift your limbs off the floor, holding at the peak. Your body must act as the antenna's structural mast. Each lift aligns our transmission beam closer to Alpha Centauri!'",
-            ru: "🏋️ ТРЕНИРОВКА: КАЛИБРОВКА МАЧТЫ В УДЕРЖАНИИ 'СУПЕРМЕН'<br><br>ИИ ОРИОН: 'Автоматический привод антенной решетки заклинило. Лягте на палубу лицом вниз, вытяните руки вперед и оторвите конечности от пола, удерживая их в верхней точке. Ваше тело должно послужить несущей мачтой антенны. Каждый подъем приближает наш передающий луч к Альфе Центавра!'",
-            sr: "🏋️ TRENING: KALIBRACIJA STUBA U 'SUPERMEN' IZDRŽAJU<br><br>AI ORION: 'Automatski motor antene je zaglavljen. Legnite licem prema dole na palubu, ispružite ruke napred i podignite ekstremitete od poda, držeći ih u najvišoj tački. Vaše telo mora delovati kao noseći stub antene. Svako podizanje usmerava naš prenosni snop bliže Alfi Kentauri!'"
-        },
+    en: `🏋️ MAIN MISSION: SUPERMAN HOLD MAST CALIBRATION<br><br>
+<strong>🚨 Emergency!</strong> The communication array's automatic motor is jammed. We are losing our signal! Your body must act as the antenna's structural mast. Every lift aligns our transmission beam closer to Alpha Centauri!<br><br>
+<strong>How to do it:</strong><br>
+Lie face down on the deck and stretch your arms forward. Keeping your neck long and looking down at the floor, slowly lift your arms, chest, and legs off the ground. Hold this "Superman" position at the peak for 1–2 seconds, squeezing your glutes and lower back, then lower down smoothly. Do not jerk your movement!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and perform Superman lifts with a short hold for 30 seconds.<br>
+2. During rest — lower completely, relax your muscles, and breathe into your lower back.<br>
+3. Repeat until the cycle is complete and the signal stabilizes.<br><br>
+Add up all your completed lifts and enter the total — every repetition strengthens the signal and connects us back to civilization!`,
+
+    ru: `🏋️ ГЛАВНАЯ МИССИЯ: КАЛИБРОВКА МАЧТЫ В УДЕРЖАНИИ 'СУПЕРМЕН'<br><br>
+<strong>🚨 Экстренная ситуация!</strong> Автоматический привод антенной решетки заклинило. Мы теряем связь! Ваше тело должно послужить несущей мачтой антенны. Каждый подъем приближает наш передающий луч к Альфе Центавра!<br><br>
+<strong>Как выполнять:</strong><br>
+Лягте на палубу лицом вниз и вытяните руки вперед. Смотрите строго в пол, чтобы шея оставалась прямой и не перенапрягалась. Плавно оторвите руки, грудь и ноги от пола. Задержитесь в верхней точке «Супермена» на 1–2 секунды, задействуя ягодицы и мышцы спины, а затем под контролем опуститесь. Избегайте резких рывков!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и делай подъемы «Супермен» с фиксацией в течение 30 секунд.<br>
+2. Во время отдыха — полностью опустись на палубу, расслабься и подыши животом.<br>
+3. Повторяй раунды до завершения цикла.<br><br>
+Сложи все выполненные подъемы и введи итоговое число — каждое повторение усиливает сигнал и возвращает нас на космические радары!`,
+
+    sr: `🏋️ GLAVNA MISIJA: KALIBRACIJA STUBA U 'SUPERMEN' IZDRŽAJU<br><br>
+<strong>🚨 Hitna situacija!</strong> Automatski motor antene je zaglavljen. Gubimo signal! Vaše telo mora delovati kao noseći stub antene. Svako podizanje usmerava naš prenosni snop bliže Alfi Kentauri!<br><br>
+<strong>Kako izvesti:</strong><br>
+Legni na palubu licem prema dole i ispruži ruke napred. Gledaj pravo u pod kako bi vrat ostao ispravljen i bez napetosti. Polako podigni ruke, grudi i noge od poda. Zadrži ovu "Supermen" poziciju u najvišoj tački 1–2 sekunde, stežući gluteuse i mišiće leđa, pa se kontrolisano spusti. Izbegavaj nagle pokrete!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi "Supermen" podizanja sa zadržavanjem 30 sekundi.<br>
+2. Tokom odmora — spusti se potpuno na pod, opusti mišiće i diši duboko.<br>
+3. Ponavljaj runde do kraja ciklusa dok se signal ne stabilizuje.<br><br>
+Saberi sva uspešna podizanja i unesi ukupan broj — svako ponavljanje pojačava signal i vraća nas na kosmičke radare!`
+},
+
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -649,11 +761,38 @@ const storyData = {
             ru: [{ id: "water_d6", text: "💧 Гидратация (Критические ткани): Выпейте 300 мл чистой воды, чтобы защитить сердечно-сосудистую систему от резких перепадов давления в нижних слоях облаков.", juice: "✅ Давление жидкостей в организме стабилизировано. Риск потери сознания от экстремальных перегрузок снижен до минимума." }],
             sr: [{ id: "water_d6", text: "💧 Hidratacija (Kritična tkiva): Popijte 300 ml čiste vode da biste zaštitili kardiovaskularni sistem od naglih fluktuacija pritiska u nižim oblacima.", juice: "✅ Pritisak telesnih tečnosti je stabilizovan. Rizik od gubitka svesti usled ekstremnih G-sila smanjen je na minimum." }]
         },
-        workoutText: {
-            en: "🏋️ MAIN MISSION: IMPACT BURPEES (NO JUMP)<br><br>AI ORION: 'Gravity is throwing us against the deck! Drop into a plank position under the G-force, then, fighting the immense weight, push yourself back up. Each rep injects emergency power into the descent thrusters. Cushion the impact, Commander!'",
-            ru: "🏋️ ГЛАВНАЯ МИССИЯ: УДАРНЫЕ БЕРПИ (БЕЗ ПРЫЖКА)<br><br>ИИ ОРИОН: 'Гравитация размазывает нас по палубе! Падайте в положение планки под весом перегрузки, затем, преодолевая колоссальный вес, выталкивайте себя обратно вверх. Каждое повторение подает аварийное питание на посадочные двигатели. Смягчите удар, Командир!'",
-            sr: "🏋️ GLAVNA MISIJA: UDARNI BERPI (BEZ SKOKA)<br><br>AI ORION: 'Gravitacija nas baca o palubu! Spustite se u položaj planka pod uticajem G-sile, a zatim se, boreći se protiv ogromne težine, gurnite nazad nagore. Svako ponavljanje ubrizgava struju za hitne slučajeve u potisnike za spuštanje. Ublažite udar, Komandante!'"
-        },
+       workoutText: {
+    en: `🏋️ MAIN MISSION: IMPACT BURPEES (FULL OVERLOAD)<br><br>
+<strong>🚨 Emergency!</strong> Extreme gravity is crushing us against the deck! To stabilize the ship, you must drop completely to the floor under the G-force, then, fighting the immense weight, push yourself back up. Every rep injects emergency power into the descent thrusters. Cushion the impact, Commander!<br><br>
+<strong>How to do it:</strong><br>
+Stand tall, squat down, and place your hands on the floor. Drop your feet back and lower your entire body so your chest and belly completely touch the deck. (No, this isn't a quick nap to check if the floor is clean!). From the floor, push yourself up with your hands, step or jump your feet back to your hands, and stand up completely, stretching your hips. Smoothly and without a final jump!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and perform full-body burpees consistently for 30 seconds.<br>
+2. During rest — stand up, breathe deeply, and remind yourself that gravity is temporary, but glory is forever.<br>
+3. Repeat until the cycle is complete and the thrusters stabilize.<br><br>
+Add up all your completed reps and enter the total — each touchdown powers the landing gears and ensures a safe arrival!`,
+
+    ru: `🏋️ ГЛАВНАЯ МИССИЯ: УДАРНЫЕ БЕРПИ (ПОЛНАЯ ПЕРЕГРУЗКА)<br><br>
+<strong>🚨 Экстренная ситуация!</strong> Экстремальная гравитация размазывает нас по палубе! Падайте на пол под весом перегрузки, а затем, преодолевая колоссальный вес, выталкивайте себя обратно вверх. Каждое повторение подает аварийное питание на посадочные двигатели. Смягчите удар, Командир!<br><br>
+<strong>Как выполнять:</strong><br>
+Из положения стоя присядьте, упритесь ладонями в пол и полностью опуститесь вниз, коснувшись палубы грудью и животом. (И нет, это не повод вздремнуть или проверить качество клининга на корабле!). Из этого положения отожмитесь от пола, шагом или прыжком подтяните стопы к рукам и полностью выпрямитесь. Выполняйте движение плавно, без финального прыжка вверх!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и делай берпи с касанием пола животом в течение 30 секунд.<br>
+2. Во время отдыха — встань ровно, глубоко дыши и напоминай себе, что гравитация временна, а триумф вечен.<br>
+3. Повторяй раунды до завершения цикла.<br><br>
+Сложи все повторения и введи итоговое число — каждое падение на палубу заряжает посадочные двигатели и спасает корабль от жесткого приземления!`,
+
+    sr: `🏋️ GLAVNA MISIJA: UDARNI BERPI (POTPUNO PREOPTEREĆENJE)<br><br>
+<strong>🚨 Hitna situacija!</strong> Ekstremna gravitacija nas baca o palubu! Spustite se potpuno na pod pod uticajem G-sile, a zatim se, boreći se protiv ogromne težine, gurnite nazad nagore. Svako ponavljanje ubrizgava struju za hitne slučajeve u potisnike za spuštanje. Ublažite udar, Komandante!<br><br>
+<strong>Kako izvesti:</strong><br>
+Iz uspravnog položaja čučni, osloni se dlanovima na pod i spusti celo telo dole, tako da grudima i stomakom potpuno dodirneš palubu. (I ne, to nije prilika da malo odspavaš ili proveriš da li je pod čist!). Iz tog položaja se odgurni rukama, vrati noge korakom ili skokom prema rukama i potpuno se ispravi. Izvodi pokret tečno, bez završnog skoka!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi kompletne berpi sa spuštanjem na stomak 30 sekundi.<br>
+2. Tokom odmora — ustani, diši duboko i podseti sebe da je gravitacija privremena, a slava večna.<br>
+3. Ponavljaj runde do kraja ciklusa dok se potisnici ne stabilizuju.<br><br>
+Saberi sva ponavljanja i unesi ukupan broj — svako spuštanje na palubu napaja sisteme i osigurava bezbedno sletanje!`
+},
+
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -709,10 +848,36 @@ const storyData = {
             sr: [{ id: "water_d7", text: "💧 Hidratacija (Nedeljni bilans tečnosti): Razmislite o svojim navikama. Da li ste postali pažljiviji u pijenju vode? Popijte poslednju čašu da proslavite preživljavanje kosmosa!", juice: "✅ Analiza telesnih tečnosti je optimalna. Vaše ćelije su se prilagodile stresorima dubokog svemira." }]
         },
         workoutText: {
-            en: "🏋️ FINAL CHALLENGE: SPINAL ALIGNMENT ROLLS<br><br>AI ORION: 'Landing forces have compressed your spine, and local gravity is intense. Sit on the deck, pull your knees to your chest, hug them tight, and gently roll backward and forward along your spine. This will align your vertebrae and restore neural signals. Enter your reps, and I'll calibrate your mobility.'",
-            ru: "🏋️ ФИНАЛЬНОЕ ИСПЫТАНИЕ: ПЕРЕКАТЫ НА СПИНЕ ДЛЯ ВЫРАВНИВАНИЯ ПОЗВОНОЧНИКА<br><br>ИИ ОРИОН: 'Силы приземления сжали ваш позвоночник, а местная гравитация очень сильна. Сядьте на палубу, подтяните колени к груди, крепко обнимите их и плавно перекатывайтесь назад и вперед по спине. Это выровняет позвонки и восстановит нейронные сигналы. Введите количество повторений, и я откалибрую вашу подвижность.'",
-            sr: "🏋️ FINALNI IZAZOV: KOTRLJANJE NA LEĐIMA ZA PORAVNANJE KIČME<br><br>AI ORION: 'Sile sletanja su kompresovale vašu kičmu, a lokalna gravitacija je intenzivna. Sedite na palubu, privucite kolena grudima, čvrsto ih zagrlite i nežno se kotrljajte unazad i unapred duž kičme. Ovo će poravnati vaše pršljenove i vratiti neuronske signale. Unesite ponavljanja i ja ću kalibrisati vašu mobilnost.'"
-        },
+    en: `🏋️ FINAL CHALLENGE: SPINAL ALIGNMENT ROLLS<br><br>
+<strong>🚨 Mission Update!</strong> Landing forces have compressed your spine, and local gravity is intense. To restore neural signals and release tension, your vertebrae need emergency calibration!<br><br>
+<strong>How to do it:</strong><br>
+Sit on a soft mat or a folded towel. Pull your knees close to your chest, hug them tight with your arms, and tuck your chin down toward your chest — your back must be completely rounded like a ball. Gently roll backward onto your spine up to your shoulder blades (do not roll onto your neck!), then roll back up to the starting position using your core. Keep the movement smooth and continuous!<br><br>
+<strong>Action plan:</strong><br>
+1. Hit start and perform gentle spinal rolls for 30 seconds.<br>
+2. During rest — stay seated or lie down comfortably, close your eyes, and take deep, relaxing breaths.<br>
+3. Repeat until the cycle is complete and your spine feels fully released.<br><br>
+Enter the total number of rolls — each gentle repetition aligns your system and calibrates your mobility for the next journey!`,
+
+    ru: `🏋️ ФИНАЛЬНОЕ ИСПЫТАНИЕ: ПЕРЕКАТЫ ДЛЯ ВЫРАВНИВАНИЯ ПОЗВОНОЧНИКА<br><br>
+<strong>🚨 Обновление миссии!</strong> Силы приземления сжали ваш позвоночник, а местная гравитация слишком сильна. Чтобы восстановить нейронные сигналы и снять напряжение, позвонкам требуется срочная калибровка!<br><br>
+<strong>Как выполнять:</strong><br>
+Сядьте на мягкий коврик или сложенное полотенце. Подтяните колени к груди, крепко обнимите их руками и опустите подбородок к груди — спина должна быть полностью круглой, как мячик. Плавно перекатитесь назад по позвоночнику до лопаток (не заезжайте на шею!), а затем за счет мышц пресса вернитесь обратно в исходное положение. Двигайтесь мягко, без рывков!<br><br>
+<strong>План действий:</strong><br>
+1. Включи старт и делай плавные перекаты на спине в течение 30 секунд.<br>
+2. Во время отдыха — посиди или спокойно полежи, прикрой глаза и глубоко подыши.<br>
+3. Повторяй раунды до завершения цикла, пока не почувствуешь легкость в спине.<br><br>
+Введи общее количество перекатов — каждое мягкое повторение выравнивает систему и калибрует твою подвижность для будущих открытий!`,
+
+    sr: `🏋️ FINALNI IZAZOV: KOTRLJANJE NA LEĐIMA ZA PORAVNANJE KIČME<br><br>
+<strong>🚨 Ažuriranje misije!</strong> Sile sletanja su kompresovale vašu kičmu, a lokalna gravitacija je previše intenzivna. Da bismo vratili neuronske signale i oslobodili napetost, pršljenovima je potrebna hitna kalibracija!<br><br>
+<strong>Kako izvesti:</strong><br>
+Sedni na mekanu prostirku ili savijeni peškir. Privuci kolena blizu grudi, čvrsto ih zagrli rukama i spusti bradu prema grudima — leđa moraju biti potpuno zaobljena, kao lopta. Nežno se otkotrljaj unazad duž kičme do lopatica (ne kotrljaj se na vrat!), a zatim se pomoću trbušnjaka vrati u početni položaj. Kreći se glatko i bez cimanja!<br><br>
+<strong>Plan akcije:</strong><br>
+1. Pritisni start i radi nežna kotrljanja na leđima 30 sekundi.<br>
+2. Tokom odmora — ostani da sediš ili ležiš udobno, zatvori oči i diši duboko.<br>
+3. Ponavljaj runde do kraja ciklusa dok ne osetiš da se kičma potpuno opustila.<br><br>
+Unesi ukupan broj kotrljanja — svako nežno ponavljanje poravnava tvoj sistem i kalibriše mobilnost za sledeće putovanje!`
+},
         calcResult: function (count, lang = 'en') {
             const messages = {
                 en: {
@@ -753,24 +918,47 @@ const storyData = {
     final: {
         type: "text-only",
         steps: {
-            en: [
-                "CHAPTER ONE CONCLUDED.",
-                "You have proven that humanity is worthy of surviving among the stars. Caring for yourself saved your body, your mind, and your Space Ark.",
-                "But the story is only beginning... The ship is surrounded. The roar of an unknown behemoth echoes from the crags. Your crewmate checks the charge on their blaster and gives you a confident wink.",
-                "AI ORION's Voice: 'Commander, welcome to Chapter 2: Chronicles of the New Earth. To be continued next week...'"
-            ],
-            ru: [
-                "ГЛАВА ПЕРВАЯ ЗАВЕРШЕНА.",
-                "Вы доказали, что человечество достойно выжить среди звезд. Забота о себе спасла ваше тело, ваш разум и ваш Космический Ковчег.",
-                "Но история только начинается... Корабль окружен. Из ущелий доносится рев неведомого чудовища. Ваш напарник проверяет заряд своего бластера и уверенно вам подмигивает.",
-                "Голос ИИ ОРИОН: 'Командир, добро пожаловать в Главу 2: Хроники Новой Земли. Продолжение следует на следующей неделе...'"
-            ],
-            sr: [
-                "PRVO POGLAVLJE JE ZAVRŠENO.",
-                "Dokazali ste da je čovečanstvo dostojno preživljavanja među zvezdama. Briga o sebi spasila je vaše telo, vaš um i vašu Svemirsku Barku.",
-                "Ali priča tek počinje... Brod je okružen. Rika nepoznatog čudovišta odjekuje iz litica. Vaš član posade proverava napunjenost svog blastera i samouvereno vam namiguje.",
-                "Glas AI ORION-a: 'Komandante, dobrodošli u 2. poglavlje: Hronike Nove Zemlje. Nastaviće se sledeće nedelje...'"
-            ]
+          en: [
+    "CHAPTER ONE CONCLUDED. 🚀",
+    
+    "You have successfully completed the introductory cycle! By taking care of your body and mind, you adapted to space conditions and saved your Space Ark.",
+    
+    "📊 SYSTEM UPDATE:\nBased on your physical data, Orion has calculated your path. You have unlocked a unique route tailored specifically to your level!",
+    
+    "🌍 WHAT'S NEXT?\nThe survival story on this uncharted planet is only beginning. Ahead of you lies a whole new week of exploration among dangerous crags and alien wilderness.",
+    
+    "Suddenly, a thunderous roar echoes from the deep canyons. Your crewmate checks the charge on their blaster and gives you a confident wink.",
+    
+    "🎙️ AI ORION: 'Commander, system calibration is complete. Welcome to Chapter 2: Chronicles of the New Earth. Your customized planetary mission begins next week...'"
+],
+
+ru: [
+    "ГЛАВА ПЕРВАЯ ЗАВЕРШЕНА. 🚀",
+    
+    "Вы успешно прошли вводный цикл! Забота о себе помогла вам адаптироваться к космическим нагрузкам, спасши ваше тело, разум и Космический Ковчег.",
+    
+    "📊 ОБНОВЛЕНИЕ СИСТЕМЫ:\nОриентируясь на ваши показатели, Орион рассчитал дальнейший путь. Вы открыли уникальную ветку сюжета, адаптированную именно под ваш уровень!",
+    
+    "🌍 ЧТО ДАЛЬШЕ?\nИстория выживания на этой неизведанной планеты только начинается. Впереди вас ждет целая неделя экспедиций среди опасных скал и диких зарослей.",
+    
+    "Вдруг из глубоких ущелий доносится раскатистый рев огромного чудовища. Ваш напарник проверяет заряд своего бластера и уверенно вам подмигивает.",
+    
+    "🎙️ ИИ ОРИОН: 'Командир, калибровка систем завершена. Добро пожаловать в Главу 2: Хроники Новой Земли. Ваша персональная планетарная миссия начнется на следующей неделе...'"
+],
+
+sr: [
+    "PRVO POGLAVLJE JE ZAVRŠENO. 🚀",
+    
+    "Uspešno ste završili uvodni ciklus! Briga o sebi pomogla vam je da se prilagodite kosmičkim naporima, spasivši vaše telo, um i vašu Svemirsku Barku.",
+    
+    "📊 AŽURIRANJE SISTEMA:\nNa osnovu vaših podataka, Orion je izračunao dalji put. Otključali ste jedinstvenu rutu prilagođenu upravo vašem nivou!",
+    
+    "🌍 ŠTA JE SLEDEĆE?\nPriča o preživljavanju na ovoj neistraženoj planeti tek počinje. Pred vama je cela nedelja ekspedicija među opasnim liticama i divljinom.",
+    
+    "Odjednom, gromoglasna rika odjekuje iz dubokih klisura. Vaš član posade proverava napunjenost svog blastera i samouvereno vam namiguje.",
+    
+    "🎙️ AI ORION: 'Komandante, kalibracija sistema je završena. Dobrodošli u 2. poglavlje: Hronike Nove Zemlje. Vaša personalizovana planetarna misija počinje sledeće nedelje...'"
+]
         },
         btnTexts: {
             en: ["SUMMARIZE RESULTS", "GLANCE AT YOUR PARTNER", "PREPARE WEAPONS", "END OF CHAPTER ONE 🚀"],
@@ -1092,6 +1280,34 @@ function loadDay(dayKey) {
     }
     updateProgressIndicator();
     renderMissionJournal();
+    function loadDay(dayKey) {
+    if (!gameState.unlockedDays.includes(dayKey)) return;
+    gameState.currentDayKey = dayKey;
+    gameState.currentStepIndex = 0;
+    saveProgress();
+
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+        btn.classList.remove("active");
+        btn.removeAttribute("aria-current");
+        btn.setAttribute("aria-pressed", "false");
+    });
+    const activeBtn = document.getElementById(`btn-${dayKey}`);
+    if (activeBtn) {
+        activeBtn.classList.add("active");
+        activeBtn.setAttribute("aria-current", "page");
+        activeBtn.setAttribute("aria-pressed", "true");
+    }
+
+    if (dayKey === "final") {
+        renderVictoryScreen();
+    } else {
+        renderCurrentState();
+        updateHUD();
+    }
+    updateProgressIndicator();
+    renderMissionJournal();
+    updateDayDots();
+}
 }
 
 // Обновление HUD баров (Water и Thrusters)
@@ -1450,6 +1666,7 @@ function shareMissionProgress() {
 
 // Переход к следующему дню по кнопке
 function jumpToNextDay() {
+     const DEV_MODE = true; // true = без блокировки, false = с блокировкой
     const dayData = storyData[gameState.currentDayKey];
     if (!dayData || !dayData.nextKey) return;
 
@@ -1457,8 +1674,7 @@ function jumpToNextDay() {
     const todayStr = now.toDateString();
     const lastDayKey = `last_completed_${gameState.currentDayKey}`;
     const lastCompleted = getStoredItem(lastDayKey);
-
-    if (lastCompleted && lastCompleted === todayStr) {
+    if (!DEV_MODE && lastCompleted && lastCompleted === todayStr) {
         // Уже завершили сегодня — показываем сообщение
         const lang = gameState.currentLang;
         const message = lang === 'ru'
@@ -2085,3 +2301,59 @@ function updateReminderStatus() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(setupDailyReminder, 2000);
 });
+// ============ ПРОГРЕСС ТОЧКИ ============
+function updateDayDots() {
+    const days = ['intro', 'day1', 'day2', 'day3', 'day4', 'day5', 'day6', 'day7', 'final'];
+    
+    days.forEach(dayKey => {
+        const dot = document.getElementById(`dot-${dayKey}`);
+        if (!dot) return;
+        
+        dot.classList.remove('completed', 'current');
+        
+        if (dayKey === gameState.currentDayKey) {
+            dot.classList.add('current');
+        } else if (gameState.unlockedDays.includes(dayKey)) {
+            const day = storyData[dayKey];
+            if (day && day.type === 'interactive-day') {
+                const taskId = getTranslatedDayTasks(day, gameState.currentLang)[0]?.id;
+                const waterOk = taskId ? getStoredItem(`track_${dayKey}_${taskId}`) === 'true' : false;
+                const reps = parseInt(getStoredItem(`track_${dayKey}_workout_reps`) || '0');
+                if (waterOk && reps >= 1) dot.classList.add('completed');
+            } else {
+                dot.classList.add('completed');
+            }
+        }
+    });
+}
+// Mobile dayNav: set select to current page and scroll active link into view
+        (function(){
+            const sel = document.getElementById('day-nav-select');
+            const nav = document.getElementById('dayNav');
+            if (sel) {
+                // set select to current file if option exists
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                const opt = Array.from(sel.options).find(o => o.value === currentFile);
+                if (opt) sel.value = currentFile;
+                sel.addEventListener('change', (e) => {
+                    const v = e.target.value;
+                    if (v) window.location.href = v;
+                });
+            }
+
+            // mark active link and scroll it into view
+            if (nav) {
+                const links = nav.querySelectorAll('a.day-link');
+                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                for (const a of links) {
+                    const href = a.getAttribute('href');
+                    const full = a.href || href;
+                    if (href === currentFile || full.endsWith('/' + currentFile) || full.endsWith(currentFile)) {
+                        a.classList.add('active');
+                        a.setAttribute('aria-current', 'page');
+                        try { a.scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'}); } catch (e) { a.scrollIntoView(); }
+                        break;
+                    }
+                }
+            }
+        })();

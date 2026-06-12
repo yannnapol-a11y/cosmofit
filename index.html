@@ -60,22 +60,24 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <div class="terminal">       
-        <header class="terminal-header">
-            <div class="terminal-title">
-                <h1>Space Ark: Survival</h1>
-                <p class="hero-summary" id="mission-objective">Mission Objective: Movement without instructions or stress. Just trust in your body.</p>
-                </div>
-            <div class="status-container">
-                <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
-                <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>               
-                <label for="lang-select" class="sr-only">Language</label>
-                <select id="lang-select" class="lang-select" aria-label="Language selector">
-                    <option value="en">EN</option>
-                    <option value="ru">RU</option>
-                    <option value="sr">SR</option>
-                </select>
-            </div>            
-        </header>
+    <header class="terminal-header">
+        <div class="terminal-title">
+            <h1>Space Ark: Survival</h1>
+            <p class="hero-summary" id="mission-objective">Mission Objective: Movement without instructions or stress. Just trust in your body.</p>
+        </div>
+        <div class="status-container">
+            <span class="status-indicator" id="status-indicator">SYSTEM: ONLINE</span>
+            <button type="button" class="reset-btn" id="reset-btn" title="Reset progress">🔄 Reset</button>               
+            <label for="lang-select" class="sr-only">Language</label>
+            <select id="lang-select" class="lang-select" aria-label="Language selector">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+                <option value="sr">SR</option>
+            </select>
+        </div>            
+    </header>
+
+    <nav id="dayNav" class="day-nav" aria-label="Mission days"></nav> 
 
         <main id="main-content" class="terminal-body">
             <section class="status-section" aria-labelledby="status-title">
@@ -129,48 +131,15 @@
 
     <footer class="terminal-footer">        
     <div class="manifesto-container">
-        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already inside you.</h2>
+        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already within you. The most important thing is the connection with your own body.</h2>
         <div class="manifesto-text" id="manifesto-text">
-            <p>Complex instructions often distract us from what matters most — connecting with our body. We invite you to return to the roots. This program is based entirely on natural movements, the ones we have known since birth.</p>
-            <p>You dont need to compare yourself to perfect pictures. If it feels comfortable, you are doing it right. Our goal is to bring you peace, confidence, and the joy of every movement.</p>
+            <p>Pain is not a part of the workout. If you experience pain in your joints, spine, or internal organs, stop exercising and consult a doctor. This project is designed for motivation and general fitness maintenance; it does not replace medical advice. If you have any medical contraindications, please consult a specialist. Move without comparing yourself to others. If you feel comfortable — you are on the right track.</p>
         </div>
     </div>    
-        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and Gemini. Without them, this journey wouldn't be possible. 🚀✨</p>
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and my fiends. Without them, this journey wouldn't be possible. 🚀✨</p>
     </footer>
 
     <script src="script-new.js"></script>
-    <script>
-        // Mobile dayNav: set select to current page and scroll active link into view
-        (function(){
-            const sel = document.getElementById('day-nav-select');
-            const nav = document.getElementById('dayNav');
-            if (sel) {
-                // set select to current file if option exists
-                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
-                const opt = Array.from(sel.options).find(o => o.value === currentFile);
-                if (opt) sel.value = currentFile;
-                sel.addEventListener('change', (e) => {
-                    const v = e.target.value;
-                    if (v) window.location.href = v;
-                });
-            }
-
-            // mark active link and scroll it into view
-            if (nav) {
-                const links = nav.querySelectorAll('a.day-link');
-                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
-                for (const a of links) {
-                    const href = a.getAttribute('href');
-                    const full = a.href || href;
-                    if (href === currentFile || full.endsWith('/' + currentFile) || full.endsWith(currentFile)) {
-                        a.classList.add('active');
-                        a.setAttribute('aria-current', 'page');
-                        try { a.scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'}); } catch (e) { a.scrollIntoView(); }
-                        break;
-                    }
-                }
-            }
-        })();
-    </script>
+    
 </body>
 </html>
