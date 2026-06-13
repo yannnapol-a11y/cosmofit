@@ -1687,7 +1687,7 @@ function shareMissionProgress() {
 
 // Переход к следующему дню по кнопке
 function jumpToNextDay() {
-     const DEV_MODE = true; // true = без блокировки, false = с блокировкой
+     const DEV_MODE = false; // true = без блокировки, false = с блокировкой
     const dayData = storyData[gameState.currentDayKey];
     if (!dayData || !dayData.nextKey) return;
 
