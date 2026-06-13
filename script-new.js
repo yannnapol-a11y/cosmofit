@@ -11,10 +11,10 @@ const uiTranslations = {
         days: { intro: "Intro", day1: "Day 01", day2: "Day 02", day3: "Day 03", day4: "Day 04", day5: "Day 05", day6: "Day 06", day7: "Day 07", final: "FINAL", planetDay1: "Planet Day 1", planetDayMedium: "Planet Day - Medium", planetDayHigh: "Planet Day - Advanced" },
         planetDayMediumDesc: "Face strange sounds and ground tremors on an alien planet. Perform chair squats and push-ups to survive the day.",
         planetDayHighDesc: "Battle extreme gravity and hostile flora. Beat your squat record and perform pull-ups to escape.",
-        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and my fiends. Without all of you, this journey would not have been possible. 🚀✨",
-        footerThanksHtml: "Made with love. Special thanks to my wonderful <strong>husband</strong>, two amazing daughters, and my friends. Without all of you, this journey would not have been possible. 🚀✨",
-        manifestoTitle: "Everything you need is already within you. The most important thing is the connection with your own body.",
-        manifestoText: "Pain is not a part of the workout. If you experience pain in your joints, spine, or internal organs, stop exercising and consult a doctor. This project is designed for motivation and general fitness maintenance; it does not replace medical advice. If you have any medical contraindications, please consult a specialist. Move without comparing yourself to others. If you feel comfortable — you are on the right track.",
+        footerThanks: "Made with love. Special thanks to my wonderful husband, two amazing daughters, and my friends. Without all of you, this journey would not have been possible. 🚀✨",
+        footerThanksHtml: "Made with love. Special thanks to my wonderful <strong>husband</strong>, two amazing <strong>daughters</strong>, and my friends. Without all of you, this journey would not have been possible. 🚀✨",
+        manifestoTitle: "Everything you need is already within you. The most important thing is to listen to your body.",
+        manifestoText: "Pain is not part of the workout. If you feel pain — stop and see a doctor. This project is made for motivation and general fitness. It does not replace medical advice. If you have any contraindications — consult a specialist first, then train. Move at your own pace. No comparisons. No judgment. If you feel comfortable — you're already on the right path. 🚀",
         confirmProtocol: "CONFIRM PROTOCOL",
         continueBtn: "CONTINUE",
         authIntroTitle: "PLANETARY CHECK-IN",
@@ -23,8 +23,8 @@ const uiTranslations = {
         authChecklistSubtitle: "Mark the statements that are true. ORION uses this data to determine your fitness level and contraindications.",
         authChecklistQuestions: [
             "I have had surgery or given birth in the last six months.",
-            "I have any chronic illnesses?",
-            "I experience chronic joint pain?",
+            "I have any chronic illnesses.",
+            "I experience chronic joint pain.",
             "I regularly train with strength workouts.",
             "I regularly do active cardio.",
             "I take moderate walks and train sometimes.",
@@ -43,6 +43,8 @@ const uiTranslations = {
         authResultMediumText: "This planet is mysterious and moderately aggressive. ORION suggests caution, but the environment is rich with strange signals and potential discoveries.",
         authResultLowTitle: "LOW FITNESS LEVEL",
         authResultLowText: "The world appears friendlier and your partner is supportive. ORION recommends careful exploration and patience, because your body needs time to adapt.",
+        authResultRecoveryTitle: "RECOVERY MODE",
+        authResultRecoveryText: "ORION: 'Commander, your body is still in recovery after surgery or childbirth. The planet ahead is calm and safe. We recommend resting, moving gently, and consulting a specialist before any physical training. The Ark will wait for you.'",
         authContinueToPlanet: "START FIRST DAY ON PLANET",
         authMissingFields: "Please fill in the test values before continuing.",
         planetSummary: "The Ark has landed. Strange green flora surrounds the damaged vessel as ORION guides you toward the glowing dome.",
@@ -58,7 +60,7 @@ const uiTranslations = {
         planetWorkoutTitle: "GENTLE FLORA EXPLORATION SEQUENCE",
         planetWorkoutDesc: "The friendly flora pulses with a gentle rhythm. Your companion suggests mimicking the plants' movement pattern—a flowing bridge gesture followed by a cross-body exploration motion. This will help your muscles adapt to the local gravity.",
         planetExercise1: "🌿 Bridge (Glute Bridge) + Bird Dog Movements",
-        planetExerciseInstructions: "1. Lie on back, feet flat, raise hips in a bridge position (hold 2 sec, repeat).\n2. Move to table position (hands & knees), alternate lifting opposite arm & leg (count each pair).\nEnter total combined movements:",
+        planetExerciseInstructions: "1. Lie on back, feet flat, raise hips in a bridge position (hold 2 sec, repeat).<br>2. Move to table position (hands & knees), alternate lifting opposite arm & leg (count each pair).<br>Enter total combined movements:",
         planetSubmitWorkout: "SUBMIT",
         planetWorkoutLow: "🔴 No movements recorded. Rest and try again when ready.",
         planetWorkoutMedium: "🟡 Gentle movements. The flora seems to recognize your rhythm. Your companion nods approvingly.",
@@ -75,7 +77,7 @@ const uiTranslations = {
         planetIntroMedium: "AI ORION: 'Commander, distant rumbling and odd cyclic sounds echo from the undergrowth. Sensors detect large moving masses. Move low and listen — then rise and respond. The terrain trembles occasionally; lie flat and listen, then push up to hands and knees and repeat when safe.'",
         planetWorkoutMediumTitle: "ATTUNEMENT SEQUENCE — KNEE CHAIR SQUATS & PUSH-UPS",
         planetExercise2: "🪑 Chair Squats + Push-ups (knees allowed)",
-        planetExercise2Instructions: "1. Stand in front of a chair, perform a controlled squat until you lightly touch the seat, then stand (counts as one).\\n2. Perform push-ups — full or on knees (counts individually).\\nEnter total combined repetitions:",
+        planetExercise2Instructions: "1. Stand in front of a chair, perform a controlled squat until you lightly touch the seat, then stand (counts as one).<br>2. Perform push-ups — full or on knees (counts individually).<br>Enter total combined repetitions:",
         planetTremorExercise: "🌎 Ground Tremor Sequence (Lie down → Listen → Rise to hands & knees)",
         hudWorkout: "Training",
         interactiveTitleTasks: "DAILY SYNCHRONIZATION TASKS",
@@ -114,8 +116,8 @@ const uiTranslations = {
         planetDayHighDesc: "Сражайся с экстремальной гравитацией и враждебной флорой. Побей свой рекорд приседаний и выполни максимум подтягиваний, чтобы сбежать.",
         footerThanks: "Сделано с любовью. Особая благодарность моему замечательному мужу, двум прекрасным дочерям и моим друзьям. Без вас всех это путешествие не было бы возможным. 🚀✨",
         footerThanksHtml: "Сделано с любовью. Особая благодарность моему замечательному <strong>мужу</strong>, двум прекрасным дочерям и моим друзьям. Без вас всех это путешествие не было бы возможным. 🚀✨",        
-        manifestoTitle: "Всё необходимое уже есть внутри тебя. Главное — связь с собственным телом.",
-        manifestoText: "Боль — не часть тренировки. При боли в суставах, позвоночнике или внутренних органах прекратите занятия и обратитесь к врачу. Этот проект создан для мотивации и поддержания общей физической формы и не заменяет медицинские рекомендации. Если у вас есть противопоказания, проконсультируйтесь со специалистом. Двигайся без сравнения с другими. Если тебе комфортно — ты на правильном пути.",
+        manifestoTitle: "Всё необходимое уже есть внутри тебя. Главное — слышать своё тело.",
+        manifestoText: "Боль — не часть тренировки. Если ты чувствуешь боль — остановись и обратись к врачу. Этот проект создан для мотивации и поддержания общей формы. Он не заменяет медицинскую помощь. Если есть противопоказания — сначала специалист, потом тренировка. Двигайся в своём темпе. Без сравнений. Без осуждения. Если тебе комфортно — ты уже на правильном пути. 🚀",
         continueBtn: "ПРОДОЛЖИТЬ",
         authIntroTitle: "ПРИЕМНАЯ НА ПЛАНЕТЕ",
         authIntroText: "ИИ ОРИОН: 'Командир, Ковчег приземлился на неизвестной планете. Датчики фиксируют купол поблизости. Прежде чем двигаться дальше, нам нужно оценить ваше состояние, записать медицинские риски и измерить кардио-ответ.'",
@@ -143,6 +145,8 @@ const uiTranslations = {
         authResultMediumText: "Планета выглядит таинственно и умеренно агрессивно. ORION предлагает осторожность, но среда богата странными сигналами и потенциалом открытий.",
         authResultLowTitle: "НИЗКИЙ УРОВЕНЬ",
         authResultLowText: "Мир кажется дружелюбнее, а напарник поддерживает. ORION рекомендует аккуратное исследование и терпение, потому что вашему телу нужно время адаптироваться.",
+        authResultRecoveryTitle: "РЕЖИМ ВОССТАНОВЛЕНИЯ",
+        authResultRecoveryText: "ОРИОН: 'Командир, ваше тело ещё восстанавливается после операции или родов. Планета впереди спокойна и безопасна. Рекомендуем отдыхать, двигаться бережно и проконсультироваться со специалистом перед тренировками. Ковчег подождёт.'",
         authContinueToPlanet: "НАЧАТЬ ПЕРВЫЙ ДЕНЬ НА ПЛАНЕТЕ",
         authMissingFields: "Пожалуйста, заполните значения теста перед продолжением.",
         planetSummary: "Ковчег приземлился. Странная зелёная флора окружает повреждённый корабль, пока ОРИОН ведёт вас к светящемуся куполу.",
@@ -158,7 +162,7 @@ const uiTranslations = {
         planetWorkoutTitle: "НЕЖНАЯ ПОСЛЕДОВАТЕЛЬНОСТЬ ЭКСПЛОРАЦИИ",
         planetWorkoutDesc: "Дружелюбная флора пульсирует мягким ритмом. Ваш напарник предлагает имитировать движения растений — течение моста и взмах через туловище. Это поможет вашему телу адаптироваться к местной гравитации.",
         planetExercise1: "🌿 Мост (Ягодичный мост) + Движения Bird Dog",
-        planetExerciseInstructions: "1. Лежа на спине, ноги на полу, поднять бёдра в мост (держать 2-3 сек, повторить).\n2. Встать на четвереньки (руки, колена), попеременно поднимать противоположную руку и ногу (считать каждую пару).\nВведите общее количество движений:",
+        planetExerciseInstructions: "1. Лежа на спине, ноги на полу, поднять бёдра в мост (держать 2-3 сек, повторить).<br>2. Встать на четвереньки (руки, колена), попеременно поднимать противоположную руку и ногу (считать каждую пару).<br>Введите общее количество движений:",
         planetSubmitWorkout: "ОТПРАВИТЬ",
         planetWorkoutLow: "🔴 Движений не зарегистрировано. Отдохни и попробуй снова, когда будешь готов.",
         planetWorkoutMedium: "🟡 Плавные нежные движения. Флора кажется распознаёт твой ритм. Твой напарник одобрительно кивает.",
@@ -175,7 +179,7 @@ const uiTranslations = {
         planetIntroMedium: "ИИ ОРИОН: 'Командир, издалека доносятся глухие раскаты и странные повторяющиеся звуки из зарослей. Датчики фиксируют крупные движущиеся массы. Двигайся низко и прислушайся — затем встань и ответь. Почва иногда дрожит; ляг и послушай, затем подними корпус на колени и ладони и повтори, когда безопасно.'",
         planetWorkoutMediumTitle: "СИНХРОНИЗАЦИЯ — ПРИСЕДАНИЯ НА СТУЛ И ОТЖИМАНИЯ",
         planetExercise2: "🪑 Приседания на стул + Отжимания (возможны на коленях)",
-        planetExercise2Instructions: "1. Встаньте перед стулом, выполните контролируемое приседание до лёгкого касания сиденья, затем встаньте (считается один).\\n2. Выполните отжимания — полноценные или на коленях (считаются поштучно).\\nВведите общее количество повторений:",
+        planetExercise2Instructions: "1. Встаньте перед стулом, выполните контролируемое приседание до лёгкого касания сиденья, затем встаньте (считается один).<br>2. Выполните отжимания — полноценные или на коленях (считаются поштучно).<br>Введите общее количество повторений:",
         planetTremorExercise: "🌎 Последовательность при землетрясении (Ляг → Прислушайся → Встань на руки и колени)",
         planetTremorInstructions: "Когда земля дрожит, лягте плоско и прислушайтесь 5 секунд, затем поднимитесь на руки и колени, удержите 2 секунды, затем вернитесь в положение лёжа. Считайте каждую полную «ляг-встань» как одно. Введите число последовательностей:",
         hudWorkout: "Тренировка",
@@ -214,8 +218,8 @@ const uiTranslations = {
         planetDayHighDesc: "Bori se sa ekstremnom gravitacijom i neprijateljskom florom. Obori svoj rekord u čučnjevima i uradi što više zgibova da pobegiš.",
         footerThanks: "Napravljeno sa ljubavlju. Posebno hvala mom divnom mužu, dvema neverovatnim ćerkama, i mojim prijateljima. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
         footerThanksHtml: "Napravljeno sa ljubavlju. Posebno hvala mom divnom <strong>mužu</strong>, dvema neverovatnim ćerkama i mojim prijateljima. Bez vas svih ovo putovanje ne bi bilo moguće. 🚀✨",
-        manifestoTitle: "Sve što ti je potrebno već je unutar tebe. Najvažnija je veza sa sopstvenim telom.",
-        manifestoText: "Bol nije deo treninga. Ukoliko osetiš bol u zglobovima, kičmi ili unutrašnjim organima, prekini sa vežbanjem i obrati se lekaru. Ovaj projekat je kreiran za motivaciju i održavanje opšte fizičke forme i ne zamenjuje medicinske savete. Ako imaš bilo kakve kontraindikacije, konsultuj se sa stručnjakom. Kreći se bez poređenja sa drugima. Ako se osećaš prijatno — na pravom si putu.",
+        manifestoTitle: "Све што ти је потребно већ је у теби. Главно је — слушати своје тело.",
+manifestoText: "Бол није део тренинга. Ако осећаш бол — стани и обрати се лекару. Овај пројекат је направљен за мотивацију и одржавање опште форме. Он не замењује медицинску помоћ. Ако имаш контраиндикације — прво специјалиста, па тренинг. Крећи се својим темпом. Без поређења. Без осуђивања. Ако ти је удобно — већ си на правом путу. 🚀",
         confirmProtocol: "POTVRDI PROTOKOL",
         continueBtn: "NASTAVI",
         authIntroTitle: "PROVERA NA PLANETI",
@@ -244,6 +248,8 @@ const uiTranslations = {
         authResultMediumText: "Planeta izgleda misteriozno i umereno agresivno. ORION predlaže oprez, ali okolina je bogata čudnim signalima i potencijalnim otkrićima.",
         authResultLowTitle: "NISKI NIVO",
         authResultLowText: "Svet deluje prijateljskije, a saputnik te podržava. ORION preporučuje pažljivo istraživanje i strpljenje, jer tvoje telo treba vreme da se prilagodi.",
+        authResultRecoveryTitle: "РЕЖИМ ОПОРАВКА",
+        authResultRecoveryText: "ОРИÓN: 'Команданте, ваше тело се још опоравља од операције или порођаја. Планета испред је мирна и безбедна. Препоручујемо одмор, нежно кретање и консултацију са специјалистом пре тренинга. Арка ће сачекати.'",
         authContinueToPlanet: "POČNI PRVI DAN NA PLANETI",
         authMissingFields: "Popuni vrednosti testa pre nego što nastavio.",
         planetSummary: "Barca je sletela. Čudna zelena flora okružuje oštećeni brod dok ORION vodi prema sjajnoj kupoli.",
@@ -259,7 +265,7 @@ const uiTranslations = {
         planetWorkoutTitle: "NEŽNA SEKVENCA ISTRAŽIVANJA FLORE",
         planetWorkoutDesc: "Prijateljska flora pulzira sa nežnim ritmom. Tvoj saputnik sugeriše da imitiraš pokret biljaka - teče mostom prate prenosom tela. Ovo će pomoći tvojim mišićima da se prilagode lokalnoj gravitaciji.",
         planetExercise1: "🌿 Most (Glute Bridge) + Pokret Bird Dog",
-        planetExerciseInstructions: "1. Leži na leđima, noge na podu, podizanje kuka u most (drži 2-3 sec, ponovi).\n2. Stani na četiri noge (ruke, kolena), naizmenično podiži suprotnu ruku i nogu (broji svaki par).\nUnesi ukupan broj kombinovanih pokreta:",
+        planetExerciseInstructions: "1. Leži na leđima, noge na podu, podizanje kuka u most (drži 2-3 sec, ponovi).<br>2. Stani na četiri noge (ruke, kolena), naizmenično podiži suprotnu ruku i nogu (broji svaki par).<br>Unesi ukupan broj kombinovanih pokreta:",
         planetSubmitWorkout: "POŠALJI",
         planetWorkoutLow: "🔴 Nijedan pokret nije registrovan. Odmori se i pokušaj ponovo kad bude spremno.",
         planetWorkoutMedium: "🟡 Nežni pokreti. Flora izgleda da prepoznaje tvoj ritam. Tvoj saputnik odobravajuće klimnje.",
@@ -276,7 +282,7 @@ const uiTranslations = {
         planetIntroMedium: "AI ORION: 'Komandante, izdaleka se čuju duboki zveckovi i čudni ciklični zvuci iz šume. Senzori detektuju velike pokretne mase. Kreći se nisko i osluškuj — zatim ustani i odgovori. Tlo povremeno drhti; legni i oslušni, zatim se podigni na kolena i dlanove i ponovi kada bude bezbedno.'",
         planetWorkoutMediumTitle: "SINHRONIZACIJA — ČUČNJEVI NA STOLICI I SKLEKOVI",
         planetExercise2: "🪑 Čučnjevi na stolici + Sklekovi (dozvoljeno na kolenima)",
-        planetExercise2Instructions: "1. Stani ispred stolice, izvedi kontrolisani čučanj dok blago ne dotakneš sedište, zatim se podigni (računa se kao jedan).\\n2. Uradi sklekove — puni ili na kolenima (računaju se pojedinačno).\\nUnesi ukupan broj ponavljanja:",
+        planetExercise2Instructions: "1. Stani ispred stolice, izvedi kontrolisani čučanj dok blago ne dotakneš sedište, zatim se podigni (računa se kao jedan).<br>2. Uradi sklekove — puni ili na kolenima (računaju se pojedinačno).<br>Unesi ukupan broj ponavljanja:",
         planetTremorExercise: "🌎 Sekvenca potresa tla (Legni → Oslušni → Ustani na ruke i kolena)",
         planetTremorInstructions: "Kada tlo drhti, legni ravno i osluškuj 5 sekundi, zatim se podigni na ruke i kolena, zadrži 2 sekunde, pa se vrati u ležeći položaj. Svaki potpuni 'legni-usti' računa se kao jedno. Unesi broj sekvenci:",
         hudWorkout: "Trening",
@@ -336,7 +342,7 @@ const storyData = {
         },
         introText: {
             en: "AI ORION's Voice: 'Commander, do you read me? This is ORION, your on-board AI. My systems are nominal, but your pulse and the vessel's hydraulics are redlined. We won't make it unless we synchronize your biology with the life support systems right now. Initiating protocol.'",
-            ru: "Голос ИИ ОРИОН: 'Командир, вы слышите меня? Это ОРИОН, ваш бортовой ИИ. Мои системы работают штатно, но ваш пульс и гидравлика корабля — на пределе. Мы не долетим, если прямо сейчас не синхронизируем вашу биологию с комплексами жизнеобеспечения. Начинаю protocol.'",
+            ru: "Голос ИИ ОРИОН: 'Командир, вы слышите меня? Это ОРИОН, ваш бортовой ИИ. Мои системы работают штатно, но ваш пульс и гидравлика корабля — на пределе. Мы не долетим, если прямо сейчас не синхронизируем вашу биологию с комплексами жизнеобеспечения. Начинаю протокол.'",
             sr: "Glas AI ORION-a: 'Komandante, da li me čujete? Ovde ORION, vaš brodski AI. Moji sistemi rade normalno, ali vaš puls i hidraulika broda su na samoj granici. Nećemo stići ako iste sekunde ne sinhronizujemo vašu biologiju sa sistemima za održavanje života. Pokrećem protokol.'"
         },
         tasks: {
@@ -398,9 +404,9 @@ Saberi sve ponavljanja i unesi ukupan broj da izračunam generisanu energiju.`
             };
             const currentLang = messages[lang] ? lang : 'en';
             if (count < 1) return messages[currentLang].error;
-            if (count >= 1 && count < 30) return messages[currentLang].modes[0];
-            if (count >= 30 && count < 50) return messages[currentLang].modes[1];
-            if (count >= 50) return messages[currentLang].modes[2];
+            if (count >= 1 && count < 20) return messages[currentLang].modes[0];
+            if (count >= 20 && count < 40) return messages[currentLang].modes[1];
+            if (count >= 40) return messages[currentLang].modes[2];
         },
         nextKey: "day2"
     },
@@ -650,9 +656,9 @@ Saberi sve udarce i unesi ukupan broj — svaki udarac odbacuje zveri i osigurav
             };
             const currentLang = messages[lang] ? lang : 'en';
             if (count < 1) return messages[currentLang].error;
-            if (count >= 1 && count < 40) return messages[currentLang].modes[0];
-            if (count >= 40 && count < 80) return messages[currentLang].modes[1];
-            if (count >= 80) return messages[currentLang].modes[2];
+            if (count >= 1 && count < 20) return messages[currentLang].modes[0];
+            if (count >= 20 && count < 40) return messages[currentLang].modes[1];
+            if (count >= 40) return messages[currentLang].modes[2];
         },
         nextKey: "day5"
     },
@@ -840,10 +846,10 @@ Saberi sva ponavljanja i unesi ukupan broj — svako spuštanje na palubu napaja
         introText: {
             en: "AI ORION's Voice: 'Commander, we have landed on the surface of this uncharted planet. Extreme conditions rage outside, but the Ark's core is stable. Your biology survived the vacuum, the gravitational siren, and the crash-landing impact. You made it! Let's lock in your weekly metrics before we step outside.'",
             ru: "Голос ИИ ОРИОН: 'Командир, мы совершили посадку на поверхность этой неизведанной планеты. Снаружи бушуют экстремальные условия, но ядро Ковчега стабильно. Ваша биология пережила вакуум, гравитационную сирену и удар при жесткой посадке. Вы справились! Давайте зафиксируем ваши недельные показатели, прежде чем выйти наружу.'",
-            sr: "Glas AI ORION-a: 'Komandante, sleteli smo na površinu ove neistražene planete. Ekstremni uslovi besne napolju, ali jezgro Barke je stabilno. Vaša biologija je preživela vakuum, gravitacionu sirenu i udar prinudnog sletanja. Uspele ste! Hajde da zabeležimo vaše nedeljne metričke podatke pre nego što iskoračimo napolje.'"
+            sr: "Glas AI ORION-a: 'Komandante, sleteli smo na površinu ove neistražene planete. Ekstremni uslovi besne napolju, ali jezgro Barke je stabilno. Vaša biologija je preživela vakuum, gravitacionu sirenu i udar prinudnog sletanja. Uspeli ste! Hajde da zabeležimo vaše nedeljne metričke podatke pre nego što iskoračimo napolje.'"
         },
         tasks: {
-            en: [{ id: "water_d7", text: "💧 Hydration (Weekly Fluid Balance): Reflect on your habits. Have you become more mindful about drinking water? Drink a final glass to celebrate surviving the cosmos!", juice: "Chemical bio-fluids analysis is optimal. Your cells have adapted to deep-space stressors." }],
+            en: [{ id: "water_d7", text: "💧 Hydration (Weekly Fluid Balance): Reflect on your habits. Have you become more mindful about drinking water? Drink a final glass to celebrate surviving the cosmos!", juice: "✅Chemical bio-fluids analysis is optimal. Your cells have adapted to deep-space stressors." }],
             ru: [{ id: "water_d7", text: "💧 Гидратация (Недельный водный баланс): Подумайте о своих привычках. Стали ли вы осознаннее пить воду? Выпейте финальный стакан, чтобы отпраздновать спасение в космосе!", juice: "✅ Анализ биожидкостей оптимален. Ваши клетки адаптировались к стрессорам глубокого космоса." }],
             sr: [{ id: "water_d7", text: "💧 Hidratacija (Nedeljni bilans tečnosti): Razmislite o svojim navikama. Da li ste postali pažljiviji u pijenju vode? Popijte poslednju čašu da proslavite preživljavanje kosmosa!", juice: "✅ Analiza telesnih tečnosti je optimalna. Vaše ćelije su se prilagodile stresorima dubokog svemira." }]
         },
@@ -1117,11 +1123,11 @@ function setSaveStateMessage(message) {
 
 // Смена языка в селекте
 function changeLanguage(lang) {
-    const safeLang = getSafeLang(lang);
-    gameState.currentLang = safeLang;
-    saveProgress();
-    updateInterfaceTexts();
-
+   const safeLang = getSafeLang(lang);
+gameState.currentLang = safeLang;
+document.documentElement.lang = safeLang; // ← вот сюда
+saveProgress();
+updateInterfaceTexts();
     const finalSteps = getTranslatedDaySteps(storyData.final, safeLang);
     if (gameState.currentDayKey === "final" && gameState.currentStepIndex >= finalSteps.length - 1) {
         renderVictoryScreen();
@@ -1133,6 +1139,17 @@ function changeLanguage(lang) {
 
 // Обновление статических элементов разметки
 function updateInterfaceTexts() {
+
+    const welcomeTextEl = document.getElementById('orion-welcome-text');
+if (welcomeTextEl) {
+    const welcomeMessages = {
+        en: "Commander, systems are online. Your mission has begun. The first step is the most important one.",
+        ru: "Командир, системы онлайн. Ваша миссия началась. Первый шаг — самый важный.",
+        sr: "Команданте, системи су онлајн. Ваша мисија је почела. Први корак је најважнији."
+    };
+    welcomeTextEl.textContent = welcomeMessages[gameState.currentLang] || welcomeMessages.en;
+}
+
     const lang = gameState.currentLang;
     const trans = uiTranslations[lang];
 
@@ -1413,7 +1430,11 @@ function renderCurrentState() {
     }
     updateProgressIndicator();
     renderMissionJournal();
+
+    // 🚀 ВОТ СЮДА ДОБАВЛЯЕМ НАШУ МАГИЮ:
+    setupMobileLogToggle(); 
 }
+
 
 function renderTextOnlyScreen(dayData, lang, output, actionBtn) {
     actionBtn.style.display = "block";
@@ -1745,20 +1766,33 @@ function renderVictoryScreen() {
 
     const stats = getAggregateStats();
 
-    // Рендерим шаги финала в виде красивого текста
-    let stepsHtml = "";
-    const finalSteps = getTranslatedDaySteps(storyData.final, gameState.currentLang);
-    finalSteps.forEach(step => {
-        stepsHtml += `<p class="victory-step">${step}</p>`;
-    });
+    const starsContainer = document.querySelector(".stars");
+    if (starsContainer) {
+        starsContainer.querySelectorAll(".star").forEach(s => {
+            s.style.animationDuration = (parseFloat(s.style.animationDuration) / 3) + "s";
+        });
+    }
+
+    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    const d = new Date();
+    const stardate = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+
+    const orionMessage = {
+        en: `"Commander. You did it. Seven days ago you were adrift in the void — uncertain, searching. Today the Ark carries you forward, not because the stars aligned, but because YOU showed up. Every drop of water. Every movement. Every choice to continue when it was easier to stop. The new world is not just ahead of us. It is already inside you. This mission is certified. — AI ORION"`,
+        ru: `«Командир. Вы справились. Семь дней назад вы дрейфовали в пустоте — неуверенные, ищущие. Сегодня Ковчег несёт вас вперёд — не потому что звёзды сошлись, а потому что ВЫ не сдались. Каждый глоток воды. Каждое движение. Каждый выбор продолжать, когда было легче остановиться. Новый мир — не только впереди. Он уже внутри вас. Миссия подтверждена. — ИИ ОРИОН»`,
+        sr: `„Команданте. Успели сте. Пре седам дана лутали сте кроз празнину — несигурни, у потрази. Данас вас Арка носи напред — не зато што су се звезде поклопиле, већ зато што ВИ нисте одустали. Свака кап воде. Сваки покрет. Сваки избор да наставите када је било лакше стати. Нови свет није само испред нас. Он је већ у вама. Мисија је потврђена. — ВИ ОРИОН"`
+    };
 
     output.innerHTML = `
         <div class="victory-container">
-            <h2>🏆 ${trans.victoryTitle}</h2>
-            <div class="victory-message">
-                ${stepsHtml}
+
+            <div class="victory-warp-text">✦ MISSION EXODUS: COMPLETE ✦</div>
+
+            <div class="victory-orion-message">
+                <span class="victory-orion-label">AI ORION:</span>
+                <p>${orionMessage[gameState.currentLang] || orionMessage.en}</p>
             </div>
-            
+
             <h3 class="victory-log-title">${trans.victoryLog}</h3>
             <div class="victory-stats">
                 <div class="stat-box">
@@ -1768,14 +1802,48 @@ function renderVictoryScreen() {
                     <span>${trans.victoryWorkout}: <strong>${stats.totalWorkouts} reps</strong></span>
                 </div>
             </div>
-            
+
+            <div class="victory-badge-wrapper">
+                <svg id="victory-badge" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="400" height="480" rx="16" fill="#05050d"/>
+                    <rect x="0" y="0" width="400" height="480" rx="16" fill="none" stroke="#00ffcc" stroke-width="2"/>
+                    <rect x="8" y="8" width="384" height="464" rx="12" fill="none" stroke="#00ffcc" stroke-width="0.5" opacity="0.4"/>
+                    <ellipse cx="200" cy="165" rx="120" ry="10" fill="none" stroke="#00ffcc" stroke-width="0.5" opacity="0.2"/>
+                    <circle cx="320" cy="165" r="5" fill="#00ffcc" opacity="0.6"/>
+                    <polygon points="200,60 215,110 265,110 225,140 240,190 200,160 160,190 175,140 135,110 185,110" fill="#00ffcc" opacity="0.9"/>
+                    <text x="200" y="228" text-anchor="middle" font-family="Orbitron,monospace" font-size="22" font-weight="700" fill="#00ffcc" letter-spacing="4">ARK CREW</text>
+                    <text x="200" y="250" text-anchor="middle" font-family="Orbitron,monospace" font-size="11" fill="#00ffcc" opacity="0.7" letter-spacing="3">CERTIFIED SURVIVOR</text>
+                    <line x1="40" y1="265" x2="360" y2="265" stroke="#00ffcc" stroke-width="0.5" opacity="0.4"/>
+                    <text x="200" y="298" text-anchor="middle" font-family="Orbitron,monospace" font-size="32" font-weight="700" fill="#ffffff" letter-spacing="6">7 DAYS</text>
+                    <text x="200" y="322" text-anchor="middle" font-family="Orbitron,monospace" font-size="11" fill="#00ffcc" opacity="0.7" letter-spacing="3">MISSION COMPLETE</text>
+                    <line x1="40" y1="338" x2="360" y2="338" stroke="#00ffcc" stroke-width="0.5" opacity="0.4"/>
+                    <text x="200" y="370" text-anchor="middle" font-family="Orbitron,monospace" font-size="13" fill="#ffffff" letter-spacing="2">COMMANDER</text>
+                    <text x="200" y="395" text-anchor="middle" font-family="Orbitron,monospace" font-size="13" fill="#ffffff" letter-spacing="2">ARK-01 · EXODUS CLASS</text>
+                    <line x1="40" y1="410" x2="360" y2="410" stroke="#00ffcc" stroke-width="0.5" opacity="0.4"/>
+                    <text x="200" y="438" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffffff" opacity="0.5">STARDATE ${stardate}</text>
+                    <text x="200" y="458" text-anchor="middle" font-family="Orbitron,monospace" font-size="9" fill="#00ffcc" opacity="0.6" letter-spacing="3">AI ORION · CERTIFIED</text>
+                </svg>
+
+                <button type="button" id="download-badge" class="submit-btn">⬇ DOWNLOAD BADGE</button>
+            </div>
+
             <button type="button" id="victory-new-mission" class="action-btn">${trans.continueBtn}</button>
         </div>
     `;
-    const victoryButton = document.getElementById("victory-new-mission");
-    if (victoryButton) {
-        victoryButton.addEventListener("click", startPostFinalAssessment);
-    }
+
+    document.getElementById("download-badge")?.addEventListener("click", () => {
+        const svg = document.getElementById("victory-badge");
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const blob = new Blob([svgData], { type: "image/svg+xml" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "ark-crew-badge.svg";
+        a.click();
+        URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("victory-new-mission")?.addEventListener("click", startPostFinalAssessment);
 }
 
 function startPostFinalAssessment() {
@@ -1858,7 +1926,7 @@ function renderPostFinalAssessment() {
         const resultText = trans[`authResult${capitalizeString(gameState.assessment.fitnessLevel)}Text`] || trans.authResultMediumText;
         container.innerHTML = `
             <div class="interactive-section">
-                <h3>${resultTitle}</h3>
+                <h3>${resultTitle}</h3>cardioTest
                 <p>${resultText}</p>
                 <p>AI ORION: 'I detected a dome structure on the horizon. If you decide to search for a better planet, we will need to enter the dome and discover what magic it hides. The Ark is damaged and cannot safely leave this system yet.'</p>
             </div>
@@ -1891,7 +1959,7 @@ function renderPostFinalAssessment() {
         if (startPlanetBtn) startPlanetBtn.addEventListener("click", startPlanetDay);
     }
 }
-
+//Medical Checklist
 function submitMedicalChecklist() {
     const questions = uiTranslations[gameState.currentLang].authChecklistQuestions || uiTranslations.en.authChecklistQuestions;
     const answers = {};
@@ -1932,13 +2000,16 @@ function submitCardioAssessment() {
 
 function calculateFitnessLevel() {
     const answers = gameState.assessment.medicalAnswers || {};
-    const contraindications = [answers.q1, answers.q2, answers.q3].filter(Boolean).length;
+    const contraindications = [answers.q2, answers.q3].filter(Boolean).length;
     const activityScore = [answers.q4, answers.q5, answers.q6, answers.q7].filter(Boolean).length;
     const reps = gameState.assessment.cardioReps || 0;
     const pulseBefore = gameState.assessment.pulseBefore || 0;
     const pulseAfter = gameState.assessment.pulseAfter || 0;
     const pulseChange = pulseAfter - pulseBefore;
 
+    if (answers.q1) {
+        return "Recovery";
+    }
     if (contraindications > 0 || reps < 12 || pulseAfter > 120 || pulseChange > 35) {
         return "Low";
     }
@@ -1961,15 +2032,21 @@ function startPlanetDay() {
 function generateStarfield() {
     const starsContainer = document.querySelector(".stars");
     if (!starsContainer) return;
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 100; i++) {
         const star = document.createElement("div");
         star.className = "star";
-        star.style.width = `${Math.random() * 3}px`;
-        star.style.height = star.style.width;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 8}s`;
-        star.style.animationDuration = `${4 + Math.random() * 6}s`;
+        const size = Math.random() * 3 + 0.5;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        // Все звёзды стартуют из центра
+        star.style.left = `50%`;
+        star.style.top = `${20 + Math.random() * 60}%`;
+        // Каждая звезда летит в свою сторону
+        const direction = Math.random() > 0.5 ? 1 : -1;
+        const distance = 40 + Math.random() * 60; // насколько далеко улетит
+        star.style.setProperty('--tx', `${direction * distance}vw`);
+        star.style.animationDelay = `${Math.random() * 10}s`;
+        star.style.animationDuration = `${4 + Math.random() * 8}s`;
         starsContainer.appendChild(star);
     }
 }
@@ -2332,7 +2409,7 @@ function updateDayDots() {
             const nav = document.getElementById('dayNav');
             if (sel) {
                 // set select to current file if option exists
-                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                const currentFile = (location.pathname.split('/').pop() || 'index.html');
                 const opt = Array.from(sel.options).find(o => o.value === currentFile);
                 if (opt) sel.value = currentFile;
                 sel.addEventListener('change', (e) => {
@@ -2344,7 +2421,7 @@ function updateDayDots() {
             // mark active link and scroll it into view
             if (nav) {
                 const links = nav.querySelectorAll('a.day-link');
-                const currentFile = (location.pathname.split('/').pop() || 'index-new.html');
+                const currentFile = (location.pathname.split('/').pop() || 'index.html');
                 for (const a of links) {
                     const href = a.getAttribute('href');
                     const full = a.href || href;
@@ -2357,3 +2434,24 @@ function updateDayDots() {
                 }
             }
         })();
+        document.addEventListener('DOMContentLoaded', () => {
+    const welcome = document.getElementById('orion-welcome');
+    const closeBtn = document.getElementById('orion-welcome-close');
+    const textEl = document.getElementById('orion-welcome-text');
+
+    const messages = {
+        en: "Commander, systems are online. Your mission has begun. The first step is the most important one.",
+        ru: "Командир, системы онлайн. Ваша миссия началась. Первый шаг — самый важный.",
+        sr: "Команданте, системи су онлајн. Ваша мисија је почела. Први корак је најважнији."
+    };
+
+    if (textEl) {
+        textEl.textContent = messages[gameState.currentLang] || messages.en;
+    }
+
+    if (closeBtn && welcome) {
+        closeBtn.addEventListener('click', () => {
+            welcome.classList.add('hidden');
+        });
+    }
+});

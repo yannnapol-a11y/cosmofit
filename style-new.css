@@ -86,16 +86,27 @@ textarea {
     position: absolute;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 6px #fff;
+    box-shadow: 0 0 4px #fff;
     opacity: 0;
-    animation: blink infinite ease-in-out;
+    animation: warp infinite linear;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 0.8; transform: scale(1.2); }
+@keyframes warp {
+    0% {
+        opacity: 0;
+        transform: translateX(0) scale(0.2);
+    }
+    15% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(var(--tx)) scale(2);
+    }
 }
-
 .terminal {
     width: 100%;
     max-width: 800px;
@@ -993,14 +1004,26 @@ body.planet-page .action-btn:hover {
         margin-bottom: 18px;
     }
 
-    .interactive-section {
-        padding: 12px;
-        margin-bottom: 15px;
-    }
+   .interactive-section {
+    background: rgba(0, 255, 204, 0.03);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
-    .interactive-section h3 {
-        font-size: 0.78rem;
-    }
+.interactive-section h3 {
+    margin-top: 0;
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--neon-yellow);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+}
+
 
     .task-item label {
         font-size: 0.82rem;
@@ -1122,37 +1145,37 @@ body.planet-page .action-btn:hover {
     }
 }
 .manifesto-container {
-    max-width: 750px; /* Немного сузили, чтобы строка не была слишком длинной — так глаза меньше устают при чтении */
-    margin: 40px auto; /* Сделали больше воздуха вокруг блока */
-    padding: 30px 35px; /* Увеличили внутренние отступы, чтобы тексту было просторно */
-    background: rgba(255, 255, 255, 0.03); /* Чуть-чуть плотнее фон, чтобы отделить от звездного неба */
-    border: 1px solid rgba(0, 255, 204, 0.2); /* Сделали неоновую рамку капельку заметнее */
-    border-radius: 12px; /* Мягкие скругленные углы */
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 30px 35px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    border-radius: 12px;
     text-align: left;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Добавили глубины за счет мягкой тени */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .manifesto-title {
-    font-family: 'Orbitron', system-ui, -apple-system, sans-serif; /* Orbitron для футуризма */
-    font-size: 2rem; /* Сделали заголовок крупнее и заметнее */
-    color: #00ffcc; /* Твой фирменный бирюзовый, он отлично горит на темном фоне */
+    font-family: 'Orbitron', system-ui, -apple-system, sans-serif;
+    font-size: 2rem;
+    color: #00ffcc;
     margin-bottom: 20px;
     letter-spacing: 0.7px;
     font-weight: 700;
 }
 
 .manifesto-text p {
-    /* Главный секрет читаемости: используем системные шрифты без засечек, они идеальны для чтения больших текстов */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.4rem; /* Увеличили размер букв (было 0.95, стало 1.1) — теперь не нужно вглядываться! */
-    line-height: 1.65; /* Идеальное расстояние между строками, чтобы они не слипались */
-    
-    /* Цвет текста: не ядовито-белый, а мягкий, благородный светло-серый/молочный. 
-       Он дает великолепную читаемость и при этом совершенно не утомляет зрение */
-    color: #e2e8f0; 
-    
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #e2e8f0;
     margin-bottom: 16px;
-    letter-spacing: 0.2px; /* Чуть-чуть раздвинули буквы для воздушности */
+    letter-spacing: 0.2px;
+}
+
+.manifesto-text p:first-child {
+    color: var(--neon-yellow);
+    font-weight: 700;
 }
 
 .manifesto-text p:last-child {
@@ -1225,4 +1248,172 @@ input[type="time"] {
 @keyframes pulse-dot {
     0%, 100% { box-shadow: 0 0 6px rgba(0, 255, 204, 0.4); }
     50% { box-shadow: 0 0 16px rgba(0, 255, 204, 0.8); }
+}
+/* Базовые стили для нашей новой кнопки */
+.toggle-log-btn {
+    background: transparent;
+    border: 1px dashed rgba(0, 255, 204, 0.6);
+    color: #00ffcc;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.toggle-log-btn:hover {
+    background: rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+}
+
+/* Стили магии сжатия только для мобильных экранов */
+@media (max-width: 767px) {
+    /* Когда класс .collapsed активен, ограничиваем высоту */
+    .output-wrapper.collapsed {
+        max-height: 160px; /* Высота примерно 3-4 абзацев текста */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Эффект футуристичного космического затухания текста снизу */
+    .output-wrapper.collapsed::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, transparent, #05050d); /* Подстраивается под цвет фона твоего сайта */
+        pointer-events: none;
+    }
+}
+.victory-warp-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.3rem;
+    color: #00ffcc;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    animation: blink 2s infinite ease-in-out;
+}
+
+.victory-orion-message {
+    border-left: 2px solid #00ffcc;
+    padding: 16px 20px;
+    margin: 0 0 30px 0;
+    background: rgba(0, 255, 204, 0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+.victory-orion-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.8rem;
+    color: #00ffcc;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.victory-orion-message p {
+    color: #e2e8f0;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.victory-badge-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 30px 0;
+}
+
+#victory-badge {
+    width: 280px;
+    max-width: 100%;
+}
+.orion-welcome {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    background: rgba(0, 255, 204, 0.06);
+    border-bottom: 1px solid rgba(0, 255, 204, 0.15);
+    animation: fadeIn 1.5s ease-in;
+}
+
+.orion-welcome-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.7rem;
+    color: #00ffcc;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+.orion-welcome-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.orion-welcome-close {
+    background: none;
+    border: none;
+    color: rgba(0, 255, 204, 0.5);
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+.orion-welcome-close:hover {
+    color: #00ffcc;
+}
+
+.orion-welcome.hidden {
+    display: none;
+}
+@media (max-width: 600px) {
+    .day-nav {
+        gap: 6px;
+        padding: 8px 12px 10px;
+    }
+
+    .day-link {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+    }
+
+    .day-link.active {
+        padding: 9px 13px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        box-shadow: 0 0 16px rgba(0, 255, 204, 0.5);
+        transform: translateY(-2px) scale(1.06);
+        z-index: 1;
+        position: relative;
+    }
+
+    .nav-btn {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .nav-btn.active {
+        padding: 9px 13px;
+        font-size: 0.82rem;
+        box-shadow: 0 0 16px rgba(0, 255, 204, 0.5);
+        transform: scale(1.06);
+        position: relative;
+        z-index: 1;
+    }
 }

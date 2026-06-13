@@ -76,7 +76,11 @@
             </select>
         </div>            
     </header>
-
+<div class="orion-welcome" id="orion-welcome">
+    <span class="orion-welcome-label">AI ORION</span>
+    <span class="orion-welcome-text" id="orion-welcome-text">Командир, системы онлайн. Ваша миссия началась. Первый шаг — самый важный.</span>
+    <button type="button" class="orion-welcome-close" id="orion-welcome-close" aria-label="Close welcome message">✕</button>
+</div>
     <nav id="dayNav" class="day-nav" aria-label="Mission days"></nav> 
 
         <main id="main-content" class="terminal-body">
@@ -104,10 +108,11 @@
 
             <section class="story-section" aria-labelledby="story-title">
     <h2 id="story-title" class="sr-only">Current mission log</h2>
-    <button type="button" id="speak-btn" class="speak-btn" aria-label="Read story aloud">🔊</button>
-    <div class="output-wrapper">
-        <p id="story-text" class="typing-text" role="status" aria-live="polite" aria-atomic="true"></p>
-    </div>
+<button type="button" id="speak-btn" class="speak-btn" aria-label="Read story aloud">🔊</button>
+<div class="output-wrapper" id="log-wrapper"> <p id="story-text" class="typing-text" role="status" aria-atomic="true"></p>
+</div>
+
+<button type="button" id="toggle-log-btn" class="toggle-log-btn" style="display: none;">📖 Read full mission log</button>
 </section>
 
             <div class="progress-indicator" id="progress-indicator" aria-live="polite"></div>
@@ -131,12 +136,12 @@
 
     <footer class="terminal-footer">        
     <div class="manifesto-container">
-        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already within you. The most important thing is the connection with your own body.</h2>
+        <h2 class="manifesto-title" id="manifesto-title">Everything you need is already within you. The most important thing is to listen to your body.</h2>
         <div class="manifesto-text" id="manifesto-text">
-            <p>Pain is not a part of the workout. If you experience pain in your joints, spine, or internal organs, stop exercising and consult a doctor. This project is designed for motivation and general fitness maintenance; it does not replace medical advice. If you have any medical contraindications, please consult a specialist. Move without comparing yourself to others. If you feel comfortable — you are on the right track.</p>
+            <p>Pain is not part of the workout. If you feel pain — stop and see a doctor. This project is made for motivation and general fitness. It does not replace medical advice. If you have any contraindications — consult a specialist first, then train. Move at your own pace. No comparisons. No judgment. If you feel comfortable — you're already on the right path. </p>
         </div>
     </div>    
-        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and my fiends. Without them, this journey wouldn't be possible. 🚀✨</p>
+        <p id="footer-thanks">Made with love. Special thanks to my wonderful husband, two amazing daughters, and my friends. Without them, this journey wouldn't be possible. 🚀✨</p>
     </footer>
 
     <script src="script-new.js"></script>
